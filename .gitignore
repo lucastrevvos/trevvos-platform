@@ -1,0 +1,23 @@
+bin/
+obj/
+.vs/
+.vscode/
+.idea/
+TestResults/
+*.user
+*.suo
+*.cache
+*.log
+*.nupkg
+coverage/
+artifacts/
+
+# Local configuration
+appsettings.Local.json
+appsettings.*.Local.json
+.env
+.env.*
+
+# Docker/PostgreSQL local data
+.docker/
+postgres-data/
