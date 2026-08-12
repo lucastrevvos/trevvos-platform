@@ -1,20 +1,25 @@
-# Visão de Arquitetura
+# Visao De Arquitetura
 
-A Trevvos começa como monólito modular em um único repositório. O objetivo é manter implantação simples, baixo custo operacional e clareza para aprendizado profundo em .NET, Angular, PostgreSQL, segurança e IA aplicada.
+A Trevvos usa este monorepo para manter backend, frontends e documentacao de plataforma em uma unica raiz operacional.
 
-## Camadas Iniciais
+## Backend Consolidado
 
-- `Trevvos.Api`: entrada HTTP, configuração, health checks, composição de dependências e infraestrutura web.
-- `Trevvos.SharedKernel`: contratos transversais pequenos e estáveis.
-- `trevvos-web`: cliente Angular standalone.
-- `tests`: testes de arquitetura e integração.
+O backend atual foi importado do repositorio `trevvos-api` e esta em `src/backend`:
 
-Módulos de domínio serão materializados apenas quando o marco correspondente for implementado.
+- `Trevvos.Api`: entrada HTTP e composicao web.
+- `Trevvos.Application`: servicos de aplicacao e modulos iniciais.
+- `Trevvos.Domain`: nucleo de dominio.
+- `Trevvos.Infrastructure`: persistencia e integracoes de infraestrutura.
+- `Trevvos.Worker`: worker .NET.
 
-## Princípios
+## Frontends
 
-- Começar pequeno e executável.
-- Evitar abstrações sem uso.
-- Proteger segurança e privacidade desde a fundação.
-- Registrar decisões duradouras em ADR.
-- Separar autenticação, IA, finanças e domínio educacional.
+- `src/frontend/trevvos-web`: portal publico Angular.
+- `src/frontend/kmone-landing`: landing React/Vite do KM One.
+
+## Principios
+
+- Preservar historico e codigo existente sempre que tecnicamente seguro.
+- Separar backend e frontends por diretorios claros.
+- Evitar alteracoes de comportamento durante tarefas de consolidacao.
+- Registrar decisoes duradouras em documentos de arquitetura.

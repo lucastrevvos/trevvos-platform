@@ -20,7 +20,7 @@ Nesta fundação, esses módulos existem apenas como documentação. Projetos, p
 
 ## Regras
 
-- `SharedKernel` não depende da API nem de módulos de domínio.
+- Projetos de dominio e aplicacao nao devem depender da API HTTP.
 - `Api` compõe dependências e expõe endpoints.
 - Módulos futuros não devem acessar tabelas internas de outros módulos diretamente.
 - Alterações em autenticação, ledger de IA e fundo comunitário exigem ADR.

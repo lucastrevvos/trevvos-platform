@@ -12,6 +12,8 @@ dist/
 
 # Environment and secrets
 .env
+.env.*
+!.env.example
 *.Development.local.json
 *.secrets.json
 

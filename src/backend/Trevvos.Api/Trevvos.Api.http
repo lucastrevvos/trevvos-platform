@@ -1,6 +1,6 @@
-@Trevvos.Api_HostAddress = http://localhost:5211
+@Trevvos.Api_HostAddress = http://localhost:5127
 
-GET {{Trevvos.Api_HostAddress}}/weatherforecast/
+GET {{Trevvos.Api_HostAddress}}/health
 Accept: application/json
 
 ###

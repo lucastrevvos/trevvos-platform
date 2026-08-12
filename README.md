@@ -1,94 +1,73 @@
 # Trevvos Platform
 
-Trevvos é uma comunidade global e gratuita de troca de conhecimentos. A plataforma vai conectar pessoas que podem ensinar e aprender umas com as outras, sem créditos individuais, carteira de horas ou equivalência financeira entre conhecimentos.
+Monorepo oficial da plataforma Trevvos.
 
-Estado atual: Marco 0 - fundação. Este repositório contém apenas a base executável, documentação inicial e decisões arquiteturais. Cadastro, login, perfis, habilidades, matching, agenda, chat, doações e IA ainda não foram implementados.
-
-## Stack
-
-- .NET SDK 10.0.301
-- ASP.NET Core 10
-- C# / nullable reference types
-- Entity Framework Core 10
-- PostgreSQL 17 Alpine por Docker Compose
-- Angular 21.2
-- Node 20.19.4
-- npm 10.8.2
-- xUnit
-
-## Requisitos
-
-- .NET SDK 10.0.301 ou compatível com `global.json`
-- Node.js 20 LTS
-- npm 10
-- Docker com Docker Compose
-- Bash para executar scripts e comandos documentados
+```text
+Trevvos Platform
+├── Backend
+│   └── Trevvos.Api
+├── Frontends
+│   ├── trevvos-web
+│   └── kmone-landing
+└── Tests
+```
 
 ## Estrutura
 
 ```text
-src/backend/Trevvos.Api              API ASP.NET Core
-src/backend/Trevvos.SharedKernel     contratos transversais mínimos
-src/frontend/trevvos-web             aplicação Angular
-tests/Trevvos.ArchitectureTests      regras básicas de dependência
-tests/Trevvos.IntegrationTests       testes de integração do health check
-docs/                               produto, arquitetura, segurança, operação e ADRs
-scripts/                            scripts Bash de desenvolvimento
+src/
+  backend/
+    Trevvos.Api/
+    Trevvos.Application/
+    Trevvos.Domain/
+    Trevvos.Infrastructure/
+    Trevvos.Worker/
+  frontend/
+    trevvos-web/
+    kmone-landing/
+tests/
+docs/
 ```
 
-## Configuração
+## Backend
+
+O backend consolidado veio do repositório `lucastrevvos/trevvos-api`, branch `feature/m0-platform-architecture`.
+
+Comandos:
 
 ```bash
-cp .env.example .env
 dotnet restore
-npm ci --prefix src/frontend/trevvos-web
-docker compose up -d
-```
-
-As credenciais de `.env.example` são apenas de desenvolvimento local. Nenhum segredo real deve ser versionado.
-
-## Execução
-
-Backend:
-
-```bash
+dotnet build
+dotnet test
 dotnet run --project src/backend/Trevvos.Api/Trevvos.Api.csproj
 ```
 
-Frontend:
+## Frontends
+
+Portal Trevvos:
 
 ```bash
-npm start --prefix src/frontend/trevvos-web
+cd src/frontend/trevvos-web
+npm install
+npm run build
+npm test
 ```
 
-Health checks:
+Landing KM One:
 
 ```bash
-curl http://localhost:5211/health/live
-curl http://localhost:5211/health/ready
+cd src/frontend/kmone-landing
+npm install
+npm run build
+npm run lint
 ```
 
-## Testes e build
+## Documentacao
 
-```bash
-dotnet build
-dotnet test
-npm run build --prefix src/frontend/trevvos-web
-docker compose config
-```
+- `docs/repository-architecture.md`
+- `docs/migration-history.md`
+- `docs/azure-deployment-roadmap.md`
 
-## Decisões principais
+## Fora Do Monorepo
 
-- Monólito modular em um único repositório.
-- Módulos de domínio documentados antes de serem implementados.
-- Navegador usará cookies seguros HTTP-only e padrão próximo a BFF no futuro, não JWT em `localStorage`.
-- Tokens de autenticação e tokens de modelos de IA são conceitos separados.
-- IA depende de orçamento comunitário, limites e ledger auditável.
-- Doações, créditos promocionais e infraestrutura cedida não são somados como dinheiro em caixa.
-- Agenda interna será a fonte oficial; Google Calendar e Meet serão adaptadores externos futuros.
-
-## Próximos passos
-
-1. Estudar a fundação e executar os comandos locais.
-2. Iniciar o Marco 1 com modelagem de Identity, sessão por cookie, CSRF e auditoria.
-3. Criar ADRs adicionais antes de alterar autenticação, ledger de IA ou governança financeira.
+`motor-kmone` permanece fora deste monorepo. O Android oficial nao faz parte desta consolidacao.
