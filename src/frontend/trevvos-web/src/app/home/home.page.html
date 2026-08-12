@@ -1,0 +1,23 @@
+<main class="home">
+  <section class="intro" aria-labelledby="page-title">
+    <p class="eyebrow">{{ text.eyebrow }}</p>
+    <h1 id="page-title">{{ text.title }}</h1>
+    <p class="summary">{{ text.summary }}</p>
+  </section>
+
+  <section class="status" aria-labelledby="status-title">
+    <h2 id="status-title">{{ text.backendStatusTitle }}</h2>
+
+    @if (backendStatus$ | async; as status) {
+      <p class="status-line" [class.available]="status === 'available'">
+        <span aria-hidden="true"></span>
+        {{ status === 'available' ? text.backendAvailable : text.backendUnavailable }}
+      </p>
+    } @else {
+      <p class="status-line">
+        <span aria-hidden="true"></span>
+        {{ text.backendChecking }}
+      </p>
+    }
+  </section>
+</main>

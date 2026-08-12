@@ -1,0 +1,24 @@
+# .NET
+bin/
+obj/
+TestResults/
+*.user
+*.suo
+
+# Angular / Node
+node_modules/
+dist/
+.angular/
+
+# Environment and secrets
+.env
+*.Development.local.json
+*.secrets.json
+
+# IDE
+.vs/
+.vscode/
+
+# OS
+Thumbs.db
+.DS_Store
