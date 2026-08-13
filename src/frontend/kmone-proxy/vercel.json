@@ -2,8 +2,8 @@
   "$schema": "https://openapi.vercel.sh/vercel.json",
   "rewrites": [
     {
-      "source": "/:path*",
-      "destination": "https://delightful-hill-04248b510.7.azurestaticapps.net/:path*"
+      "source": "/(.*)",
+      "destination": "https://delightful-hill-04248b510.7.azurestaticapps.net/$1"
     }
   ]
 }
