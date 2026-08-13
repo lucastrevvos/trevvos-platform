@@ -27,6 +27,7 @@ Follow-up TODOs:
 ## Core Principles
 
 ### I. Product Truth
+
 Implementation MUST NOT invent product capabilities, availability, guarantees, metrics,
 business rules, or behavior. Product-facing changes MUST be grounded in approved
 requirements, existing repository documentation, accepted specifications, or explicit human
@@ -36,6 +37,7 @@ Rationale: A brownfield platform must preserve real product behavior and avoid c
 assumptions into shipped commitments.
 
 ### II. Small, Reviewable Changes
+
 Changes MUST be small, bounded, reviewable, and reversible. Feature work MUST NOT include
 broad unrelated refactors, formatting churn, dependency swaps, or repository reshaping unless
 the approved scope explicitly requires them. When a larger change is unavoidable, it MUST be
@@ -45,6 +47,7 @@ Rationale: The monorepo stays safer when reviewers can understand the intent, bl
 and rollback path of each change.
 
 ### III. Evidence Before Completion
+
 No task may be declared complete without executing the applicable validation steps, such as
 build, automated tests, linting, static analysis, contract checks, or documented acceptance
 checks. Agents and contributors MUST report exactly which validations were executed and MUST
@@ -53,6 +56,7 @@ NOT claim a validation passed if it was not executed.
 Rationale: Completion is an evidence-based state, not a confidence statement.
 
 ### IV. Human-Owned Architecture
+
 AI agents may propose architectural options, tradeoffs, and implementation paths, but durable
 architectural decisions remain human-owned. Significant architectural changes MUST receive
 explicit human approval and MUST be documented through Architecture Decision Records before
@@ -63,6 +67,7 @@ Rationale: Architecture encodes product, operational, and governance commitments
 be delegated to generated output.
 
 ### V. Simplicity Before Abstraction
+
 The repository MUST avoid speculative architecture, premature abstractions, unnecessary
 dependencies, microservices, Kubernetes, queues, event buses, or infrastructure patterns
 without a concrete current requirement. New projects, folders, schemas, modules, or shared
@@ -72,6 +77,7 @@ Rationale: Simplicity protects the modular monolith from unnecessary operational
 cognitive cost.
 
 ### VI. Explicit Boundaries
+
 Contributors MUST respect boundaries between backend, frontends, products, modules, and
 deployment units in this monorepo. Changes MUST NOT modify unrelated areas unless explicitly
 required by the accepted scope. Module boundaries documented in
@@ -82,6 +88,7 @@ Rationale: Clear boundaries preserve the modular monolith while allowing the rep
 evolve safely.
 
 ### VII. Quality Is Part of the Feature
+
 Maintainability, testability, accessibility, security, and SEO where applicable are part of
 the Definition of Done. Feature plans and reviews MUST include the quality work necessary for
 the changed surface, and MUST NOT defer required quality controls as optional follow-up work
@@ -91,6 +98,7 @@ Rationale: Quality attributes determine whether a change is usable, operable, an
 production.
 
 ### VIII. AI Output Is Untrusted Until Validated
+
 Generated code, documentation, tests, plans, specifications, and architectural suggestions
 MUST be reviewed and validated before acceptance. AI-generated tests MUST NOT be treated as
 proof unless they are relevant, executable, and have been run. Generated documentation MUST be
@@ -100,6 +108,7 @@ Rationale: AI output can accelerate work, but it can also encode plausible error
 confidence.
 
 ### IX. Specification Before Implementation
+
 Meaningful features MUST begin with an approved specification that defines intent, user
 value, requirements, scope, non-goals, and acceptance criteria before implementation begins.
 Small maintenance changes may proceed without a full feature specification when they do not
@@ -109,6 +118,7 @@ Rationale: Specifications keep implementation aligned with product intent and ma
 criteria explicit.
 
 ### X. No Silent Assumptions
+
 Agents and contributors MUST surface material ambiguity, conflicts, or missing product
 decisions rather than silently inventing behavior. Minor implementation details may be
 resolved locally only when they do not alter product behavior, user commitments,
@@ -122,9 +132,9 @@ This constitution governs the entire `trevvos-platform` repository, including ba
 frontends, tests, documentation, infrastructure definitions, Spec Kit artifacts, and future
 repository-local modules. It is not limited to `trevvos-web`.
 
-The repository is a brownfield modular monolith. Contributors MUST preserve the single
-repository and modular monolith architecture unless an approved ADR explicitly changes that
-direction. Existing `AGENTS.md` files may add more specific local instructions, but they MUST
+The repository is a brownfield monorepo. The backend follows a modular monolith architecture.
+Contributors MUST preserve the single-repository strategy and the backend modular monolith
+unless an approved ADR explicitly changes either direction. Existing `AGENTS.md` files may add more specific local instructions, but they MUST
 NOT contradict this constitution.
 
 The repository MUST NOT use, copy, modify, or depend on `lucastrevvos/portaltrevvos`.
@@ -162,6 +172,7 @@ a Sync Impact Report, updated semantic version, amendment date, and a concise ex
 the affected principles, sections, and downstream workflow impact.
 
 Constitution versions follow semantic versioning:
+
 - MAJOR: backward-incompatible governance changes, principle removals, or principle
   redefinitions.
 - MINOR: new principles, new governance sections, or materially expanded guidance.
