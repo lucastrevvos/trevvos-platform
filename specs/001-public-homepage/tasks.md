@@ -9,11 +9,11 @@
 
 **Purpose**: Enable the approved Angular static prerender / SSG path before homepage work depends on generated HTML.
 
-- [ ] T001 Run `npm ci` with working directory `src/frontend/trevvos-web` and command `npm ci`, using `src/frontend/trevvos-web/package-lock.json` as the lockfile.
-- [ ] T002 Use the Angular-supported mechanism to enable rendering support for the existing application in `src/frontend/trevvos-web`, then record every generated or modified file before making manual adjustments.
-- [ ] T003 Review the Angular-generated rendering changes in `src/frontend/trevvos-web` and configure only what is required for static output and prerendering of the existing root route.
-- [ ] T004 Verify the rendering setup in `src/frontend/trevvos-web` requires no dynamic SSR/runtime server deployment path and preserves the approved static prerender / SSG -> generated HTML -> static hosting architecture.
-- [ ] T005 Run an initial `npm run build` with working directory `src/frontend/trevvos-web`, determine the generated root HTML artifact from Angular configuration or build output, and verify the root route produces static generated HTML before deeper homepage implementation.
+- [X] T001 Run `npm ci` with working directory `src/frontend/trevvos-web` and command `npm ci`, using `src/frontend/trevvos-web/package-lock.json` as the lockfile.
+- [X] T002 Use the Angular-supported mechanism to enable rendering support for the existing application in `src/frontend/trevvos-web`, then record every generated or modified file before making manual adjustments.
+- [X] T003 Review the Angular-generated rendering changes in `src/frontend/trevvos-web` and configure only what is required for static output and prerendering of the existing root route.
+- [X] T004 Verify the rendering setup in `src/frontend/trevvos-web` requires no dynamic SSR/runtime server deployment path and preserves the approved static prerender / SSG -> generated HTML -> static hosting architecture.
+- [X] T005 Run an initial `npm run build` with working directory `src/frontend/trevvos-web`, determine the generated root HTML artifact from Angular configuration or build output, and verify the root route produces static generated HTML before deeper homepage implementation.
 
 **Checkpoint**: The existing Angular app has the minimum approved static rendering foundation for build-time prerendering and static hosting, and the root route has produced a static generated HTML artifact at least once.
 
