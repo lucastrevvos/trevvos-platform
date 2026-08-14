@@ -4,7 +4,7 @@
 
 **Created**: 2026-08-13
 
-**Status**: Draft
+**Status**: Approved
 
 **Input**: User description: "Create the product specification for the new public Trevvos homepage."
 
