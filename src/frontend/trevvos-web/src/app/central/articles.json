@@ -1,0 +1,77 @@
+[
+  {
+    "id": "motorista-decide-melhor-com-contexto",
+    "slug": "motorista-decide-melhor-com-contexto",
+    "status": "publicado",
+    "category": "Mobilidade e operação",
+    "title": "O motorista decide melhor quando o contexto está organizado",
+    "summary": "Antes de prometer ganhos, tecnologia para mobilidade precisa ajudar o motorista a enxergar distância, valor, tempo, região e histórico com clareza.",
+    "readingTime": "4 min",
+    "publishedAt": "2026-08-15",
+    "tags": ["KM One", "mobilidade", "operação"],
+    "sections": [
+      {
+        "heading": "Decisão começa antes do aceite",
+        "body": "Para quem trabalha na rua, uma oferta não é só um valor na tela. Ela envolve deslocamento, tempo parado, região, risco de retorno vazio e histórico do próprio motorista."
+      },
+      {
+        "heading": "Organizar contexto é mais honesto que prometer resultado",
+        "body": "A Trevvos prefere construir ferramentas que melhorem leitura e organização, sem prometer ganho garantido, demanda ou corrida perfeita. O papel do produto é reduzir ruído para que a decisão continue com quem dirige."
+      },
+      {
+        "heading": "O KM One nasce dessa visão",
+        "body": "Quando valor, distância, registros e rotina ficam no mesmo ambiente, o motorista consegue comparar melhor o que está acontecendo e aprender com a própria operação."
+      }
+    ]
+  },
+  {
+    "id": "ia-assistida-nao-substitui-escolha",
+    "slug": "ia-assistida-nao-substitui-escolha",
+    "status": "publicado",
+    "category": "IA aplicada",
+    "title": "IA assistida não substitui escolha: ela prepara decisões",
+    "summary": "A visão da Trevvos para IA é apoiar leitura, sugestão e organização sem executar ações importantes sem revisão humana.",
+    "readingTime": "5 min",
+    "publishedAt": "2026-08-15",
+    "tags": ["IA", "produto", "RAG"],
+    "sections": [
+      {
+        "heading": "IA como preparação, não como piloto automático",
+        "body": "Uma IA útil não precisa tomar o controle para gerar valor. Ela pode resumir, sugerir, agrupar e preparar caminhos, deixando a confirmação final para a pessoa."
+      },
+      {
+        "heading": "Confiança depende de revisão",
+        "body": "Em produtos públicos, especialmente quando existe impacto operacional ou comunitário, a revisão humana protege contra respostas fora de contexto e contra automações que parecem convenientes, mas podem criar problemas."
+      },
+      {
+        "heading": "Onde RAG entra na história",
+        "body": "Com bases bem organizadas, a IA pode responder usando conteúdo da própria Trevvos, do Flow ou do Impacto. A diferença é que ela consulta conhecimento controlado em vez de inventar uma resposta solta."
+      }
+    ]
+  },
+  {
+    "id": "flow-comeca-pequeno-porque-rotina-e-pratica",
+    "slug": "flow-comeca-pequeno-porque-rotina-e-pratica",
+    "status": "publicado",
+    "category": "Produtos Trevvos",
+    "title": "Por que o Trevvos Flow começa por listas simples",
+    "summary": "Listas, tarefas e rotinas são uma porta pequena, mas poderosa, para entender como pessoas organizam decisões antes de automatizar qualquer coisa.",
+    "readingTime": "3 min",
+    "publishedAt": "2026-08-15",
+    "tags": ["Trevvos Flow", "listas", "produto"],
+    "sections": [
+      {
+        "heading": "Começar simples é uma escolha de produto",
+        "body": "Listas parecem pequenas, mas mostram como uma pessoa pensa, prioriza, esquece, retoma e compartilha uma rotina. Isso é uma base real para evoluir produto."
+      },
+      {
+        "heading": "A rotina revela o que deve virar inteligência",
+        "body": "Antes de criar automações, o Flow observa estruturas simples: itens, categorias, progresso e colaboração. A IA passa a fazer sentido quando entende esse contexto."
+      },
+      {
+        "heading": "Do app para o ecossistema",
+        "body": "O Flow pode se tornar uma peça de entrada para testar sugestões inteligentes, colaboração leve e organização pessoal antes de levar essas capacidades para módulos maiores."
+      }
+    ]
+  }
+]

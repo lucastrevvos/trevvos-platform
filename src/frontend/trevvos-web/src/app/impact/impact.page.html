@@ -1,0 +1,97 @@
+<main class="home impact-page" aria-labelledby="impact-title">
+  <div class="os-shell">
+    <header class="top-bar" aria-label="Ambiente público Trevvos Impacto">
+      <a class="brand-lockup" href="/" aria-label="Trevvos homepage">
+        <img src="/assets/brand/processed/trevvos-symbol.webp" alt="" aria-hidden="true" />
+        <span class="brand-word" aria-hidden="true">
+          <span>TR</span>
+          <span class="brand-e">
+            <span></span>
+            <span></span>
+            <span></span>
+          </span>
+          <span>VVOS</span>
+        </span>
+        <span class="brand-divider" aria-hidden="true"></span>
+      </a>
+
+      <nav class="system-nav" aria-label="Navegação Trevvos Impacto">
+        <a href="/">{{ text.cta.secondary }}</a>
+        <a href="#impact-sections">Preparação</a>
+        <a href="#impact-audiences">Públicos</a>
+      </nav>
+
+      <div class="system-signals impact-signal" aria-hidden="true">
+        <svg lucideNetwork></svg>
+      </div>
+    </header>
+
+    <div class="workspace impact-workspace">
+      <aside class="side-rail" aria-label="Navegação visual Trevvos Impacto">
+        <a class="nav-item" href="/" aria-label="Voltar para a Home"><svg lucideArrowLeft aria-hidden="true"></svg></a>
+        <span class="rail-divider" aria-hidden="true"></span>
+        <a class="nav-item rail-active" href="#impact-title" aria-label="Trevvos Impacto"><svg lucideNetwork aria-hidden="true"></svg></a>
+        <a class="nav-item" href="#impact-sections" aria-label="Preparação do Impacto"><svg lucideHeartHandshake aria-hidden="true"></svg></a>
+        <a class="nav-item" href="#impact-audiences" aria-label="Públicos do Impacto"><svg lucideUsersRound aria-hidden="true"></svg></a>
+      </aside>
+
+      <section class="impact-screen">
+        <section class="impact-hero">
+          <div class="impact-copy">
+            <p class="impact-eyebrow">{{ text.eyebrow }}</p>
+            <h1 id="impact-title">{{ text.title }}</h1>
+            <p class="impact-summary">{{ text.summary }}</p>
+            <a class="impact-primary" [href]="text.cta.contactHref">
+              {{ text.cta.primary }}
+              <span aria-hidden="true">→</span>
+            </a>
+          </div>
+
+          <div class="impact-panel" aria-label="Resumo do Trevvos Impacto">
+            <svg lucideHeartHandshake aria-hidden="true"></svg>
+            <h2>Em breve, com escuta real</h2>
+            <p>
+              O Impacto nasce para mapear necessidades antes de oferecer produto:
+              primeiro conversa, depois piloto, depois evolução responsável.
+            </p>
+          </div>
+        </section>
+
+        <section id="impact-sections" class="impact-sections" aria-labelledby="impact-sections-title">
+          <div class="impact-section-heading">
+            <p class="impact-eyebrow">Em preparação</p>
+            <h2 id="impact-sections-title">{{ text.sectionsTitle }}</h2>
+          </div>
+
+          <div class="impact-section-grid">
+            @for (section of text.sections; track section.title) {
+              <article class="impact-card">
+                <svg lucideHeartHandshake aria-hidden="true"></svg>
+                <h3>{{ section.title }}</h3>
+                <p>{{ section.text }}</p>
+              </article>
+            }
+          </div>
+        </section>
+
+        <section id="impact-audiences" class="impact-audiences" aria-labelledby="impact-audiences-title">
+          <div>
+            <p class="impact-eyebrow">Pontes</p>
+            <h2 id="impact-audiences-title">{{ text.audiencesTitle }}</h2>
+          </div>
+
+          <ul>
+            @for (audience of text.audiences; track audience) {
+              <li>
+                <svg lucideCheck aria-hidden="true"></svg>
+                {{ audience }}
+              </li>
+            }
+          </ul>
+        </section>
+
+        <p class="impact-note">{{ text.note }}</p>
+      </section>
+    </div>
+  </div>
+</main>

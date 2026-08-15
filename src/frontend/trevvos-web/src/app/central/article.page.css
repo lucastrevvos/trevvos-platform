@@ -1,0 +1,214 @@
+:host {
+  display: block;
+}
+
+.article-page .article-signal {
+  border-color: rgba(125, 255, 108, 0.74);
+  box-shadow:
+    0 0 0 1px rgba(125, 255, 108, 0.14) inset,
+    0 0 24px rgba(125, 255, 108, 0.24);
+}
+
+.article-page .article-signal svg {
+  color: #8dff77;
+  height: 1.55rem;
+  width: 1.55rem;
+}
+
+.article-screen {
+  display: grid;
+  gap: 1rem;
+  min-width: 0;
+  padding: 2.2rem;
+}
+
+.article-hero {
+  background:
+    linear-gradient(90deg, rgba(2, 14, 11, 0.9) 0 42%, rgba(2, 14, 11, 0.5)),
+    radial-gradient(circle at 78% 26%, rgba(125, 255, 108, 0.22), transparent 12rem),
+    url("/assets/home/central-trevvos-bg.png") 58% 54% / cover no-repeat,
+    #03120d;
+  border: 1px solid rgba(125, 255, 108, 0.65);
+  border-radius: 8px;
+  box-shadow: 0 24px 80px rgba(0, 0, 0, 0.36);
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: minmax(18rem, 1fr) minmax(13rem, 0.28fr);
+  min-height: 24rem;
+  padding: 2.4rem;
+}
+
+.article-eyebrow {
+  color: #8dff77;
+  font-family: "Rajdhani", "Space Grotesk", sans-serif;
+  font-size: 0.92rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  margin: 0 0 0.75rem;
+  text-transform: uppercase;
+}
+
+.article-hero h1,
+.article-content h2,
+.article-missing h1 {
+  color: #fff;
+  font-family: "Rajdhani", "Space Grotesk", sans-serif;
+  letter-spacing: 0;
+  text-transform: uppercase;
+}
+
+.article-hero h1,
+.article-missing h1 {
+  font-size: clamp(2.2rem, 4vw, 4.35rem);
+  line-height: 0.98;
+  margin: 0 0 1rem;
+  max-width: 15ch;
+}
+
+.article-summary {
+  border-left: 3px solid #8dff77;
+  color: #d3e9d2;
+  font-size: 1.08rem;
+  line-height: 1.58;
+  margin: 0;
+  max-width: 44rem;
+  padding-left: 1rem;
+}
+
+.article-meta {
+  align-self: end;
+  background: rgba(1, 18, 13, 0.74);
+  border: 1px solid rgba(141, 255, 119, 0.28);
+  border-radius: 8px;
+  display: grid;
+  gap: 0.9rem;
+  margin: 0;
+  padding: 1.1rem;
+}
+
+.article-meta div {
+  display: grid;
+  gap: 0.2rem;
+}
+
+.article-meta dt {
+  color: #8dff77;
+  font-family: "Rajdhani", "Space Grotesk", sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.article-meta dd {
+  color: #fff;
+  margin: 0;
+}
+
+.article-content,
+.article-footer,
+.article-missing {
+  background: rgba(3, 13, 23, 0.78);
+  border: 1px solid rgba(155, 224, 166, 0.18);
+  border-radius: 8px;
+}
+
+.article-content {
+  display: grid;
+  gap: 1.2rem;
+  padding: 1.6rem;
+}
+
+.article-content section {
+  max-width: 54rem;
+}
+
+.article-content h2 {
+  font-size: clamp(1.65rem, 2.4vw, 2.35rem);
+  line-height: 1;
+  margin: 0 0 0.65rem;
+}
+
+.article-content p,
+.article-missing p {
+  color: #c6ddc5;
+  font-size: 1.02rem;
+  line-height: 1.66;
+  margin: 0;
+}
+
+.article-footer {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: space-between;
+  padding: 1rem 1.2rem;
+}
+
+.article-footer ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.article-footer li {
+  background: rgba(141, 255, 119, 0.1);
+  border: 1px solid rgba(141, 255, 119, 0.18);
+  border-radius: 999px;
+  color: #eaffea;
+  font-size: 0.82rem;
+  padding: 0.28rem 0.55rem;
+}
+
+.article-footer a,
+.article-missing a {
+  color: #8dff77;
+  font-family: "Rajdhani", "Space Grotesk", sans-serif;
+  font-weight: 700;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.article-footer a {
+  align-items: center;
+  display: inline-flex;
+  gap: 0.55rem;
+}
+
+.article-missing {
+  padding: 2rem;
+}
+
+@media (max-width: 1050px) {
+  .article-screen {
+    padding: 1.5rem;
+  }
+
+  .article-hero {
+    grid-template-columns: 1fr;
+    min-height: auto;
+  }
+}
+
+@media (max-width: 640px) {
+  .article-screen {
+    padding: 1rem 0.85rem 6.2rem;
+  }
+
+  .article-hero,
+  .article-content {
+    padding: 1.25rem;
+  }
+
+  .article-hero h1,
+  .article-missing h1 {
+    font-size: 2.35rem;
+  }
+
+  .article-summary,
+  .article-content p {
+    font-size: 0.98rem;
+  }
+}

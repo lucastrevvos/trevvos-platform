@@ -1,0 +1,97 @@
+<main class="home ai-page" aria-labelledby="ai-title">
+  <div class="os-shell">
+    <header class="top-bar" aria-label="Ambiente público IA Trevvos">
+      <a class="brand-lockup" href="/" aria-label="Trevvos homepage">
+        <img src="/assets/brand/processed/trevvos-symbol.webp" alt="" aria-hidden="true" />
+        <span class="brand-word" aria-hidden="true">
+          <span>TR</span>
+          <span class="brand-e">
+            <span></span>
+            <span></span>
+            <span></span>
+          </span>
+          <span>VVOS</span>
+        </span>
+        <span class="brand-divider" aria-hidden="true"></span>
+      </a>
+
+      <nav class="system-nav" aria-label="Navegação IA Trevvos">
+        <a [href]="text.cta.contactHref">{{ text.cta.secondary }}</a>
+        <a href="#ai-intents">Intenções</a>
+        <a href="#ai-principles">Princípios</a>
+      </nav>
+
+      <div class="system-signals ai-signal" aria-hidden="true">
+        <svg lucideBotMessageSquare></svg>
+      </div>
+    </header>
+
+    <div class="workspace ai-workspace">
+      <aside class="side-rail" aria-label="Navegação visual IA Trevvos">
+        <a class="nav-item" href="/contato" aria-label="Voltar para contato"><svg lucideArrowLeft aria-hidden="true"></svg></a>
+        <span class="rail-divider" aria-hidden="true"></span>
+        <a class="nav-item rail-active" href="#ai-title" aria-label="IA Trevvos"><svg lucideBotMessageSquare aria-hidden="true"></svg></a>
+        <a class="nav-item" href="#ai-intents" aria-label="Intenções identificadas"><svg lucideSearchCheck aria-hidden="true"></svg></a>
+        <a class="nav-item" href="#ai-principles" aria-label="Princípios da IA"><svg lucideCheck aria-hidden="true"></svg></a>
+      </aside>
+
+      <section class="ai-screen">
+        <section class="ai-hero">
+          <div class="ai-copy">
+            <p class="ai-eyebrow">{{ text.eyebrow }}</p>
+            <h1 id="ai-title">{{ text.title }}</h1>
+            <p class="ai-summary">{{ text.summary }}</p>
+            <a class="ai-primary" [href]="text.cta.contactHref">
+              {{ text.cta.primary }}
+              <span aria-hidden="true">→</span>
+            </a>
+          </div>
+
+          <div class="ai-panel" aria-label="Função da IA Trevvos">
+            <svg lucideNetwork aria-hidden="true"></svg>
+            <h2>Da pergunta ao caminho certo</h2>
+            <p>
+              A IA deve ler a intenção, recuperar contexto confiável e indicar se o melhor
+              próximo passo é produto, conteúdo, parceria, impacto ou atendimento direto.
+            </p>
+          </div>
+        </section>
+
+        <section id="ai-intents" class="ai-intents" aria-labelledby="ai-intents-title">
+          <div class="ai-section-heading">
+            <p class="ai-eyebrow">Triagem inteligente</p>
+            <h2 id="ai-intents-title">{{ text.intentsTitle }}</h2>
+          </div>
+
+          <div class="ai-intent-grid">
+            @for (intent of text.intents; track intent.title) {
+              <article class="ai-intent">
+                <svg lucideSearchCheck aria-hidden="true"></svg>
+                <h3>{{ intent.title }}</h3>
+                <p>{{ intent.text }}</p>
+              </article>
+            }
+          </div>
+        </section>
+
+        <section id="ai-principles" class="ai-principles" aria-labelledby="ai-principles-title">
+          <div>
+            <p class="ai-eyebrow">Controle</p>
+            <h2 id="ai-principles-title">{{ text.principlesTitle }}</h2>
+          </div>
+
+          <ul>
+            @for (principle of text.principles; track principle) {
+              <li>
+                <svg lucideCheck aria-hidden="true"></svg>
+                {{ principle }}
+              </li>
+            }
+          </ul>
+        </section>
+
+        <p class="ai-note">{{ text.note }}</p>
+      </section>
+    </div>
+  </div>
+</main>

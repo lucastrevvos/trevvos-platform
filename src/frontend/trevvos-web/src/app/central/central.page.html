@@ -1,0 +1,126 @@
+<main class="home central-page" aria-labelledby="central-title">
+  <div class="os-shell">
+    <header class="top-bar" aria-label="Ambiente público Central Trevvos">
+      <a class="brand-lockup" href="/" aria-label="Trevvos homepage">
+        <img src="/assets/brand/processed/trevvos-symbol.webp" alt="" aria-hidden="true" />
+        <span class="brand-word" aria-hidden="true">
+          <span>TR</span>
+          <span class="brand-e">
+            <span></span>
+            <span></span>
+            <span></span>
+          </span>
+          <span>VVOS</span>
+        </span>
+        <span class="brand-divider" aria-hidden="true"></span>
+      </a>
+
+      <nav class="system-nav" aria-label="Navegação Central Trevvos">
+        <a href="/">{{ text.cta.secondary }}</a>
+        <a href="#central-articles">Artigos</a>
+        <a href="#central-tracks">Trilhas</a>
+        <a href="#central-queue">Formatos</a>
+      </nav>
+
+      <div class="system-signals central-signal" aria-hidden="true">
+        <svg lucideLayers3></svg>
+      </div>
+    </header>
+
+    <div class="workspace central-workspace">
+      <aside class="side-rail" aria-label="Navegação visual Central Trevvos">
+        <a class="nav-item" href="/" aria-label="Voltar para a Home"><svg lucideArrowLeft aria-hidden="true"></svg></a>
+        <span class="rail-divider" aria-hidden="true"></span>
+        <a class="nav-item rail-active" href="#central-title" aria-label="Central Trevvos"><svg lucideLayers3 aria-hidden="true"></svg></a>
+        <a class="nav-item" href="#central-articles" aria-label="Artigos editoriais"><svg lucideFileText aria-hidden="true"></svg></a>
+        <a class="nav-item" href="#central-tracks" aria-label="Trilhas editoriais"><svg lucideBookOpen aria-hidden="true"></svg></a>
+        <a class="nav-item" href="#central-queue" aria-label="Próximos formatos"><svg lucideRoute aria-hidden="true"></svg></a>
+      </aside>
+
+      <section class="central-screen">
+        <section class="central-hero">
+          <div class="central-copy">
+            <p class="central-eyebrow">{{ text.eyebrow }}</p>
+            <h1 id="central-title">{{ text.title }}</h1>
+            <p class="central-summary">{{ text.summary }}</p>
+            <a class="central-primary" href="#central-tracks">
+              {{ text.cta.primary }}
+              <span aria-hidden="true">→</span>
+            </a>
+          </div>
+
+          <article class="central-featured">
+            <p>{{ text.featured.label }}</p>
+            <h2>{{ text.featured.title }}</h2>
+            <span aria-hidden="true"><svg lucideBrainCircuit></svg></span>
+            <p>{{ text.featured.text }}</p>
+          </article>
+        </section>
+
+        <section id="central-articles" class="central-articles" aria-labelledby="central-articles-title">
+          <div class="central-section-heading">
+            <p class="central-eyebrow">Publicações</p>
+            <h2 id="central-articles-title">Artigos editoriais</h2>
+          </div>
+
+          <div class="central-article-grid">
+            @for (article of articles; track article.id) {
+              <article class="central-article">
+                <div class="central-article-meta">
+                  <span>{{ article.category }}</span>
+                  <span><svg lucideFileText aria-hidden="true"></svg>{{ article.readingTime }}</span>
+                </div>
+                <h3>{{ article.title }}</h3>
+                <p>{{ article.summary }}</p>
+                <a class="central-article-link" [href]="'/central/' + article.slug">
+                  Ler artigo
+                  <span aria-hidden="true">→</span>
+                </a>
+                <ul aria-label="Tags do artigo">
+                  @for (tag of article.tags; track tag) {
+                    <li>{{ tag }}</li>
+                  }
+                </ul>
+              </article>
+            }
+          </div>
+        </section>
+
+        <section id="central-tracks" class="central-tracks" aria-labelledby="central-tracks-title">
+          <div class="central-section-heading">
+            <p class="central-eyebrow">Editorial</p>
+            <h2 id="central-tracks-title">{{ text.tracksTitle }}</h2>
+          </div>
+
+          <div class="central-track-grid">
+            @for (track of text.tracks; track track.title) {
+              <article class="central-track">
+                <svg lucideRoute aria-hidden="true"></svg>
+                <h3>{{ track.title }}</h3>
+                <p>{{ track.text }}</p>
+              </article>
+            }
+          </div>
+        </section>
+
+        <section id="central-queue" class="central-queue" aria-labelledby="central-queue-title">
+          <div>
+            <p class="central-eyebrow">Formatos editoriais</p>
+            <h2 id="central-queue-title">{{ text.queueTitle }}</h2>
+          </div>
+
+          <ul>
+            @for (item of text.queue; track item) {
+              <li>
+                <svg lucideFileText aria-hidden="true"></svg>
+                {{ item }}
+              </li>
+            }
+          </ul>
+        </section>
+
+        <p class="central-note">{{ text.note }}</p>
+      </section>
+    </div>
+  </div>
+</main>

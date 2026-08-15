@@ -1,0 +1,279 @@
+:host {
+  display: block;
+}
+
+.flow-page .system-signals {
+  border-color: rgba(36, 231, 255, 0.82);
+  box-shadow:
+    0 0 0 1px rgba(36, 231, 255, 0.16) inset,
+    0 0 24px rgba(36, 231, 255, 0.32);
+}
+
+.flow-page .system-signals img {
+  filter: drop-shadow(0 0 10px rgba(36, 231, 255, 0.56));
+}
+
+.flow-screen {
+  display: grid;
+  gap: 1rem;
+  min-width: 0;
+  padding: 2.2rem;
+}
+
+.flow-hero {
+  align-items: center;
+  background:
+    linear-gradient(90deg, rgba(2, 8, 15, 0.76) 0 34%, rgba(2, 8, 15, 0.32) 66%, rgba(2, 8, 15, 0.68)),
+    radial-gradient(circle at 76% 28%, rgba(36, 231, 255, 0.26), transparent 13rem),
+    url("/assets/home/trevvos-flow-bg.png") 58% 52% / cover no-repeat,
+    #03101c;
+  border: 1px solid rgba(36, 231, 255, 0.78);
+  border-radius: 8px;
+  box-shadow: 0 24px 80px rgba(0, 0, 0, 0.36);
+  display: grid;
+  gap: 1.6rem;
+  grid-template-columns: minmax(18rem, 0.66fr) minmax(25rem, 1fr);
+  min-height: 27rem;
+  overflow: hidden;
+  padding: 2.4rem;
+  position: relative;
+}
+
+.flow-hero::before {
+  background:
+    linear-gradient(90deg, rgba(2, 8, 15, 0.14), transparent 44%),
+    linear-gradient(135deg, transparent 0 63%, rgba(36, 231, 255, 0.1) 64%, transparent 70%);
+  content: "";
+  inset: 0;
+  pointer-events: none;
+  position: absolute;
+}
+
+.flow-hero > * {
+  position: relative;
+}
+
+.flow-eyebrow {
+  color: #37e9ff;
+  font-family: "Rajdhani", "Space Grotesk", sans-serif;
+  font-size: 0.92rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  margin: 0 0 0.75rem;
+  text-transform: uppercase;
+}
+
+.flow-copy h1,
+.flow-use-cases h2,
+.flow-card h2 {
+  color: #fff;
+  font-family: "Rajdhani", "Space Grotesk", sans-serif;
+  letter-spacing: 0;
+  text-transform: uppercase;
+}
+
+.flow-copy h1 {
+  font-size: clamp(2.1rem, 3.2vw, 3.55rem);
+  line-height: 1;
+  margin: 0 0 1rem;
+  max-width: 15ch;
+}
+
+.flow-summary {
+  border-left: 3px solid #37e9ff;
+  color: #c7dce6;
+  font-size: 1.05rem;
+  line-height: 1.56;
+  margin: 0 0 1.6rem;
+  max-width: 38rem;
+  padding-left: 1rem;
+}
+
+.flow-primary {
+  align-items: center;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.12), rgba(255, 255, 255, 0.03)),
+    rgba(2, 8, 15, 0.72);
+  border: 2px solid rgba(118, 224, 255, 0.9);
+  border-radius: 999px;
+  box-shadow: 0 0 34px rgba(36, 231, 255, 0.24);
+  color: #d7f8ff;
+  display: inline-flex;
+  font-family: "Rajdhani", "Space Grotesk", sans-serif;
+  font-weight: 700;
+  gap: 0.9rem;
+  min-height: 3.1rem;
+  padding: 0.5rem 1.35rem 0.5rem 1.65rem;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.flow-primary span {
+  border-left: 1px solid rgba(215, 248, 255, 0.35);
+  padding-left: 0.9rem;
+}
+
+.flow-showcase {
+  align-items: end;
+  background: rgba(1, 13, 24, 0.62);
+  border: 1px solid rgba(118, 224, 255, 0.28);
+  border-radius: 8px;
+  box-shadow:
+    0 0 54px rgba(36, 231, 255, 0.18),
+    inset 0 0 54px rgba(36, 231, 255, 0.05);
+  display: grid;
+  gap: 0.75rem;
+  grid-template-columns: 1.04fr 0.92fr 0.92fr;
+  min-height: 23rem;
+  overflow: hidden;
+  padding: 1rem;
+}
+
+.flow-card svg,
+.flow-use-cases svg {
+  color: #37e9ff;
+  height: 1.45rem;
+  width: 1.45rem;
+}
+
+.flow-shot {
+  aspect-ratio: 9 / 16;
+  border: 1px solid rgba(118, 224, 255, 0.26);
+  border-radius: 1.25rem;
+  box-shadow:
+    0 1.1rem 2.4rem rgba(0, 0, 0, 0.4),
+    0 0 1.6rem rgba(36, 231, 255, 0.12);
+  display: block;
+  height: auto;
+  object-fit: cover;
+  object-position: top center;
+  width: 100%;
+}
+
+.flow-shot-main {
+  border-color: rgba(55, 233, 255, 0.56);
+  box-shadow:
+    0 1.3rem 3rem rgba(0, 0, 0, 0.48),
+    0 0 2rem rgba(36, 231, 255, 0.24);
+  transform: translateY(-0.55rem);
+}
+
+.flow-shot-tail {
+  transform: translateY(0.55rem);
+}
+
+.flow-sections {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.flow-card,
+.flow-use-cases,
+.flow-note {
+  background: rgba(3, 13, 23, 0.74);
+  border: 1px solid rgba(155, 198, 224, 0.18);
+  border-radius: 8px;
+}
+
+.flow-card {
+  min-height: 13rem;
+  padding: 1.35rem;
+}
+
+.flow-card h2 {
+  font-size: 1.65rem;
+  line-height: 0.96;
+  margin: 1rem 0 0.75rem;
+}
+
+.flow-card p,
+.flow-note {
+  color: #bdd2dc;
+  line-height: 1.52;
+}
+
+.flow-use-cases {
+  align-items: center;
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: 0.65fr 1fr;
+  padding: 1.45rem;
+}
+
+.flow-use-cases h2 {
+  font-size: 2.35rem;
+  line-height: 0.95;
+  margin: 0;
+}
+
+.flow-use-cases ul {
+  display: grid;
+  gap: 0.75rem;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.flow-use-cases li {
+  align-items: center;
+  background: rgba(255, 255, 255, 0.045);
+  border: 1px solid rgba(155, 198, 224, 0.16);
+  border-radius: 8px;
+  color: #e4f6ff;
+  display: flex;
+  gap: 0.7rem;
+  min-height: 3.3rem;
+  padding: 0.75rem;
+}
+
+.flow-note {
+  margin: 0;
+  padding: 1rem 1.2rem;
+}
+
+@media (max-width: 1050px) {
+  .flow-screen {
+    padding: 1.5rem;
+  }
+
+  .flow-hero,
+  .flow-sections,
+  .flow-use-cases {
+    grid-template-columns: 1fr;
+  }
+
+  .flow-hero {
+    min-height: auto;
+  }
+}
+
+@media (max-width: 640px) {
+  .flow-screen {
+    padding: 1rem 0.85rem 6.2rem;
+  }
+
+  .flow-hero {
+    padding: 1.25rem;
+  }
+
+  .flow-copy h1 {
+    font-size: 2.75rem;
+  }
+
+  .flow-summary {
+    font-size: 0.96rem;
+  }
+
+  .flow-showcase {
+    grid-template-columns: repeat(3, minmax(9.5rem, 1fr));
+    min-height: 19rem;
+    overflow-x: auto;
+    padding: 0.75rem;
+  }
+
+  .flow-use-cases ul {
+    grid-template-columns: 1fr;
+  }
+}

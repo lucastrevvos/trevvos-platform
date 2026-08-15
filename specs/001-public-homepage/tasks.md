@@ -25,11 +25,11 @@
 
 **Independent Test**: Build or run the homepage and verify the first visible content clearly presents Trevvos, gives KM One primary prominence, and avoids unsupported guarantees.
 
-- [ ] T006 [US1] Replace placeholder homepage copy with approved Brazilian Portuguese Trevvos and KM One content in `src/frontend/trevvos-web/src/app/i18n/messages.pt-BR.ts`, keeping KM One primary and excluding Copiloto KM One.
-- [ ] T007 [US1] Remove the backend health/status dependency from the public homepage component in `src/frontend/trevvos-web/src/app/home/home.page.ts` by dropping `HealthService`, `AsyncPipe`, and `backendStatus$` usage without deleting `src/frontend/trevvos-web/src/app/core/health/health.service.ts`.
-- [ ] T008 [US1] Replace the placeholder backend-status template with semantic homepage structure in `src/frontend/trevvos-web/src/app/home/home.page.html`, including one meaningful `h1`, Trevvos positioning, and a primary KM One section.
+- [X] T006 [US1] Replace placeholder homepage copy with approved Brazilian Portuguese Trevvos and KM One content in `src/frontend/trevvos-web/src/app/i18n/messages.pt-BR.ts`, keeping KM One primary and excluding Copiloto KM One.
+- [X] T007 [US1] Remove the backend health/status dependency from the public homepage component in `src/frontend/trevvos-web/src/app/home/home.page.ts` by dropping `HealthService`, `AsyncPipe`, and `backendStatus$` usage without deleting `src/frontend/trevvos-web/src/app/core/health/health.service.ts`.
+- [X] T008 [US1] Replace the placeholder backend-status template with semantic homepage structure in `src/frontend/trevvos-web/src/app/home/home.page.html`, including one meaningful `h1`, Trevvos positioning, and a primary KM One section.
 - [ ] T009 [US1] Add KM One supporting capability copy primarily to `src/frontend/trevvos-web/src/app/i18n/messages.pt-BR.ts` and render it semantically from that local message model in `src/frontend/trevvos-web/src/app/home/home.page.html`, using only the approved whitelist from `specs/001-public-homepage/spec.md` and without guaranteed rides, income, demand, savings, profitability or financial-result claims.
-- [ ] T010 [US1] Set a meaningful root homepage title and any required route metadata in `src/frontend/trevvos-web/src/app/app.routes.ts` so the public page is not exposed as a placeholder title.
+- [X] T010 [US1] Set a meaningful root homepage title and any required route metadata in `src/frontend/trevvos-web/src/app/app.routes.ts` so the public page is not exposed as a placeholder title.
 
 **Checkpoint**: User Story 1 is independently understandable and testable as the MVP homepage message.
 
@@ -41,10 +41,10 @@
 
 **Independent Test**: Inspect the generated or rendered page content and verify KM One and Trevvos Flow are distinct, truthful, accessible and proportionally prioritized.
 
-- [ ] T011 [US2] Add approved Trevvos Flow Brazilian Portuguese content to `src/frontend/trevvos-web/src/app/i18n/messages.pt-BR.ts`, limited to local/shared lists, shopping/task lists, progress tracking, collaboration, AI-oriented area, and user-selected intelligent suggestions.
-- [ ] T012 [US2] Add a secondary Trevvos Flow section with `id="trevvos-flow"` and an accessible section name in `src/frontend/trevvos-web/src/app/home/home.page.html`, rendering Trevvos Flow copy from `src/frontend/trevvos-web/src/app/i18n/messages.pt-BR.ts`.
-- [ ] T013 [US2] Add product comparison hierarchy in `src/frontend/trevvos-web/src/app/home/home.page.html` so KM One remains structurally and textually more prominent than Trevvos Flow.
-- [ ] T014 [US2] Review all homepage copy in `src/frontend/trevvos-web/src/app/i18n/messages.pt-BR.ts` and `src/frontend/trevvos-web/src/app/home/home.page.html` to ensure Copiloto KM One, autonomous AI action claims and unsupported availability/statistics are absent.
+- [X] T011 [US2] Add approved Trevvos Flow Brazilian Portuguese content to `src/frontend/trevvos-web/src/app/i18n/messages.pt-BR.ts`, limited to local/shared lists, shopping/task lists, progress tracking, collaboration, AI-oriented area, and user-selected intelligent suggestions.
+- [X] T012 [US2] Add a secondary Trevvos Flow section with `id="trevvos-flow"` and an accessible section name in `src/frontend/trevvos-web/src/app/home/home.page.html`, rendering Trevvos Flow copy from `src/frontend/trevvos-web/src/app/i18n/messages.pt-BR.ts`.
+- [X] T013 [US2] Add product comparison hierarchy in `src/frontend/trevvos-web/src/app/home/home.page.html` so KM One remains structurally and textually more prominent than Trevvos Flow.
+- [X] T014 [US2] Review all homepage copy in `src/frontend/trevvos-web/src/app/i18n/messages.pt-BR.ts` and `src/frontend/trevvos-web/src/app/home/home.page.html` to ensure Copiloto KM One, autonomous AI action claims and unsupported availability/statistics are absent.
 
 **Checkpoint**: User Story 2 is independently testable through accessible, indexable comparison content.
 
@@ -56,10 +56,10 @@
 
 **Independent Test**: Verify each CTA has clear copy and the approved destination behavior without requiring authentication, backend state or hidden interactions.
 
-- [ ] T015 [US3] Add CTA labels and accessibility text for KM One and Trevvos Flow in `src/frontend/trevvos-web/src/app/i18n/messages.pt-BR.ts`.
-- [ ] T016 [US3] Implement the KM One CTA as a normal external anchor to `https://kmone.trevvos.com.br/` in `src/frontend/trevvos-web/src/app/home/home.page.html`.
-- [ ] T017 [US3] Implement the Trevvos Flow CTA as a normal same-page anchor to `#trevvos-flow` in `src/frontend/trevvos-web/src/app/home/home.page.html`.
-- [ ] T018 [US3] Ensure homepage navigation and CTA semantics are keyboard-reachable and do not depend on JavaScript-only click handlers in `src/frontend/trevvos-web/src/app/home/home.page.html`.
+- [X] T015 [US3] Add CTA labels and accessibility text for KM One and Trevvos Flow in `src/frontend/trevvos-web/src/app/i18n/messages.pt-BR.ts`.
+- [X] T016 [US3] Implement the KM One CTA as a normal external anchor to `https://kmone.trevvos.com.br/` in `src/frontend/trevvos-web/src/app/home/home.page.html`.
+- [X] T017 [US3] Implement the Trevvos Flow CTA as a normal same-page anchor to `#trevvos-flow` in `src/frontend/trevvos-web/src/app/home/home.page.html`.
+- [X] T018 [US3] Ensure homepage navigation and CTA semantics are keyboard-reachable and do not depend on JavaScript-only click handlers in `src/frontend/trevvos-web/src/app/home/home.page.html`.
 
 **Checkpoint**: User Story 3 is independently testable through explicit CTA destination checks.
 
@@ -69,9 +69,9 @@
 
 **Purpose**: Apply the approved public homepage visual identity and responsive behavior across all user stories.
 
-- [ ] T019 Style the homepage with a dark, technical, product-oriented visual identity in `src/frontend/trevvos-web/src/app/home/home.page.css`, preserving readable text, visible focus states, and one clear hierarchy.
-- [ ] T020 Add mobile-first responsive layout rules in `src/frontend/trevvos-web/src/app/home/home.page.css` so reading order remains Trevvos introduction, KM One primary content, Trevvos Flow secondary content, then continuation/navigation.
-- [ ] T021 Ensure text wrapping, CTA layout, reduced-motion behavior if motion exists, and non-overlapping content at representative viewport widths in `src/frontend/trevvos-web/src/app/home/home.page.css`.
+- [X] T019 Style the homepage with a dark, technical, product-oriented visual identity in `src/frontend/trevvos-web/src/app/home/home.page.css`, preserving readable text, visible focus states, and one clear hierarchy.
+- [X] T020 Add mobile-first responsive layout rules in `src/frontend/trevvos-web/src/app/home/home.page.css` so reading order remains Trevvos introduction, KM One primary content, Trevvos Flow secondary content, then continuation/navigation.
+- [X] T021 Ensure text wrapping, CTA layout, reduced-motion behavior if motion exists, and non-overlapping content at representative viewport widths in `src/frontend/trevvos-web/src/app/home/home.page.css`.
 
 **Checkpoint**: The homepage is visually complete enough for responsive and accessibility review.
 
@@ -81,9 +81,9 @@
 
 **Purpose**: Cover the public homepage behavior and guardrails with the existing Angular unit-test setup without adding new test dependencies.
 
-- [ ] T022 Add or update homepage unit tests in `src/frontend/trevvos-web/src/app/home/home.page.spec.ts` to assert Trevvos, KM One, Trevvos Flow, one `h1`, `#trevvos-flow`, and approved CTA hrefs are rendered.
-- [ ] T023 Add or update homepage guardrail tests in `src/frontend/trevvos-web/src/app/home/home.page.spec.ts` to assert `Copiloto KM One`, backend health/status text, and guaranteed income/rides/demand claims are absent.
-- [ ] T024 Update app-level tests in `src/frontend/trevvos-web/src/app/app.spec.ts` only if SSG or route metadata changes require existing app test expectations to be adjusted.
+- [X] T022 Add or update homepage unit tests in `src/frontend/trevvos-web/src/app/home/home.page.spec.ts` to assert Trevvos, KM One, Trevvos Flow, one `h1`, `#trevvos-flow`, and approved CTA hrefs are rendered.
+- [X] T023 Add or update homepage guardrail tests in `src/frontend/trevvos-web/src/app/home/home.page.spec.ts` to assert `Copiloto KM One`, backend health/status text, and guaranteed income/rides/demand claims are absent.
+- [X] T024 Update app-level tests in `src/frontend/trevvos-web/src/app/app.spec.ts` only if SSG or route metadata changes require existing app test expectations to be adjusted.
 
 **Checkpoint**: Automated tests cover the homepage content, CTA and forbidden-content guardrails using the existing test stack.
 
@@ -93,14 +93,14 @@
 
 **Purpose**: Prove the approved generated-HTML and quality requirements before completion.
 
-- [ ] T025 Run `npm run build` in `src/frontend/trevvos-web/package.json` and confirm the production build succeeds within existing Angular budgets.
-- [ ] T026 Determine the actual generated root HTML artifact from `src/frontend/trevvos-web/angular.json` or the build output under `src/frontend/trevvos-web/dist/`, then inspect that generated HTML file to prove it contains `Trevvos`, `KM One`, and `Trevvos Flow`.
-- [ ] T027 Inspect the same generated root HTML artifact under `src/frontend/trevvos-web/dist/` to prove `Copiloto KM One`, backend health/status copy, and unsupported guarantee terms are absent.
-- [ ] T028 Run `npm test` in `src/frontend/trevvos-web/package.json` and confirm the Angular unit test suite passes.
-- [ ] T029 Perform the manual product-truth review against `specs/001-public-homepage/spec.md` and `specs/001-public-homepage/contracts/homepage-ui.md`, confirming 100% of homepage claims trace to approved sources.
-- [ ] T030 Perform the manual accessibility review from `specs/001-public-homepage/quickstart.md`, confirming meaningful title, one primary heading, semantic sections, keyboard-reachable CTAs, visible focus states and understandable content without images or backend status.
-- [ ] T031 Run or open the implemented homepage from `src/frontend/trevvos-web`, inspect the rendered UI at approximately 360px, 768px and 1280px, and verify reading order, KM One/Trevvos Flow hierarchy, text wrapping, CTA layout, and absence of overflow or overlap.
-- [ ] T032 Perform the CTA validation from `specs/001-public-homepage/quickstart.md`, confirming the KM One CTA points to `https://kmone.trevvos.com.br/` and the Trevvos Flow CTA navigates to `#trevvos-flow`.
+- [X] T025 Run `npm run build` in `src/frontend/trevvos-web/package.json` and confirm the production build succeeds within existing Angular budgets.
+- [X] T026 Determine the actual generated root HTML artifact from `src/frontend/trevvos-web/angular.json` or the build output under `src/frontend/trevvos-web/dist/`, then inspect that generated HTML file to prove it contains `Trevvos`, `KM One`, and `Trevvos Flow`.
+- [X] T027 Inspect the same generated root HTML artifact under `src/frontend/trevvos-web/dist/` to prove `Copiloto KM One`, backend health/status copy, and unsupported guarantee terms are absent.
+- [X] T028 Run `npm test` in `src/frontend/trevvos-web/package.json` and confirm the Angular unit test suite passes.
+- [X] T029 Perform the manual product-truth review against `specs/001-public-homepage/spec.md` and `specs/001-public-homepage/contracts/homepage-ui.md`, confirming 100% of homepage claims trace to approved sources.
+- [X] T030 Perform the manual accessibility review from `specs/001-public-homepage/quickstart.md`, confirming meaningful title, one primary heading, semantic sections, keyboard-reachable CTAs, visible focus states and understandable content without images or backend status.
+- [X] T031 Run or open the implemented homepage from `src/frontend/trevvos-web`, inspect the rendered UI at approximately 360px, 768px and 1280px, and verify reading order, KM One/Trevvos Flow hierarchy, text wrapping, CTA layout, and absence of overflow or overlap.
+- [X] T032 Perform the CTA validation from `specs/001-public-homepage/quickstart.md`, confirming the KM One CTA points to `https://kmone.trevvos.com.br/` and the Trevvos Flow CTA navigates to `#trevvos-flow`.
 
 **Checkpoint**: Build, tests, generated HTML inspection, product-truth review, accessibility review, responsive review and CTA validation are complete and reported.
 
@@ -166,3 +166,4 @@
 - Keep `src/frontend/trevvos-web/src/app/home/home.page.html` focused on semantic structure and rendering from the local message model instead of scattering product copy across hard-coded template strings.
 - Do not delete `src/frontend/trevvos-web/src/app/core/health/health.service.ts` unless a concrete compile/test dependency later proves a minimal change is necessary.
 - Do not hard-code a dist path into application code; generated HTML validation must determine the actual artifact from Angular configuration or build output.
+- Visual implementation currently lives in `src/frontend/trevvos-web/src/styles.css` after interactive design iteration, while `src/frontend/trevvos-web/src/app/home/home.page.css` remains a component placeholder.

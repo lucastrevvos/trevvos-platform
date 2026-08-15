@@ -1,0 +1,89 @@
+<main class="home article-page" aria-labelledby="article-title">
+  <div class="os-shell">
+    <header class="top-bar" aria-label="Artigo da Central Trevvos">
+      <a class="brand-lockup" href="/" aria-label="Trevvos homepage">
+        <img src="/assets/brand/processed/trevvos-symbol.webp" alt="" aria-hidden="true" />
+        <span class="brand-word" aria-hidden="true">
+          <span>TR</span>
+          <span class="brand-e">
+            <span></span>
+            <span></span>
+            <span></span>
+          </span>
+          <span>VVOS</span>
+        </span>
+        <span class="brand-divider" aria-hidden="true"></span>
+      </a>
+
+      <nav class="system-nav" aria-label="Navegação do artigo">
+        <a href="/central">Central</a>
+        <a href="/central#central-articles">Artigos</a>
+      </nav>
+
+      <div class="system-signals article-signal" aria-hidden="true">
+        <svg lucideBookOpen></svg>
+      </div>
+    </header>
+
+    <div class="workspace article-workspace">
+      <aside class="side-rail" aria-label="Navegação visual do artigo">
+        <a class="nav-item" href="/central" aria-label="Voltar para a Central"><svg lucideArrowLeft aria-hidden="true"></svg></a>
+        <span class="rail-divider" aria-hidden="true"></span>
+        <a class="nav-item rail-active" href="#article-title" aria-label="Topo do artigo"><svg lucideBookOpen aria-hidden="true"></svg></a>
+        <a class="nav-item" href="#article-content" aria-label="Conteúdo do artigo"><svg lucideFileText aria-hidden="true"></svg></a>
+      </aside>
+
+      <article class="article-screen">
+        @if (article) {
+          <header class="article-hero">
+            <div>
+              <p class="article-eyebrow">{{ article.category }}</p>
+              <h1 id="article-title">{{ article.title }}</h1>
+              <p class="article-summary">{{ article.summary }}</p>
+            </div>
+
+            <dl class="article-meta">
+              <div>
+                <dt>Tempo</dt>
+                <dd>{{ article.readingTime }}</dd>
+              </div>
+              <div>
+                <dt>Status</dt>
+                <dd>{{ article.status }}</dd>
+              </div>
+            </dl>
+          </header>
+
+          <section id="article-content" class="article-content" aria-label="Conteúdo do artigo">
+            @for (section of article.sections; track section.heading) {
+              <section>
+                <h2>{{ section.heading }}</h2>
+                <p>{{ section.body }}</p>
+              </section>
+            }
+          </section>
+
+          <footer class="article-footer">
+            <ul aria-label="Tags do artigo">
+              @for (tag of article.tags; track tag) {
+                <li>{{ tag }}</li>
+              }
+            </ul>
+
+            <a href="/central#central-articles">
+              Voltar para artigos
+              <span aria-hidden="true">→</span>
+            </a>
+          </footer>
+        } @else {
+          <section class="article-missing">
+            <p class="article-eyebrow">Central Trevvos</p>
+            <h1 id="article-title">Artigo não encontrado</h1>
+            <p>Esse artigo não está disponível na Central Trevvos.</p>
+            <a href="/central">Voltar para a Central</a>
+          </section>
+        }
+      </article>
+    </div>
+  </div>
+</main>

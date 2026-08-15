@@ -1,23 +1,171 @@
-<main class="home">
-  <section class="intro" aria-labelledby="page-title">
-    <p class="eyebrow">{{ text.eyebrow }}</p>
-    <h1 id="page-title">{{ text.title }}</h1>
-    <p class="summary">{{ text.summary }}</p>
-  </section>
+<main class="home" aria-labelledby="page-title">
+  <div class="os-shell">
+    <header class="top-bar" aria-label="Ambiente público Trevvos">
+      <a class="brand-lockup" href="/" aria-label="Trevvos homepage">
+        <img src="/assets/brand/processed/trevvos-symbol.webp" alt="" aria-hidden="true" />
+        <span class="brand-word" aria-hidden="true">
+          <span>TR</span>
+          <span class="brand-e">
+            <span></span>
+            <span></span>
+            <span></span>
+          </span>
+          <span>VVOS</span>
+        </span>
+        <span class="brand-divider" aria-hidden="true"></span>
+      </a>
 
-  <section class="status" aria-labelledby="status-title">
-    <h2 id="status-title">{{ text.backendStatusTitle }}</h2>
+      <nav class="system-nav" aria-label="Módulos Trevvos">
+        <a href="#km-one-title">{{ text.nav.kmOne }}</a>
+        <a href="#trevvos-flow">{{ text.nav.flow }}</a>
+        <a href="#central-trevvos">{{ text.nav.central }}</a>
+        <a href="#trevvos-impacto">{{ text.nav.impact }}</a>
+      </nav>
 
-    @if (backendStatus$ | async; as status) {
-      <p class="status-line" [class.available]="status === 'available'">
-        <span aria-hidden="true"></span>
-        {{ status === 'available' ? text.backendAvailable : text.backendUnavailable }}
-      </p>
-    } @else {
-      <p class="status-line">
-        <span aria-hidden="true"></span>
-        {{ text.backendChecking }}
-      </p>
-    }
-  </section>
+      <div class="system-signals" aria-hidden="true">
+        <img src="/assets/brand/processed/trevvos-symbol.webp" alt="" />
+      </div>
+    </header>
+
+    <div class="workspace">
+      <aside class="side-rail" aria-label="Navegação visual Trevvos OS">
+        <a class="nav-item rail-active" href="#page-title" aria-label="Início"><svg lucideHome aria-hidden="true"></svg></a>
+        <span class="rail-divider" aria-hidden="true"></span>
+        <a class="nav-item nav-brand" href="#km-one-title" aria-label="KM One">
+          <img class="nav-logo nav-logo-km" src="/assets/brand/processed/km-one-symbol.webp" alt="" aria-hidden="true" />
+        </a>
+        <a class="nav-item nav-brand" href="#trevvos-flow" aria-label="Trevvos Flow">
+          <img class="nav-logo nav-logo-flow" src="/assets/brand/processed/trevvos-flow-symbol.webp" alt="" aria-hidden="true" />
+        </a>
+        <a class="nav-item" href="#central-trevvos" aria-label="Central Trevvos"><svg lucideLayers3 aria-hidden="true"></svg></a>
+        <a class="nav-item" href="#trevvos-impacto" aria-label="Trevvos Impacto"><svg lucideNetwork aria-hidden="true"></svg></a>
+        <span class="rail-divider" aria-hidden="true"></span>
+        <a class="nav-item nav-ai" href="/ia" aria-label="IA Trevvos"><svg lucideBotMessageSquare aria-hidden="true"></svg></a>
+        <a class="nav-item" href="/contato" aria-label="Contato Trevvos"><svg lucideMail aria-hidden="true"></svg></a>
+        <a class="nav-item" href="https://chat.whatsapp.com/K1cepLtEEoY6pScVRTNvg9" target="_blank" rel="noopener" aria-label="Grupo de testadores no WhatsApp"><svg lucideUsersRound aria-hidden="true"></svg></a>
+        <span class="rail-divider" aria-hidden="true"></span>
+        <a class="nav-item" href="https://open.spotify.com/show/7xvDpbP6wuoZi8coSgTFkY" target="_blank" rel="noopener" aria-label="Podcast Trevvos no Spotify"><svg lucideAudioLines aria-hidden="true"></svg></a>
+        <a class="nav-item brand-social" href="https://www.instagram.com/trevvos.ia/" target="_blank" rel="noopener" aria-label="Instagram Trevvos IA">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <rect x="5" y="5" width="14" height="14" rx="4"></rect>
+            <circle cx="12" cy="12" r="3.2"></circle>
+            <circle cx="16.5" cy="7.7" r="0.7"></circle>
+          </svg>
+        </a>
+        <a class="nav-item brand-social brand-linkedin" href="https://www.linkedin.com/company/trevvos/" target="_blank" rel="noopener" aria-label="LinkedIn Trevvos">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <rect x="3.8" y="3.8" width="16.4" height="16.4" rx="3.2"></rect>
+            <circle class="linkedin-glyph" cx="7.7" cy="8" r="1.05"></circle>
+            <path class="linkedin-glyph" d="M6.65 10.3h2.1v6.7h-2.1z"></path>
+            <path class="linkedin-glyph" d="M10.75 10.3h2.02v.92c.43-.65 1.13-1.08 2.15-1.08 1.98 0 3.05 1.29 3.05 3.57V17h-2.1v-3.05c0-1.14-.45-1.82-1.36-1.82-.95 0-1.66.69-1.66 1.97V17h-2.1z"></path>
+          </svg>
+        </a>
+      </aside>
+
+      <section class="home-screen" aria-labelledby="page-title">
+        <div class="hero-copy">
+          <p class="eyebrow">Trevvos OS</p>
+          <h1 id="page-title">{{ text.title }}</h1>
+          <p class="summary">{{ text.summary }}</p>
+        </div>
+
+        <section class="module-grid" aria-label="Ecossistema Trevvos">
+          <article class="module module-km" aria-labelledby="km-one-title">
+            <span class="module-route km-route" aria-hidden="true"></span>
+            <span class="module-pin" aria-hidden="true"></span>
+            <div class="module-logo module-logo-km">
+              <img src="/assets/brand/processed/km-one-symbol.webp" alt="" aria-hidden="true" />
+            </div>
+            <p class="eyebrow">{{ text.kmOne.priority }}</p>
+            <h2 id="km-one-title">{{ text.kmOne.name }}</h2>
+            <p class="module-type">Mobilidade</p>
+            <p>{{ text.kmOne.summary }}</p>
+            <a class="module-action" [href]="text.kmOne.cta.href" [attr.aria-label]="text.kmOne.cta.ariaLabel">
+              {{ text.kmOne.cta.label }}
+              <span aria-hidden="true">&rarr;</span>
+            </a>
+            <a
+              class="module-social-link"
+              [href]="text.kmOne.instagram.href"
+              target="_blank"
+              rel="noopener"
+              [attr.aria-label]="text.kmOne.instagram.ariaLabel"
+            >
+              {{ text.kmOne.instagram.label }}
+            </a>
+          </article>
+
+          <article id="trevvos-flow" class="module module-flow" aria-labelledby="trevvos-flow-title">
+            <span class="flow-wave" aria-hidden="true"></span>
+            <div class="module-logo">
+              <img src="/assets/brand/processed/trevvos-flow-symbol.webp" alt="" aria-hidden="true" />
+            </div>
+            <p class="eyebrow">{{ text.trevvosFlow.priority }}</p>
+            <h2 id="trevvos-flow-title">{{ text.trevvosFlow.name }}</h2>
+            <p class="module-type">IA</p>
+            <p class="module-description">{{ text.trevvosFlow.summary }}</p>
+            <a class="module-action" [href]="text.trevvosFlow.cta.href" [attr.aria-label]="text.trevvosFlow.cta.ariaLabel">
+              {{ text.trevvosFlow.cta.label }}
+              <span aria-hidden="true">&rarr;</span>
+            </a>
+          </article>
+
+          <article id="central-trevvos" class="module module-small module-central" aria-labelledby="central-trevvos-title">
+            <div class="mini-mark" aria-hidden="true"><svg lucideLayers3></svg></div>
+            <p class="eyebrow">{{ text.central.priority }}</p>
+            <h2 id="central-trevvos-title">{{ text.central.name }}</h2>
+            <p class="module-type">Editorial</p>
+            <p>{{ text.central.summary }}</p>
+            <a class="module-action" [href]="text.central.cta.href" [attr.aria-label]="text.central.cta.ariaLabel">
+              {{ text.central.cta.label }}
+              <span aria-hidden="true">&rarr;</span>
+            </a>
+          </article>
+
+          <article id="trevvos-impacto" class="module module-small module-impact" aria-labelledby="trevvos-impacto-title">
+            <div class="mini-mark mini-blue" aria-hidden="true"><svg lucideNetwork></svg></div>
+            <p class="eyebrow">{{ text.impact.priority }}</p>
+            <h2 id="trevvos-impacto-title">{{ text.impact.name }}</h2>
+            <p class="module-type">Comunidades</p>
+            <p>{{ text.impact.summary }}</p>
+            <a class="module-action" [href]="text.impact.cta.href" [attr.aria-label]="text.impact.cta.ariaLabel">
+              {{ text.impact.cta.label }}
+              <span aria-hidden="true">&rarr;</span>
+            </a>
+          </article>
+        </section>
+
+        <nav class="bottom-dock" aria-label="Atalhos visuais Trevvos OS">
+          <a class="nav-item" href="#page-title" aria-label="Início"><svg lucideHome aria-hidden="true"></svg></a>
+          <a class="nav-item nav-brand" href="#km-one-title" aria-label="KM One">
+            <img class="nav-logo nav-logo-km" src="/assets/brand/processed/km-one-symbol.webp" alt="" aria-hidden="true" />
+          </a>
+          <a class="nav-item nav-brand" href="#trevvos-flow" aria-label="Trevvos Flow">
+            <img class="nav-logo nav-logo-flow" src="/assets/brand/processed/trevvos-flow-symbol.webp" alt="" aria-hidden="true" />
+          </a>
+          <a class="nav-item" href="#central-trevvos" aria-label="Central Trevvos"><svg lucideLayers3 aria-hidden="true"></svg></a>
+          <a class="nav-item" href="#trevvos-impacto" aria-label="Trevvos Impacto"><svg lucideNetwork aria-hidden="true"></svg></a>
+          <a class="nav-item nav-ai" href="/ia" aria-label="IA Trevvos"><svg lucideBotMessageSquare aria-hidden="true"></svg></a>
+          <a class="nav-item" href="/contato" aria-label="Contato Trevvos"><svg lucideMail aria-hidden="true"></svg></a>
+          <a class="nav-item" href="https://chat.whatsapp.com/K1cepLtEEoY6pScVRTNvg9" target="_blank" rel="noopener" aria-label="Grupo de testadores no WhatsApp"><svg lucideUsersRound aria-hidden="true"></svg></a>
+          <a class="nav-item" href="https://open.spotify.com/show/7xvDpbP6wuoZi8coSgTFkY" target="_blank" rel="noopener" aria-label="Podcast Trevvos no Spotify"><svg lucideAudioLines aria-hidden="true"></svg></a>
+          <a class="nav-item brand-social" href="https://www.instagram.com/trevvos.ia/" target="_blank" rel="noopener" aria-label="Instagram Trevvos IA">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <rect x="5" y="5" width="14" height="14" rx="4"></rect>
+              <circle cx="12" cy="12" r="3.2"></circle>
+              <circle cx="16.5" cy="7.7" r="0.7"></circle>
+            </svg>
+          </a>
+          <a class="nav-item brand-social brand-linkedin" href="https://www.linkedin.com/company/trevvos/" target="_blank" rel="noopener" aria-label="LinkedIn Trevvos">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <rect x="3.8" y="3.8" width="16.4" height="16.4" rx="3.2"></rect>
+              <circle class="linkedin-glyph" cx="7.7" cy="8" r="1.05"></circle>
+              <path class="linkedin-glyph" d="M6.65 10.3h2.1v6.7h-2.1z"></path>
+              <path class="linkedin-glyph" d="M10.75 10.3h2.02v.92c.43-.65 1.13-1.08 2.15-1.08 1.98 0 3.05 1.29 3.05 3.57V17h-2.1v-3.05c0-1.14-.45-1.82-1.36-1.82-.95 0-1.66.69-1.66 1.97V17h-2.1z"></path>
+            </svg>
+          </a>
+        </nav>
+      </section>
+    </div>
+  </div>
 </main>

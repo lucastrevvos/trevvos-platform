@@ -1,0 +1,104 @@
+<main class="home contact-page" aria-labelledby="contact-title">
+  <div class="os-shell">
+    <header class="top-bar" aria-label="Ambiente público de contato Trevvos">
+      <a class="brand-lockup" href="/" aria-label="Trevvos homepage">
+        <img src="/assets/brand/processed/trevvos-symbol.webp" alt="" aria-hidden="true" />
+        <span class="brand-word" aria-hidden="true">
+          <span>TR</span>
+          <span class="brand-e">
+            <span></span>
+            <span></span>
+            <span></span>
+          </span>
+          <span>VVOS</span>
+        </span>
+        <span class="brand-divider" aria-hidden="true"></span>
+      </a>
+
+      <nav class="system-nav" aria-label="Navegação de contato">
+        <a href="/">{{ text.cta.secondary }}</a>
+        <a href="/ia">IA Trevvos</a>
+        <a href="#contact-channels">Assuntos</a>
+        <a href="#contact-direct">Canais</a>
+      </nav>
+
+      <div class="system-signals contact-signal" aria-hidden="true">
+        <svg lucideMail></svg>
+      </div>
+    </header>
+
+    <div class="workspace contact-workspace">
+      <aside class="side-rail" aria-label="Navegação visual de contato">
+        <a class="nav-item" href="/" aria-label="Voltar para a Home"><svg lucideArrowLeft aria-hidden="true"></svg></a>
+        <span class="rail-divider" aria-hidden="true"></span>
+        <a class="nav-item rail-active" href="#contact-title" aria-label="Contato Trevvos"><svg lucideMail aria-hidden="true"></svg></a>
+        <a class="nav-item" href="/ia" aria-label="IA Trevvos"><svg lucideBotMessageSquare aria-hidden="true"></svg></a>
+        <a class="nav-item" href="#contact-channels" aria-label="Caminhos de conversa"><svg lucideNetwork aria-hidden="true"></svg></a>
+        <a class="nav-item" href="#contact-direct" aria-label="Canais diretos"><svg lucideSend aria-hidden="true"></svg></a>
+      </aside>
+
+      <section class="contact-screen">
+        <section class="contact-hero">
+          <div class="contact-copy">
+            <p class="contact-eyebrow">{{ text.eyebrow }}</p>
+            <h1 id="contact-title">{{ text.title }}</h1>
+            <p class="contact-summary">{{ text.summary }}</p>
+            <a class="contact-primary" [href]="text.cta.mailHref">
+              {{ text.cta.primary }}
+              <span aria-hidden="true">→</span>
+            </a>
+          </div>
+
+          <div class="contact-panel" aria-label="Resumo de contato Trevvos">
+            <svg lucideBotMessageSquare aria-hidden="true"></svg>
+            <h2>Conversa certa, caminho claro</h2>
+            <p>
+              A Trevvos centraliza o primeiro contato para direcionar produto, conteúdo,
+              parcerias e iniciativas de impacto sem criar etapas desnecessárias.
+            </p>
+          </div>
+        </section>
+
+        <section id="contact-channels" class="contact-channels" aria-labelledby="contact-channels-title">
+          <div class="contact-section-heading">
+            <p class="contact-eyebrow">Assuntos</p>
+            <h2 id="contact-channels-title">{{ text.channelsTitle }}</h2>
+          </div>
+
+          <div class="contact-channel-grid">
+            @for (channel of text.channels; track channel.title) {
+              <article class="contact-channel">
+                <svg lucideNetwork aria-hidden="true"></svg>
+                <h3>{{ channel.title }}</h3>
+                <p>{{ channel.text }}</p>
+              </article>
+            }
+          </div>
+        </section>
+
+        <section id="contact-direct" class="contact-direct" aria-labelledby="contact-direct-title">
+          <div>
+            <p class="contact-eyebrow">Canais</p>
+            <h2 id="contact-direct-title">Acessos diretos</h2>
+          </div>
+
+          <div class="contact-card-grid">
+            @for (card of text.contactCards; track card.label) {
+              <a
+                class="contact-card"
+                [href]="card.href"
+                [attr.target]="card.href.startsWith('http') ? '_blank' : null"
+                [attr.rel]="card.href.startsWith('http') ? 'noopener' : null"
+              >
+                <span>{{ card.label }}</span>
+                <strong>{{ card.value }}</strong>
+              </a>
+            }
+          </div>
+        </section>
+
+        <p class="contact-note">{{ text.note }}</p>
+      </section>
+    </div>
+  </div>
+</main>

@@ -1,0 +1,272 @@
+:host {
+  display: block;
+}
+
+.contact-page .contact-signal {
+  border-color: rgba(36, 231, 255, 0.74);
+  box-shadow:
+    0 0 0 1px rgba(36, 231, 255, 0.14) inset,
+    0 0 24px rgba(36, 231, 255, 0.24);
+}
+
+.contact-page .contact-signal svg {
+  color: #37e9ff;
+  height: 1.55rem;
+  width: 1.55rem;
+}
+
+.contact-screen {
+  display: grid;
+  gap: 1rem;
+  min-width: 0;
+  padding: 2.2rem;
+}
+
+.contact-hero {
+  align-items: stretch;
+  background:
+    linear-gradient(90deg, rgba(2, 8, 15, 0.88) 0 36%, rgba(2, 8, 15, 0.44) 68%, rgba(2, 8, 15, 0.78)),
+    radial-gradient(circle at 76% 28%, rgba(36, 231, 255, 0.24), transparent 12rem),
+    linear-gradient(135deg, rgba(125, 255, 108, 0.08), transparent 44%),
+    #03101c;
+  border: 1px solid rgba(36, 231, 255, 0.64);
+  border-radius: 8px;
+  box-shadow: 0 24px 80px rgba(0, 0, 0, 0.36);
+  display: grid;
+  gap: 1.4rem;
+  grid-template-columns: minmax(18rem, 0.82fr) minmax(18rem, 0.62fr);
+  min-height: 25rem;
+  overflow: hidden;
+  padding: 2.4rem;
+  position: relative;
+}
+
+.contact-hero::before {
+  background:
+    linear-gradient(135deg, transparent 0 64%, rgba(36, 231, 255, 0.1) 65%, transparent 71%),
+    repeating-linear-gradient(90deg, rgba(55, 233, 255, 0.06) 0 1px, transparent 1px 6rem);
+  content: "";
+  inset: 0;
+  opacity: 0.7;
+  pointer-events: none;
+  position: absolute;
+}
+
+.contact-hero > * {
+  position: relative;
+}
+
+.contact-eyebrow {
+  color: #37e9ff;
+  font-family: "Rajdhani", "Space Grotesk", sans-serif;
+  font-size: 0.92rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  margin: 0 0 0.75rem;
+  text-transform: uppercase;
+}
+
+.contact-copy h1,
+.contact-panel h2,
+.contact-section-heading h2,
+.contact-direct h2,
+.contact-channel h3 {
+  color: #fff;
+  font-family: "Rajdhani", "Space Grotesk", sans-serif;
+  letter-spacing: 0;
+  text-transform: uppercase;
+}
+
+.contact-copy h1 {
+  font-size: clamp(2.25rem, 4vw, 4.4rem);
+  line-height: 0.98;
+  margin: 0 0 1rem;
+  max-width: 12ch;
+}
+
+.contact-summary {
+  border-left: 3px solid #37e9ff;
+  color: #c7dce6;
+  font-size: 1.05rem;
+  line-height: 1.56;
+  margin: 0 0 1.6rem;
+  max-width: 42rem;
+  padding-left: 1rem;
+}
+
+.contact-primary {
+  align-items: center;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.12), rgba(255, 255, 255, 0.03)),
+    rgba(2, 8, 15, 0.72);
+  border: 2px solid rgba(118, 224, 255, 0.9);
+  border-radius: 999px;
+  box-shadow: 0 0 34px rgba(36, 231, 255, 0.24);
+  color: #d7f8ff;
+  display: inline-flex;
+  font-family: "Rajdhani", "Space Grotesk", sans-serif;
+  font-weight: 700;
+  gap: 0.9rem;
+  min-height: 3.1rem;
+  padding: 0.5rem 1.35rem 0.5rem 1.65rem;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.contact-primary span {
+  border-left: 1px solid rgba(215, 248, 255, 0.35);
+  padding-left: 0.9rem;
+}
+
+.contact-panel {
+  align-self: end;
+  background: rgba(1, 13, 24, 0.72);
+  border: 1px solid rgba(118, 224, 255, 0.28);
+  border-radius: 8px;
+  box-shadow:
+    0 0 54px rgba(36, 231, 255, 0.16),
+    inset 0 0 54px rgba(36, 231, 255, 0.05);
+  display: grid;
+  gap: 0.85rem;
+  min-height: 17rem;
+  padding: 1.45rem;
+}
+
+.contact-panel svg,
+.contact-channel svg {
+  color: #37e9ff;
+  height: 1.45rem;
+  width: 1.45rem;
+}
+
+.contact-panel h2,
+.contact-section-heading h2,
+.contact-direct h2 {
+  font-size: 2.35rem;
+  line-height: 0.95;
+  margin: 0;
+}
+
+.contact-panel p,
+.contact-channel p,
+.contact-note {
+  color: #bdd2dc;
+  line-height: 1.52;
+}
+
+.contact-channels,
+.contact-direct,
+.contact-note {
+  background: rgba(3, 13, 23, 0.74);
+  border: 1px solid rgba(155, 198, 224, 0.18);
+  border-radius: 8px;
+}
+
+.contact-channels {
+  display: grid;
+  gap: 1rem;
+  padding: 1.45rem;
+}
+
+.contact-channel-grid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.contact-channel {
+  background: rgba(255, 255, 255, 0.045);
+  border: 1px solid rgba(155, 198, 224, 0.16);
+  border-radius: 8px;
+  min-height: 12rem;
+  padding: 1.2rem;
+}
+
+.contact-channel h3 {
+  font-size: 1.55rem;
+  line-height: 1;
+  margin: 1rem 0 0.75rem;
+}
+
+.contact-direct {
+  align-items: center;
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: 0.42fr 1fr;
+  padding: 1.45rem;
+}
+
+.contact-card-grid {
+  display: grid;
+  gap: 0.75rem;
+  grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
+}
+
+.contact-card {
+  background: rgba(255, 255, 255, 0.045);
+  border: 1px solid rgba(155, 198, 224, 0.16);
+  border-radius: 8px;
+  color: #e4f6ff;
+  display: grid;
+  gap: 0.35rem;
+  min-height: 5.2rem;
+  padding: 0.85rem;
+  text-decoration: none;
+}
+
+.contact-card span {
+  color: #37e9ff;
+  font-family: "Rajdhani", "Space Grotesk", sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.contact-card strong {
+  font-size: 1rem;
+}
+
+.contact-note {
+  margin: 0;
+  padding: 1rem 1.2rem;
+}
+
+@media (max-width: 1050px) {
+  .contact-screen {
+    padding: 1.5rem;
+  }
+
+  .contact-hero,
+  .contact-channel-grid,
+  .contact-direct,
+  .contact-card-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-hero {
+    min-height: auto;
+  }
+}
+
+@media (max-width: 640px) {
+  .contact-screen {
+    padding: 1rem 0.85rem 6.2rem;
+  }
+
+  .contact-hero {
+    padding: 1.25rem;
+  }
+
+  .contact-copy h1 {
+    font-size: 2.55rem;
+  }
+
+  .contact-summary {
+    font-size: 0.96rem;
+  }
+
+  .contact-panel h2,
+  .contact-section-heading h2,
+  .contact-direct h2 {
+    font-size: 2rem;
+  }
+}

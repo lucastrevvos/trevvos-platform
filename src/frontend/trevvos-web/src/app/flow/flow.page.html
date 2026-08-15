@@ -1,0 +1,102 @@
+<main class="home flow-page" aria-labelledby="flow-title">
+  <div class="os-shell">
+    <header class="top-bar" aria-label="Ambiente público Trevvos Flow">
+      <a class="brand-lockup" href="/" aria-label="Trevvos homepage">
+        <img src="/assets/brand/processed/trevvos-symbol.webp" alt="" aria-hidden="true" />
+        <span class="brand-word" aria-hidden="true">
+          <span>TR</span>
+          <span class="brand-e">
+            <span></span>
+            <span></span>
+            <span></span>
+          </span>
+          <span>VVOS</span>
+        </span>
+        <span class="brand-divider" aria-hidden="true"></span>
+      </a>
+
+      <nav class="system-nav" aria-label="Navegação Trevvos Flow">
+        <a href="/">{{ text.cta.secondary }}</a>
+        <a href="#flow-details">Detalhes</a>
+        <a href="#flow-use-cases">Casos de uso</a>
+      </nav>
+
+      <div class="system-signals" aria-hidden="true">
+        <img src="/assets/brand/processed/trevvos-flow-symbol.webp" alt="" />
+      </div>
+    </header>
+
+    <div class="workspace flow-workspace">
+      <aside class="side-rail" aria-label="Navegação visual Trevvos Flow">
+        <a class="nav-item" href="/" aria-label="Voltar para a Home"><svg lucideArrowLeft aria-hidden="true"></svg></a>
+        <span class="rail-divider" aria-hidden="true"></span>
+        <a class="nav-item rail-active nav-brand" href="#flow-title" aria-label="Trevvos Flow">
+          <img class="nav-logo nav-logo-flow" src="/assets/brand/processed/trevvos-flow-symbol.webp" alt="" aria-hidden="true" />
+        </a>
+        <a class="nav-item" href="#flow-details" aria-label="Detalhes do Flow"><svg lucideSparkles aria-hidden="true"></svg></a>
+        <a class="nav-item" href="#flow-use-cases" aria-label="Casos de uso do Flow"><svg lucideCheck aria-hidden="true"></svg></a>
+      </aside>
+
+      <section class="flow-screen">
+        <section class="flow-hero">
+          <div class="flow-copy">
+            <p class="flow-eyebrow">{{ text.eyebrow }}</p>
+            <h1 id="flow-title">{{ text.title }}</h1>
+            <p class="flow-summary">{{ text.summary }}</p>
+            <div class="flow-actions">
+              <a class="flow-primary" [href]="text.cta.playStoreHref" target="_blank" rel="noopener">
+                {{ text.cta.primary }}
+                <span aria-hidden="true">→</span>
+              </a>
+            </div>
+          </div>
+
+          <div class="flow-showcase" aria-label="Capturas de tela do Trevvos Flow no Android">
+            <img
+              class="flow-shot flow-shot-main"
+              src="/assets/flow/trevvos-flow-lists.jpeg"
+              alt="Tela inicial do Trevvos Flow com listas locais e compartilhadas"
+            />
+            <img
+              class="flow-shot"
+              src="/assets/flow/trevvos-flow-new-list.jpeg"
+              alt="Criação de nova lista no Trevvos Flow"
+            />
+            <img
+              class="flow-shot flow-shot-tail"
+              src="/assets/flow/trevvos-flow-tasks.jpeg"
+              alt="Lista de tarefas no Trevvos Flow"
+            />
+          </div>
+        </section>
+
+        <section id="flow-details" class="flow-sections" aria-label="Como o Trevvos Flow funciona">
+          @for (section of text.sections; track section.title) {
+            <article class="flow-card">
+              <svg lucideSparkles aria-hidden="true"></svg>
+              <h2>{{ section.title }}</h2>
+              <p>{{ section.text }}</p>
+            </article>
+          }
+        </section>
+
+        <section id="flow-use-cases" class="flow-use-cases" aria-labelledby="flow-use-cases-title">
+          <div>
+            <p class="flow-eyebrow">Aplicações</p>
+            <h2 id="flow-use-cases-title">{{ text.useCasesTitle }}</h2>
+          </div>
+          <ul>
+            @for (useCase of text.useCases; track useCase) {
+              <li>
+                <svg lucideCheck aria-hidden="true"></svg>
+                {{ useCase }}
+              </li>
+            }
+          </ul>
+        </section>
+
+        <p class="flow-note">{{ text.note }}</p>
+      </section>
+    </div>
+  </div>
+</main>
