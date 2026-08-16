@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { RouterLink } from '@angular/router';
 import {
   LucideAudioLines,
   LucideBotMessageSquare,
@@ -14,6 +15,7 @@ import { messages } from '../i18n/messages.pt-BR';
 @Component({
   selector: 'app-home-page',
   imports: [
+    RouterLink,
     LucideHome,
     LucideLayers3,
     LucideNetwork,
