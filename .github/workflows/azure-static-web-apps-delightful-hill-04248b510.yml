@@ -1,21 +1,32 @@
-name: Azure Static Web Apps CI/CD
+name: Deploy KM One Landing
 
 on:
   push:
     branches:
       - main
+    paths:
+      - "src/frontend/kmone-landing/**"
+      - ".github/workflows/azure-static-web-apps-delightful-hill-04248b510.yml"
   pull_request:
     types: [opened, synchronize, reopened, closed]
     branches:
       - main
+    paths:
+      - "src/frontend/kmone-landing/**"
+      - ".github/workflows/azure-static-web-apps-delightful-hill-04248b510.yml"
+  workflow_dispatch:
+
+concurrency:
+  group: kmone-landing-${{ github.ref }}
+  cancel-in-progress: true
 
 jobs:
   build_and_deploy_job:
     if: github.event_name == 'push' || (github.event_name == 'pull_request' && github.event.action != 'closed')
     runs-on: ubuntu-latest
-    name: Build and Deploy Job
+    name: Build and deploy KM One Landing
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
         with:
           submodules: true
           lfs: false
@@ -36,7 +47,7 @@ jobs:
   close_pull_request_job:
     if: github.event_name == 'pull_request' && github.event.action == 'closed'
     runs-on: ubuntu-latest
-    name: Close Pull Request Job
+    name: Close KM One preview
     steps:
       - name: Close Pull Request
         id: closepullrequest
