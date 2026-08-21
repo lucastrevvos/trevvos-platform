@@ -7,6 +7,7 @@ import { ContactPage } from './contact/contact.page';
 import { FlowPage } from './flow/flow.page';
 import { HomePage } from './home/home.page';
 import { ImpactPage } from './impact/impact.page';
+import { PrivacyPolicyPage } from './privacy-policy/privacy-policy.page';
 
 export const routes: Routes = [
   {
@@ -51,6 +52,15 @@ export const routes: Routes = [
     data: {
       description:
         'Página de contato da Trevvos para produtos, conteúdo editorial, parcerias e iniciativas de impacto.',
+    },
+  },
+  {
+    path: 'politica-de-privacidade',
+    component: PrivacyPolicyPage,
+    title: 'Política de Privacidade | KM One | Trevvos',
+    data: {
+      description:
+        'Política de Privacidade da Trevvos aplicável ao KM One, aplicativo desenvolvido pela Trevvos para motoristas profissionais.',
     },
   },
   {

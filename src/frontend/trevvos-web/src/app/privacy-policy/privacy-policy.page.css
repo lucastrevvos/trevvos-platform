@@ -1,0 +1,130 @@
+:host {
+  display: block;
+}
+
+.privacy-page .privacy-signal {
+  align-items: center;
+  border-color: rgba(36, 231, 255, 0.74);
+  box-shadow:
+    0 0 0 1px rgba(36, 231, 255, 0.14) inset,
+    0 0 24px rgba(36, 231, 255, 0.24);
+  color: #37e9ff;
+  display: inline-flex;
+  font-family: "Rajdhani", "Space Grotesk", sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  justify-content: center;
+  letter-spacing: 0;
+}
+
+.privacy-workspace {
+  align-items: stretch;
+}
+
+.privacy-document {
+  background:
+    linear-gradient(180deg, rgba(3, 13, 23, 0.92), rgba(2, 8, 15, 0.96)),
+    radial-gradient(circle at 82% 4rem, rgba(36, 231, 255, 0.16), transparent 16rem);
+  border: 1px solid rgba(155, 198, 224, 0.18);
+  border-radius: 8px;
+  color: #c7dce6;
+  display: grid;
+  gap: 1rem;
+  line-height: 1.62;
+  margin: 2.2rem;
+  max-width: 58rem;
+  min-width: 0;
+  padding: 2.4rem;
+}
+
+.privacy-hero {
+  border-bottom: 1px solid rgba(155, 198, 224, 0.18);
+  margin-bottom: 0.5rem;
+  padding-bottom: 1.6rem;
+}
+
+.privacy-eyebrow {
+  color: #37e9ff;
+  font-family: "Rajdhani", "Space Grotesk", sans-serif;
+  font-size: 0.92rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  margin: 0 0 0.75rem;
+  text-transform: uppercase;
+}
+
+.privacy-document h1,
+.privacy-document h2 {
+  color: #fff;
+  font-family: "Rajdhani", "Space Grotesk", sans-serif;
+  letter-spacing: 0;
+  margin: 0;
+  text-transform: uppercase;
+}
+
+.privacy-document h1 {
+  font-size: clamp(2.45rem, 5vw, 4.6rem);
+  line-height: 0.98;
+  max-width: 12ch;
+}
+
+.privacy-document h2 {
+  font-size: 1.65rem;
+  line-height: 1;
+  margin-bottom: 0.7rem;
+}
+
+.privacy-summary {
+  border-left: 3px solid #37e9ff;
+  color: #d7edf7;
+  font-size: 1.06rem;
+  margin: 1.2rem 0 0;
+  max-width: 45rem;
+  padding-left: 1rem;
+}
+
+.privacy-document section,
+.privacy-footer {
+  background: rgba(255, 255, 255, 0.035);
+  border: 1px solid rgba(155, 198, 224, 0.14);
+  border-radius: 8px;
+  padding: 1.2rem;
+}
+
+.privacy-document p {
+  margin: 0;
+}
+
+.privacy-document p + p {
+  margin-top: 0.8rem;
+}
+
+.privacy-document a {
+  color: #76e0ff;
+  font-weight: 700;
+}
+
+.privacy-footer {
+  margin-top: 0.4rem;
+}
+
+@media (max-width: 1050px) {
+  .privacy-document {
+    margin: 1.5rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .privacy-document {
+    margin: 1rem 0.85rem 6.2rem;
+    padding: 1.25rem;
+  }
+
+  .privacy-document h1 {
+    font-size: 2.6rem;
+  }
+
+  .privacy-document h2 {
+    font-size: 1.45rem;
+  }
+}

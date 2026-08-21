@@ -27,6 +27,10 @@ export const serverRoutes: ServerRoute[] = [
     renderMode: RenderMode.Prerender,
   },
   {
+    path: 'politica-de-privacidade',
+    renderMode: RenderMode.Prerender,
+  },
+  {
     path: 'ia',
     renderMode: RenderMode.Prerender,
   },
