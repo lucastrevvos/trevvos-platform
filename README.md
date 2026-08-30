@@ -1,56 +1,61 @@
 # Trevvos Platform
 
-Monorepo oficial da plataforma Trevvos: portal web, landing do KM One e backend central em .NET.
+**Main engineering platform for Trevvos products.**
 
-Este repositorio e a base principal do meu portfolio atual. Ele consolida produtos reais da Trevvos em uma unica estrutura, com frontends em Angular e backend em ASP.NET Core, evoluindo para APIs, banco relacional, autenticacao, integracoes e deploy em nuvem.
+This monorepo consolidates public web experiences and shared backend capabilities into a single codebase, with Angular frontends and a .NET backend evolving toward a sustainable product platform.
 
-## Por que este projeto existe
+## Why this repository exists
 
-A Trevvos nasceu como um ecossistema de produtos criados com apoio de IA, mas a direcao tecnica agora e transformar prototipos funcionais em sistemas sustentaveis.
+Trevvos started with independent product prototypes. As those products evolved, duplicated infrastructure and disconnected repositories became harder to maintain.
 
-Este monorepo mostra essa transicao:
+Trevvos Platform is the consolidation point:
 
-- frontends funcionais criados e organizados para produto real;
-- backend .NET construido com criterio, passo a passo e arquitetura clara;
-- documentacao de arquitetura, migracao e deploy;
-- consolidacao de repositorios antigos em uma plataforma unica;
-- evolucao orientada por portfolio, mercado e fundamentos tecnicos.
+- shared backend capabilities live in one .NET solution;
+- web applications are organized in one monorepo;
+- architecture and deployment decisions are documented;
+- legacy repositories can be retired without losing product history;
+- the platform can evolve incrementally instead of prematurely splitting into distributed services.
 
-## Produtos dentro da plataforma
+## Current applications
 
-### Portal Trevvos
+### Trevvos Web
 
-Frontend institucional e operacional da Trevvos, usado como porta de entrada para a marca, conteudos, produtos e futuras capturas de leads.
+Institutional and product-facing frontend for the Trevvos ecosystem.
 
 ### KM One Landing
 
-Landing mobile-first do KM One, produto para motoristas de app avaliarem se uma corrida vale a pena usando preco, distancia, R$/km, combustivel, deslocamento e contexto operacional.
+Public landing experience for KM One, a product focused on financial and operational decisions for app drivers.
 
 ### Trevvos API
 
-Backend central em .NET para sustentar portal, produtos, conteudo, dados, autenticacao, integracoes futuras e modulos compartilhados da plataforma.
+Shared .NET backend foundation for product APIs, persistence, authentication, integrations, and background processing as those capabilities are implemented.
 
-## Stack principal
+## Stack
 
-- **Backend:** C#, .NET, ASP.NET Core
-- **Arquitetura:** API, Application, Domain, Infrastructure, Worker
-- **Banco:** PostgreSQL, EF Core, Npgsql
-- **Frontend:** Angular, TypeScript
-- **Infra local:** Docker Compose
-- **Qualidade:** testes automatizados, documentacao e validacao por build
-- **Deploy planejado:** Azure
+### Backend
 
-## Estrutura
+- C#
+- .NET / ASP.NET Core
+- EF Core
+- PostgreSQL / Npgsql
 
-```text
-Trevvos Platform
-├── Backend
-│   └── Trevvos.Api
-├── Frontends
-│   ├── trevvos-web
-│   └── kmone-landing
-└── Tests
-```
+### Frontend
+
+- Angular
+- TypeScript
+
+### Local infrastructure
+
+- Docker Compose
+
+### Delivery direction
+
+- GitHub Actions
+- Azure
+
+> Azure deployment is part of the platform's delivery path and is being evolved incrementally. The repository documentation distinguishes current implementation from planned infrastructure.
+
+## Repository structure
 
 ```text
 src/
@@ -67,11 +72,7 @@ tests/
 docs/
 ```
 
-## Backend
-
-O backend consolidado veio do repositório legado `lucastrevvos/trevvos-api`, branch `feature/m0-platform-architecture`.
-
-Comandos principais:
+## Running the backend
 
 ```bash
 dotnet restore
@@ -80,9 +81,9 @@ dotnet test
 dotnet run --project src/backend/Trevvos.Api/Trevvos.Api.csproj
 ```
 
-## Frontends
+## Running the frontends
 
-Portal Trevvos:
+Trevvos Web:
 
 ```bash
 cd src/frontend/trevvos-web
@@ -91,7 +92,7 @@ npm run build
 npm test
 ```
 
-Landing KM One:
+KM One Landing:
 
 ```bash
 cd src/frontend/kmone-landing
@@ -100,18 +101,36 @@ npm run build
 npm run lint
 ```
 
-## Documentacao
+## Architecture approach
 
-- [`docs/repository-architecture.md`](docs/repository-architecture.md)
-- [`docs/migration-history.md`](docs/migration-history.md)
-- [`docs/azure-deployment-roadmap.md`](docs/azure-deployment-roadmap.md)
+The platform is intentionally evolving as a **modular product codebase** rather than starting with unnecessary service boundaries.
+
+The current priorities are:
+
+- clear domain and application responsibilities;
+- explicit infrastructure boundaries;
+- relational persistence;
+- testable backend behavior;
+- documented architecture decisions;
+- repeatable local development;
+- cloud delivery without coupling the domain to a provider.
+
+The architecture should grow when product pressure justifies it — not because a pattern is fashionable.
+
+## Documentation
+
+- [Repository architecture](docs/repository-architecture.md)
+- [Migration history](docs/migration-history.md)
+- [Azure deployment roadmap](docs/azure-deployment-roadmap.md)
 
 ## Status
 
-Em evolucao ativa.
+**Active development.**
 
-O objetivo atual e consolidar a base publica do portfolio, manter os frontends organizados e construir o backend .NET manualmente, com entendimento completo das decisoes tecnicas.
+The current focus is consolidating the public platform, strengthening the .NET backend, and moving product capabilities into the monorepo only when the migration is technically justified.
 
-## Fora do Monorepo
+The official KM One Android application remains outside this monorepo.
 
-`motor-kmone` permanece fora deste monorepo. O Android oficial nao faz parte desta consolidacao.
+---
+
+Built as the central engineering foundation for **Trevvos**.
