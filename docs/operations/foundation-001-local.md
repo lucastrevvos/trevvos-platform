@@ -49,7 +49,7 @@ Destroy the learning cluster with: `kind delete cluster --name trevvos-local`.
 
 ## Important support-window warning
 
-The existing .NET projects target `net8.0`; this first Dockerfile therefore uses ASP.NET 8 runtime until the migration PR. .NET 8 support ends **2026-11-10**. **Do not deploy this image to production.** Move to .NET 10 and revalidate EF Core/Npgsql before launch.
+Foundation 002 upgrades .NET projects, the API runtime, EF Core and Npgsql to supported .NET 10 packages. Passing a smoke test does **not** approve a production release: authentication, data protection, restore drills, deployment secrets and other release gates remain outstanding.
 
 Official references:
 - https://dotnet.microsoft.com/en-us/platform/support/policy
