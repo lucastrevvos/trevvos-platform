@@ -1,0 +1,7 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: trevvos-local
+  labels:
+    app.kubernetes.io/part-of: trevvos-platform
+    environment: local

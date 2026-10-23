@@ -1,0 +1,59 @@
+name: Foundation quality checks
+
+on:
+  pull_request:
+    paths:
+      - "src/backend/**"
+      - "tests/**"
+      - "global.json"
+      - "docker-compose.yml"
+      - "compose.local.yml"
+      - "ops/**"
+      - ".github/workflows/foundation-quality.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  dotnet:
+    name: .NET build and tests
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: |
+            8.0.x
+            10.0.x
+      - run: dotnet restore Trevvos.sln
+      - run: dotnet build Trevvos.sln --configuration Release --no-restore
+      - run: dotnet test Trevvos.sln --configuration Release --no-build --no-restore
+
+  local-infrastructure:
+    name: Validate Compose and build API image
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Validate Compose configuration
+        env:
+          POSTGRES_PASSWORD: ci_not_a_real_secret
+          RABBITMQ_DEFAULT_USER: ci_user
+          RABBITMQ_DEFAULT_PASS: ci_not_a_real_secret
+        run: docker compose -f docker-compose.yml -f compose.local.yml config --quiet
+      - name: Build API container
+        run: docker build -f src/backend/Trevvos.Api/Dockerfile -t trevvos-api:ci .
+      - name: Start API container and smoke-test HTTP health
+        run: |
+          docker run -d --name trevvos-api-smoke -p 127.0.0.1:18080:8080 trevvos-api:ci
+          for attempt in $(seq 1 20); do
+            if curl --fail --silent --show-error http://127.0.0.1:18080/health; then
+              exit 0
+            fi
+            sleep 2
+          done
+          docker logs trevvos-api-smoke
+          exit 1
+      - name: Stop smoke-test container
+        if: always()
+        run: docker rm -f trevvos-api-smoke || true
