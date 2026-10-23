@@ -43,3 +43,17 @@ jobs:
         run: docker compose -f docker-compose.yml -f compose.local.yml config --quiet
       - name: Build API container
         run: docker build -f src/backend/Trevvos.Api/Dockerfile -t trevvos-api:ci .
+      - name: Start API container and smoke-test HTTP health
+        run: |
+          docker run -d --name trevvos-api-smoke -p 127.0.0.1:18080:8080 trevvos-api:ci
+          for attempt in $(seq 1 20); do
+            if curl --fail --silent --show-error http://127.0.0.1:18080/health; then
+              exit 0
+            fi
+            sleep 2
+          done
+          docker logs trevvos-api-smoke
+          exit 1
+      - name: Stop smoke-test container
+        if: always()
+        run: docker rm -f trevvos-api-smoke || true
