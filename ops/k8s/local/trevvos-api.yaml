@@ -1,0 +1,66 @@
+# Local kind environment: serves only the API's health route; no customer data.
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: trevvos-api
+  namespace: trevvos-local
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: trevvos-api
+  template:
+    metadata:
+      labels:
+        app: trevvos-api
+    spec:
+      containers:
+        - name: api
+          image: trevvos-api:dev
+          imagePullPolicy: Never
+          ports:
+            - name: http
+              containerPort: 8080
+          env:
+            - name: ASPNETCORE_HTTP_PORTS
+              value: "8080"
+            - name: ASPNETCORE_ENVIRONMENT
+              value: Development
+          readinessProbe:
+            httpGet:
+              path: /health
+              port: http
+            initialDelaySeconds: 3
+            periodSeconds: 10
+          livenessProbe:
+            httpGet:
+              path: /health
+              port: http
+            initialDelaySeconds: 10
+            periodSeconds: 15
+          resources:
+            requests:
+              cpu: 50m
+              memory: 96Mi
+            limits:
+              cpu: 500m
+              memory: 256Mi
+          securityContext:
+            runAsNonRoot: true
+            allowPrivilegeEscalation: false
+            capabilities:
+              drop: ["ALL"]
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: trevvos-api
+  namespace: trevvos-local
+spec:
+  type: ClusterIP
+  selector:
+    app: trevvos-api
+  ports:
+    - name: http
+      port: 8080
+      targetPort: http
