@@ -6,7 +6,7 @@ COPY global.json ./
 COPY src/backend/ ./src/backend/
 RUN dotnet restore src/backend/Trevvos.Api/Trevvos.Api.csproj
 RUN dotnet publish src/backend/Trevvos.Api/Trevvos.Api.csproj \
-    --configuration Release --output /app/publish --no-restore --use-apphost false
+    --configuration Release --output /app/publish --no-restore -p:UseAppHost=false
 
 FROM mcr.microsoft.com/dotnet/aspnet:8.0 AS runtime
 WORKDIR /app
