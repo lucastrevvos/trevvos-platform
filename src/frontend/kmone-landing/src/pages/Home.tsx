@@ -1,15 +1,12 @@
-import { useForm, ValidationError } from "@formspree/react";
 import {
   ArrowRight,
   BarChart3,
   CheckCircle2,
-  Clock3,
   Fuel,
   Gauge,
   MapPinned,
   Radar,
   Route,
-  ShieldCheck,
   Smartphone,
   Sparkles,
   Target,
@@ -35,33 +32,33 @@ const pains = [
 const features = [
   {
     icon: Radar,
-    title: "Classificação de ofertas",
-    text: "Assim que a corrida é identificada, o KM One mostra se ela é boa, ruim ou vale atenção.",
+    title: "Análise de ofertas",
+    text: "Com a captura manual ou automática configurada, o KM One ajuda a analisar as ofertas identificadas. A decisão continua sendo sua.",
   },
   {
     icon: Target,
-    title: "Parâmetros do motorista",
-    text: "A análise considera as regras que você definiu para ganho mínimo, distância e objetivo do dia.",
+    title: "Copiloto por voz",
+    text: "Peça status, abra registros ou configurações, registre abastecimentos e use comandos de voz sem deixar de controlar o app.",
   },
   {
     icon: Route,
-    title: "Registro manual",
-    text: "Cadastre uma corrida manualmente quando uma oferta passar despercebida ou precisar de ajuste.",
+    title: "Registros e corridas particulares",
+    text: "Registre suas atividades, consulte o histórico e acompanhe também corridas particulares.",
   },
   {
     icon: Fuel,
-    title: "Abastecimentos",
-    text: "Registre custos de combustível e entenda o impacto no resultado do dia.",
+    title: "Abastecimento por voz",
+    text: "Diga, por exemplo, “abasteci 50 reais” para registrar gastos de combustível no KM One.",
   },
   {
     icon: BarChart3,
-    title: "Histórico avançado",
-    text: "Veja bruto, quilometragem, R$/km e desempenho por dia, semana, mês e aplicativo.",
+    title: "Metas e histórico",
+    text: "Defina a meta diária e acompanhe ganhos, registros e informações da sua operação.",
   },
   {
     icon: MapPinned,
-    title: "Tracking em tempo real",
-    text: "Contabilize deslocamentos sem passageiro e registre corridas particulares ao finalizar.",
+    title: "Deslocamento e km vazio",
+    text: "Inicie e encerre deslocamentos sem passageiro, acompanhe tempo e distância e mantenha esses registros separados dos ganhos.",
   },
 ];
 
@@ -69,7 +66,7 @@ const steps = [
   {
     icon: Smartphone,
     title: "A corrida é identificada",
-    text: "O KM One lê a oportunidade e prepara os dados relevantes para a decisão.",
+    text: "Ative os recursos necessários e escolha captura manual ou automática para analisar ofertas visíveis.",
   },
   {
     icon: Gauge,
@@ -79,7 +76,7 @@ const steps = [
   {
     icon: WalletCards,
     title: "Aceite com mais clareza",
-    text: "Você decide com um sinal direto: boa, ruim ou atenção, sem depender de achismo.",
+    text: "O KM One auxilia a análise; aceitar ou recusar a oferta permanece sob seu controle no aplicativo de corrida.",
   },
 ];
 
@@ -89,8 +86,6 @@ const roadmap = [
 ];
 
 export function Home() {
-  const [state, handleSubmit] = useForm("xyzebnjv");
-
   return (
     <div className="overflow-hidden">
       <section className="relative mx-auto grid min-h-[calc(100vh-104px)] w-full max-w-7xl items-center gap-12 px-4 pb-20 pt-8 sm:px-6 lg:grid-cols-[1.02fr_0.98fr] lg:px-8 lg:pb-28">
@@ -100,26 +95,28 @@ export function Home() {
         <div className="mx-auto max-w-2xl text-center lg:mx-0 lg:text-left">
           <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-[var(--border-soft)] bg-white/[0.04] px-4 py-2 text-sm font-semibold text-[var(--green-main)] shadow-[0_0_36px_rgba(32,242,122,0.10)]">
             <Sparkles className="h-4 w-4" />
-            Feito para motorista de aplicativo
+            Disponível para Android na Google Play
           </div>
 
           <h1 className="text-balance text-4xl font-black leading-[1.02] text-white sm:text-5xl lg:text-7xl">
-            O copiloto financeiro do motorista de aplicativo.
+            Seu copiloto na rua. Baixe o KM One.
           </h1>
 
           <p className="mt-6 text-pretty text-lg leading-8 text-[var(--text-muted)] sm:text-xl">
-            O KM One identifica ofertas da Uber e 99 e mostra, com base nos
-            seus parâmetros, se a corrida é boa, ruim ou vale atenção. Você
-            decide melhor antes de aceitar e ainda acompanha meta, tracking,
-            corridas particulares, abastecimentos e custos da operação.
+            O KM One ajuda a analisar ofertas de corrida, acompanhar sua meta diária,
+            registrar abastecimentos, corridas e deslocamentos sem passageiro.
+            Use o Copiloto por voz e tenha mais clareza sobre sua operação.
+            Disponível para download na Google Play.
           </p>
 
           <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:justify-center lg:justify-start">
             <a
-              href="#lista-vip"
+              href={play}
+              target="_blank"
+              rel="noopener noreferrer"
               className="group inline-flex min-h-14 items-center justify-center gap-2 rounded-2xl bg-[var(--green-main)] px-7 py-4 text-base font-extrabold text-[#02100A] shadow-[0_18px_50px_rgba(32,242,122,0.28)] transition hover:-translate-y-0.5 hover:bg-white"
             >
-              Entrar na lista VIP
+              Baixar grátis na Google Play
               <ArrowRight className="h-5 w-5 transition group-hover:translate-x-1" />
             </a>
           </div>
@@ -229,7 +226,7 @@ export function Home() {
             Visão completa da operação
           </p>
           <h2 className="mt-4 text-3xl font-black text-white sm:text-5xl">
-            Radar, tracking e resultado financeiro no mesmo painel.
+            Ofertas, km vazio e resultado financeiro no mesmo app.
           </h2>
           <p className="mt-5 text-lg leading-8 text-[var(--text-muted)]">
             O KM One foi pensado para transformar ofertas rápidas em decisões
@@ -242,8 +239,8 @@ export function Home() {
                 Menos achismo
               </strong>
               <span className="mt-1 block leading-6 text-[var(--text-muted)]">
-                Sinais objetivos para saber quando aceitar, recusar ou olhar a
-                oferta com mais cuidado.
+                Informações para avaliar ofertas e decidir por conta própria,
+                sem aceite ou recusa automática.
               </span>
             </div>
             <div className="rounded-2xl border border-white/10 bg-white/[0.035] p-4">
@@ -263,7 +260,7 @@ export function Home() {
           <div className="overflow-hidden rounded-[2rem] border border-[var(--border-soft)] bg-white/[0.04] p-2 shadow-[0_28px_90px_rgba(0,0,0,0.5)]">
             <img
               src={promotionalImage}
-              alt="Imagem promocional do KM One com radar ativo, tracking ao vivo, meta diária e indicadores financeiros"
+              alt="Imagem promocional do KM One com análise de ofertas e indicadores financeiros"
               className="aspect-[16/9] h-auto w-full rounded-[1.5rem] object-cover"
             />
           </div>
@@ -340,130 +337,22 @@ export function Home() {
         </div>
       </section>
 
-      <section
-        id="lista-vip"
-        className="mx-auto max-w-5xl px-4 py-20 sm:px-6 lg:px-8 lg:py-28"
-      >
-        <div className="rounded-[2rem] border border-[var(--border-soft)] bg-[radial-gradient(circle_at_top,rgba(32,242,122,0.14),transparent_36%),#081923] p-6 shadow-[0_30px_100px_rgba(0,0,0,0.48)] sm:p-10 lg:p-12">
-          <div className="mx-auto max-w-2xl text-center">
-            <div className="mx-auto mb-5 flex h-14 w-14 items-center justify-center rounded-2xl bg-[var(--green-main)]/14 text-[var(--green-main)]">
-              <ShieldCheck className="h-7 w-7" />
-            </div>
-            <h2 className="text-3xl font-black text-white sm:text-5xl">
-              Teste o KM One antes do lançamento público.
-            </h2>
-            <p className="mt-4 text-lg leading-8 text-[var(--text-muted)]">
-              Entre na lista VIP para receber acesso antecipado, novidades do
-              app e convites para testar recursos criados com motoristas reais.
-            </p>
-          </div>
-
-          {state.succeeded ? (
-            <div className="mx-auto mt-8 max-w-xl rounded-2xl border border-[var(--border-soft)] bg-[var(--green-main)]/10 p-5 text-center text-lg font-bold text-[var(--green-main)]">
-              Obrigado. Você foi cadastrado na lista VIP com sucesso.
-            </div>
-          ) : (
-            <form
-              onSubmit={handleSubmit}
-              method="POST"
-              className="mx-auto mt-8 grid max-w-2xl gap-4"
-            >
-              <div className="grid gap-4 sm:grid-cols-2">
-                <div className="flex flex-col gap-2">
-                  <label
-                    htmlFor="name"
-                    className="text-sm font-bold text-white"
-                  >
-                    Nome
-                  </label>
-                  <input
-                    required
-                    placeholder="Seu nome"
-                    className="min-h-14 rounded-2xl border border-white/10 bg-[#020B0F] px-4 text-white outline-none transition placeholder:text-[#6F7B86] focus:border-[var(--green-main)]"
-                    id="name"
-                    name="name"
-                    type="text"
-                  />
-                  <ValidationError
-                    prefix="Nome"
-                    field="name"
-                    errors={state.errors}
-                  />
-                </div>
-                <div className="flex flex-col gap-2">
-                  <label
-                    htmlFor="whatsapp"
-                    className="text-sm font-bold text-white"
-                  >
-                    WhatsApp
-                  </label>
-                  <input
-                    name="whatsapp"
-                    id="whatsapp"
-                    type="tel"
-                    placeholder="99 99999-9999"
-                    pattern="[\d\s-]+"
-                    minLength={10}
-                    maxLength={16}
-                    required
-                    title="Digite no mínimo 10 caracteres usando números, espaços ou traços"
-                    className="min-h-14 rounded-2xl border border-white/10 bg-[#020B0F] px-4 text-white outline-none transition placeholder:text-[#6F7B86] focus:border-[var(--green-main)]"
-                  />
-                  <ValidationError
-                    prefix="WhatsApp"
-                    field="whatsapp"
-                    errors={state.errors}
-                  />
-                </div>
-              </div>
-
-              <div className="flex flex-col gap-2">
-                <label htmlFor="email" className="text-sm font-bold text-white">
-                  E-mail
-                </label>
-                <input
-                  name="email"
-                  id="email"
-                  type="email"
-                  required
-                  placeholder="voce@email.com"
-                  className="min-h-14 rounded-2xl border border-white/10 bg-[#020B0F] px-4 text-white outline-none transition placeholder:text-[#6F7B86] focus:border-[var(--green-main)]"
-                />
-                <ValidationError
-                  prefix="E-mail"
-                  field="email"
-                  errors={state.errors}
-                />
-              </div>
-
-              <button
-                type="submit"
-                disabled={state.submitting}
-                className="mt-2 inline-flex min-h-14 items-center justify-center gap-2 rounded-2xl bg-[var(--green-main)] px-7 py-4 text-base font-black text-[#02100A] shadow-[0_18px_50px_rgba(32,242,122,0.25)] transition hover:-translate-y-0.5 hover:bg-white disabled:cursor-not-allowed disabled:opacity-60"
-              >
-                {state.submitting ? "Enviando..." : "Quero entrar na lista VIP"}
-                <ArrowRight className="h-5 w-5" />
-              </button>
-            </form>
-          )}
-        </div>
-      </section>
-
-      <section className="mx-auto max-w-7xl px-4 pb-16 sm:px-6 lg:px-8">
-        <div className="flex flex-col items-center justify-between gap-4 rounded-3xl border border-white/10 bg-white/[0.035] p-5 text-center sm:flex-row sm:text-left">
-          <div className="flex items-center gap-3">
-            <Clock3 className="h-5 w-5 text-[var(--yellow-soft)]" />
-            <p className="font-semibold text-white">
-              Acesso antecipado para os primeiros motoristas cadastrados.
-            </p>
-          </div>
-          <a
-            href="#lista-vip"
-            className="inline-flex items-center gap-2 font-black text-[var(--green-main)]"
-          >
-            Garantir meu convite
-            <ArrowRight className="h-4 w-4" />
+      <section id="baixar" className="mx-auto max-w-5xl px-4 py-20 sm:px-6 lg:px-8 lg:py-28">
+        <div className="rounded-[2rem] border border-[var(--border-soft)] bg-[radial-gradient(circle_at_top,rgba(32,242,122,0.14),transparent_36%),#081923] p-8 text-center shadow-[0_30px_100px_rgba(0,0,0,0.48)] sm:p-12">
+          <h2 className="text-3xl font-black text-white sm:text-5xl">Seu próximo KM começa aqui.</h2>
+          <p className="mx-auto mt-5 max-w-2xl text-lg leading-8 text-[var(--text-muted)]">
+            O KM One já está disponível na Google Play para Android. Instale, configure
+            seus parâmetros e explore a análise de ofertas, o Copiloto por voz,
+            a meta diária, os registros e o deslocamento/km vazio.
+          </p>
+          <a href={play} target="_blank" rel="noopener noreferrer"
+            className="mt-8 inline-flex min-h-14 items-center justify-center gap-2 rounded-2xl bg-[var(--green-main)] px-8 py-4 text-base font-black text-[#02100A] transition hover:bg-white">
+            Instalar KM One na Google Play <ArrowRight className="h-5 w-5" />
           </a>
+          <p className="mt-5 text-sm text-[var(--text-muted)]">
+            A captura automática depende das permissões e das condições do aparelho.
+            O KM One não aceita nem recusa corridas por você.
+          </p>
         </div>
       </section>
     </div>
