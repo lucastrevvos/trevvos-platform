@@ -76,19 +76,24 @@ const features = [
 
 const steps = [
   {
-    icon: Smartphone,
-    title: "A corrida é identificada",
-    text: "Ative os recursos necessários e escolha captura manual ou automática para analisar ofertas visíveis.",
-  },
-  {
-    icon: Gauge,
-    title: "Compare com seus parâmetros",
-    text: "O app cruza valor, distância, R$/km e suas regras para classificar a oferta.",
+    icon: Radar,
+    title: "Analise a oferta",
+    text: "Use a captura manual ou automática para visualizar valor, distância, tempo, R$/km e a classificação baseada nos seus parâmetros.",
   },
   {
     icon: WalletCards,
-    title: "Aceite com mais clareza",
-    text: "O KM One auxilia a análise; aceitar ou recusar a oferta permanece sob seu controle no aplicativo de corrida.",
+    title: "Organize em Vistas",
+    text: "As ofertas capturadas ficam em Vistas até você decidir se realizou a corrida, quer ignorá-la ou precisa conferir os detalhes.",
+  },
+  {
+    icon: BarChart3,
+    title: "Acompanhe em Registros",
+    text: "As corridas salvas alimentam seu histórico, os resumos por período e os indicadores financeiros e operacionais.",
+  },
+  {
+    icon: Route,
+    title: "Registre o restante da rotina",
+    text: "Deslocamentos sem passageiro, abastecimentos e corridas particulares também podem fazer parte do seu dia no KM One.",
   },
 ];
 
@@ -238,33 +243,33 @@ export function Home() {
       <section className="mx-auto grid max-w-7xl items-center gap-10 px-4 pb-20 sm:px-6 lg:grid-cols-[0.92fr_1.08fr] lg:px-8 lg:pb-28">
         <div>
           <p className="text-sm font-black uppercase tracking-[0.22em] text-[var(--green-main)]">
-            Visão completa da operação
+            Sua rotina em um só lugar
           </p>
           <h2 className="mt-4 text-3xl font-black text-white sm:text-5xl">
-            Ofertas, km vazio e resultado financeiro no mesmo app.
+            Da oferta ao fechamento do dia, acompanhe o que acontece na rua.
           </h2>
           <p className="mt-5 text-lg leading-8 text-[var(--text-muted)]">
-            O KM One foi pensado para transformar ofertas rápidas em decisões
-            claras e registrar o que acontece fora dos apps: deslocamentos sem
-            passageiro, corridas particulares e valores recebidos no fechamento.
+            O KM One conecta as etapas da sua rotina sem tirar sua autonomia:
+            analise ofertas, organize o que foi capturado, salve o que realmente
+            aconteceu e registre também os quilômetros e custos fora das corridas.
           </p>
           <div className="mt-7 grid gap-3 sm:grid-cols-2">
             <div className="rounded-2xl border border-white/10 bg-white/[0.035] p-4">
               <strong className="block text-lg font-black text-white">
-                Menos achismo
+                Antes da corrida
               </strong>
               <span className="mt-1 block leading-6 text-[var(--text-muted)]">
-                Informações para avaliar ofertas e decidir por conta própria,
-                sem aceite ou recusa automática.
+                Consulte valor, distância, tempo e R$/km antes de decidir.
+                O KM One mostra os dados; a decisão continua sendo sua.
               </span>
             </div>
             <div className="rounded-2xl border border-white/10 bg-white/[0.035] p-4">
               <strong className="block text-lg font-black text-white">
-                Mais controle
+                Depois da decisão
               </strong>
               <span className="mt-1 block leading-6 text-[var(--text-muted)]">
-                Ao finalizar uma corrida particular, adicione o valor recebido
-                e envie tudo para seu controle de orçamento.
+                Vistas e Registros ajudam a separar o que foi apenas capturado
+                do que realmente virou parte da sua operação.
               </span>
             </div>
           </div>
@@ -297,7 +302,7 @@ export function Home() {
             Como funciona
           </p>
           <h2 className="mt-4 text-3xl font-black text-white sm:text-5xl">
-            Uma leitura simples para decidir antes de aceitar.
+            Uma jornada simples para acompanhar o dia inteiro.
           </h2>
           <div className="mt-8 grid gap-4">
             {steps.map((step) => {
