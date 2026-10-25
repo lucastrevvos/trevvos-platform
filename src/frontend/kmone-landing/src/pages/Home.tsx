@@ -20,9 +20,9 @@ import promotionalImage from "../assets/promocional.png";
 const play = "https://play.google.com/store/apps/details?id=com.lucastrevvos.kmone";
 
 const metrics = [
-  { value: "Boa", label: "Oferta dentro dos seus parâmetros" },
-  { value: "Atenção", label: "Corrida que exige análise antes de aceitar" },
-  { value: "Ruim", label: "Alerta para proteger seu ganho por km" },
+  { value: "Boa", label: "Dentro dos seus parâmetros" },
+  { value: "Atenção", label: "Vale conferir antes de decidir" },
+  { value: "Ruim", label: "Fora dos parâmetros definidos" },
 ];
 
 const pains = [
@@ -35,32 +35,42 @@ const features = [
   {
     icon: Radar,
     title: "Análise de ofertas",
-    text: "Com a captura manual ou automática configurada, o KM One ajuda a analisar as ofertas identificadas. A decisão continua sendo sua.",
+    text: "Use a captura manual ou automática para visualizar valor, distância, tempo e R$/km antes de decidir.",
   },
   {
-    icon: Target,
-    title: "Copiloto por voz",
-    text: "Peça status, abra registros ou configurações, registre abastecimentos e use comandos de voz sem deixar de controlar o app.",
-  },
-  {
-    icon: Route,
-    title: "Registros e corridas particulares",
-    text: "Registre suas atividades, consulte o histórico e acompanhe também corridas particulares.",
-  },
-  {
-    icon: Fuel,
-    title: "Abastecimento por voz",
-    text: "Diga, por exemplo, “abasteci 50 reais” para registrar gastos de combustível no KM One.",
+    icon: WalletCards,
+    title: "Vistas",
+    text: "As ofertas capturadas ficam em Vistas até você decidir: salve se realizou a corrida, ignore se não realizou ou consulte os detalhes.",
   },
   {
     icon: BarChart3,
-    title: "Metas e histórico",
-    text: "Defina a meta diária e acompanhe ganhos, registros e informações da sua operação.",
+    title: "Registros",
+    text: "Acompanhe as corridas salvas, consulte o histórico e veja resumos financeiros e operacionais por período.",
+  },
+  {
+    icon: Fuel,
+    title: "Abastecimentos",
+    text: "Registre abastecimentos e mantenha os gastos de combustível organizados junto da sua rotina.",
   },
   {
     icon: MapPinned,
-    title: "Deslocamento e km vazio",
-    text: "Inicie e encerre deslocamentos sem passageiro, acompanhe tempo e distância e mantenha esses registros separados dos ganhos.",
+    title: "Deslocamento sem passageiro",
+    text: "Acompanhe tempo e distância dos trajetos sem passageiro e salve esses quilômetros nos Registros como sem receita.",
+  },
+  {
+    icon: Route,
+    title: "Corridas particulares",
+    text: "Acompanhe distância e tempo, informe o valor recebido e mantenha a corrida registrada no mesmo histórico.",
+  },
+  {
+    icon: Target,
+    title: "Lista de bloqueio",
+    text: "Cadastre vias ou regiões que exigem atenção e receba alertas quando elas aparecerem no seu trajeto.",
+  },
+  {
+    icon: Smartphone,
+    title: "Copiloto KM One",
+    text: "Use comandos de voz para consultar o status do dia, registrar abastecimentos, iniciar deslocamentos e acessar ações rápidas.",
   },
 ];
 
@@ -101,14 +111,13 @@ export function Home() {
           </div>
 
           <h1 className="text-balance text-4xl font-black leading-[1.02] text-white sm:text-5xl lg:text-7xl">
-            Seu copiloto na rua. Baixe o KM One.
+            Tecnologia para quem vive de dirigir.
           </h1>
 
           <p className="mt-6 text-pretty text-lg leading-8 text-[var(--text-muted)] sm:text-xl">
-            O KM One ajuda a analisar ofertas de corrida, acompanhar sua meta diária,
-            registrar abastecimentos, corridas e deslocamentos sem passageiro.
-            Use o Copiloto por voz e tenha mais clareza sobre sua operação.
-            Disponível para download na Google Play.
+            O KM One reúne ferramentas para ajudar você a tomar decisões e acompanhar
+            sua rotina na rua: analise ofertas, registre corridas e deslocamentos,
+            acompanhe seus resultados, abastecimentos e metas — tudo em um só lugar.
           </p>
 
           <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:justify-center lg:justify-start">
@@ -138,6 +147,10 @@ export function Home() {
               </div>
             ))}
           </div>
+
+          <p className="mt-5 text-sm font-semibold text-[var(--text-muted)]">
+            O KM One mostra os dados. A decisão continua sendo sua.
+          </p>
         </div>
 
         <div className="relative mx-auto flex w-full max-w-[36rem] justify-center lg:justify-end">
@@ -191,10 +204,10 @@ export function Home() {
       <section className="mx-auto max-w-7xl px-4 py-20 sm:px-6 lg:px-8 lg:py-28">
         <div className="mx-auto max-w-3xl text-center">
           <p className="text-sm font-black uppercase tracking-[0.22em] text-[var(--green-main)]">
-            Controle financeiro na rotina real
+            KM One por Dentro
           </p>
           <h2 className="mt-4 text-3xl font-black text-white sm:text-5xl">
-            Saiba antes de aceitar se a corrida faz sentido para o seu bolso.
+            Ferramentas para analisar, registrar e acompanhar sua rotina.
           </h2>
         </div>
 
@@ -344,8 +357,8 @@ export function Home() {
           <h2 className="text-3xl font-black text-white sm:text-5xl">Seu próximo KM começa aqui.</h2>
           <p className="mx-auto mt-5 max-w-2xl text-lg leading-8 text-[var(--text-muted)]">
             O KM One já está disponível na Google Play para Android. Instale, configure
-            seus parâmetros e explore a análise de ofertas, o Copiloto por voz,
-            a meta diária, os registros e o deslocamento/km vazio.
+            seus parâmetros e explore a análise de ofertas, Vistas, Registros,
+            deslocamentos, abastecimentos, corridas particulares e o Copiloto KM One.
           </p>
           <a href={play} target="_blank" rel="noopener noreferrer"
             className="mt-8 inline-flex min-h-14 items-center justify-center gap-2 rounded-2xl bg-[var(--green-main)] px-8 py-4 text-base font-black text-[#02100A] transition hover:bg-white">
