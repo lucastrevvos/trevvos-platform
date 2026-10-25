@@ -48,10 +48,12 @@ export function Layout() {
           </a>
 
           <a
-            href="#lista-vip"
+            href="https://play.google.com/store/apps/details?id=com.lucastrevvos.kmone"
+            target="_blank"
+            rel="noopener noreferrer"
             className="hidden rounded-full border border-[var(--border-soft)] bg-[var(--green-main)]/10 px-5 py-3 text-sm font-black text-[var(--green-main)] transition hover:bg-[var(--green-main)] hover:text-[#02100A] sm:inline-flex"
           >
-            Lista VIP
+            Baixar na Google Play
           </a>
         </div>
       </header>
