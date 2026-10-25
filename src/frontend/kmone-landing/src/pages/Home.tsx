@@ -17,6 +17,8 @@ import appOnmobile from "../assets/appcelular.png";
 import driverApp from "../assets/appcelulardriver.png";
 import promotionalImage from "../assets/promocional.png";
 
+const play = "https://play.google.com/store/apps/details?id=com.lucastrevvos.kmone";
+
 const metrics = [
   { value: "Boa", label: "Oferta dentro dos seus parâmetros" },
   { value: "Atenção", label: "Corrida que exige análise antes de aceitar" },
