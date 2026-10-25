@@ -97,6 +97,13 @@ const steps = [
   },
 ];
 
+const adoptionBenefits = [
+  "Sem cadastro",
+  "Sem cartão",
+  "Sem assinatura",
+  "Grátis para começar agora",
+];
+
 const roadmap = [
   "Comunidade e parcerias para reduzir custos do motorista",
   "Indicadores avançados para comparar turnos, regiões e aplicativos",
@@ -136,6 +143,10 @@ export function Home() {
               <ArrowRight className="h-5 w-5 transition group-hover:translate-x-1" />
             </a>
           </div>
+
+          <p className="mt-4 text-sm font-semibold text-white/80">
+            Grátis hoje · Sem cadastro · Sem cartão · Sem assinatura
+          </p>
 
           <div className="mt-10 grid gap-3 sm:grid-cols-3">
             {metrics.map((metric) => (
@@ -331,6 +342,56 @@ export function Home() {
         </div>
       </section>
 
+      <section className="mx-auto max-w-7xl px-4 pb-20 sm:px-6 lg:px-8 lg:pb-28">
+        <div className="overflow-hidden rounded-[2rem] border border-[var(--border-soft)] bg-[radial-gradient(circle_at_top_left,rgba(32,242,122,0.18),transparent_38%),#07151D] p-8 shadow-[0_30px_100px_rgba(0,0,0,0.45)] sm:p-10 lg:p-14">
+          <div className="grid items-center gap-10 lg:grid-cols-[1.1fr_0.9fr]">
+            <div>
+              <p className="text-sm font-black uppercase tracking-[0.22em] text-[var(--green-main)]">
+                Use agora
+              </p>
+              <h2 className="mt-4 max-w-4xl text-3xl font-black text-white sm:text-5xl">
+                Antes de cobrar, queremos provar que o KM One merece estar no seu celular.
+              </h2>
+              <p className="mt-5 max-w-3xl text-lg leading-8 text-[var(--text-muted)]">
+                Nossa prioridade agora é colocar o KM One na mão de quem vive de dirigir.
+                Baixe, use no seu dia a dia e conheça as ferramentas sem criar conta,
+                informar cartão ou contratar uma assinatura.
+              </p>
+
+              <a
+                href={play}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group mt-8 inline-flex min-h-14 items-center justify-center gap-2 rounded-2xl bg-[var(--green-main)] px-8 py-4 text-base font-black text-[#02100A] shadow-[0_18px_50px_rgba(32,242,122,0.22)] transition hover:-translate-y-0.5 hover:bg-white"
+              >
+                Experimentar o KM One grátis
+                <ArrowRight className="h-5 w-5 transition group-hover:translate-x-1" />
+              </a>
+            </div>
+
+            <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-1">
+              {adoptionBenefits.map((benefit) => (
+                <div
+                  key={benefit}
+                  className="flex items-center gap-3 rounded-2xl border border-white/10 bg-[#020B0F]/55 p-4"
+                >
+                  <CheckCircle2 className="h-5 w-5 shrink-0 text-[var(--green-main)]" />
+                  <span className="font-bold text-white">{benefit}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          <div className="mt-8 border-t border-white/10 pt-6">
+            <p className="max-w-4xl text-sm leading-6 text-[var(--text-muted)]">
+              No futuro, recursos avançados de inteligência artificial poderão fazer parte
+              de planos opcionais. Qualquer condição será apresentada de forma clara antes
+              de qualquer contratação.
+            </p>
+          </div>
+        </div>
+      </section>
+
       <section className="border-y border-white/8 bg-[linear-gradient(135deg,#06151C,#031014_62%,#063B2B)]">
         <div className="mx-auto grid max-w-7xl gap-10 px-4 py-20 sm:px-6 lg:grid-cols-[0.88fr_1.12fr] lg:px-8 lg:py-28">
           <div>
@@ -359,15 +420,14 @@ export function Home() {
 
       <section id="baixar" className="mx-auto max-w-5xl px-4 py-20 sm:px-6 lg:px-8 lg:py-28">
         <div className="rounded-[2rem] border border-[var(--border-soft)] bg-[radial-gradient(circle_at_top,rgba(32,242,122,0.14),transparent_36%),#081923] p-8 text-center shadow-[0_30px_100px_rgba(0,0,0,0.48)] sm:p-12">
-          <h2 className="text-3xl font-black text-white sm:text-5xl">Seu próximo KM começa aqui.</h2>
+          <h2 className="text-3xl font-black text-white sm:text-5xl">Baixe. Use. Conheça.</h2>
           <p className="mx-auto mt-5 max-w-2xl text-lg leading-8 text-[var(--text-muted)]">
-            O KM One já está disponível na Google Play para Android. Instale, configure
-            seus parâmetros e explore a análise de ofertas, Vistas, Registros,
-            deslocamentos, abastecimentos, corridas particulares e o Copiloto KM One.
+            O KM One está disponível gratuitamente para Android. Sem cadastro, sem cartão
+            e sem assinatura para começar. Instale, configure seus parâmetros e use no seu dia a dia.
           </p>
           <a href={play} target="_blank" rel="noopener noreferrer"
             className="mt-8 inline-flex min-h-14 items-center justify-center gap-2 rounded-2xl bg-[var(--green-main)] px-8 py-4 text-base font-black text-[#02100A] transition hover:bg-white">
-            Instalar KM One na Google Play <ArrowRight className="h-5 w-5" />
+            Baixar grátis na Google Play <ArrowRight className="h-5 w-5" />
           </a>
           <p className="mt-5 text-sm text-[var(--text-muted)]">
             A captura automática depende das permissões e das condições do aparelho.
