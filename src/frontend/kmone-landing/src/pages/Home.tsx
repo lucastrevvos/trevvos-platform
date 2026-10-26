@@ -104,9 +104,10 @@ const adoptionBenefits = [
   "Grátis para começar agora",
 ];
 
-const roadmap = [
-  "Comunidade e parcerias para reduzir custos do motorista",
-  "Indicadores avançados para comparar turnos, regiões e aplicativos",
+const visionPoints = [
+  "Recursos avançados de inteligência artificial para apoiar decisões e planejamento — opcionais, quando fizerem sentido.",
+  "Comunidade e parcerias para ajudar a reduzir custos e ampliar benefícios para quem vive de dirigir.",
+  "Uma plataforma brasileira de mobilidade mais transparente, equilibrada e construída junto com os motoristas.",
 ];
 
 export function Home() {
@@ -396,22 +397,30 @@ export function Home() {
         <div className="mx-auto grid max-w-7xl gap-10 px-4 py-20 sm:px-6 lg:grid-cols-[0.88fr_1.12fr] lg:px-8 lg:py-28">
           <div>
             <p className="text-sm font-black uppercase tracking-[0.22em] text-[var(--green-main)]">
-              Próximas versões
+              Visão de futuro
             </p>
             <h2 className="mt-4 text-3xl font-black text-white sm:text-5xl">
-              O KM One continua evoluindo para aumentar seu controle na rua.
+              Estamos só começando.
             </h2>
+            <p className="mt-5 text-lg leading-8 text-[var(--text-muted)]">
+              Primeiro, queremos conquistar a confiança de quem está na rua.
+              O KM One começa com ferramentas práticas para o dia a dia e evolui
+              ouvindo quem vive de dirigir.
+            </p>
+            <p className="mt-5 text-lg font-bold leading-8 text-white">
+              O KM One começa com o motorista. O futuro, a gente constrói juntos.
+            </p>
           </div>
           <div className="grid gap-3">
-            {roadmap.map((item, index) => (
+            {visionPoints.map((item, index) => (
               <div
                 key={item}
-                className="flex items-center gap-4 rounded-2xl border border-white/10 bg-[#020B0F]/55 p-5"
+                className="flex items-start gap-4 rounded-2xl border border-white/10 bg-[#020B0F]/55 p-5"
               >
                 <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-[var(--green-main)] text-sm font-black text-[#02100A]">
                   {String(index + 1).padStart(2, "0")}
                 </span>
-                <p className="font-semibold text-white">{item}</p>
+                <p className="pt-1 font-semibold leading-7 text-white">{item}</p>
               </div>
             ))}
           </div>
@@ -424,6 +433,9 @@ export function Home() {
           <p className="mx-auto mt-5 max-w-2xl text-lg leading-8 text-[var(--text-muted)]">
             O KM One está disponível gratuitamente para Android. Sem cadastro, sem cartão
             e sem assinatura para começar. Instale, configure seus parâmetros e use no seu dia a dia.
+          </p>
+          <p className="mt-4 text-sm font-bold text-white/80">
+            Sem cadastro. Sem cartão. Sem compromisso.
           </p>
           <a href={play} target="_blank" rel="noopener noreferrer"
             className="mt-8 inline-flex min-h-14 items-center justify-center gap-2 rounded-2xl bg-[var(--green-main)] px-8 py-4 text-base font-black text-[#02100A] transition hover:bg-white">

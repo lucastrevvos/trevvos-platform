@@ -1,56 +1,82 @@
-# KM One
+# KM One Landing
 
-KM One é uma plataforma inovadora desenvolvida para motoristas de aplicativos como Uber, 99 e InDrive, oferecendo ferramentas avançadas de gestão financeira, controle de corridas, cálculo de lucros e acesso a uma rede de parcerias locais.
+Landing page pública do KM One, produto da Trevvos voltado a motoristas de aplicativo.
 
-Embora seja uma iniciativa privada, o projeto foi desenhado com um padrão técnico robusto, aplicando as melhores práticas em frontend (ReactJS + Tailwind), backend conectado (próximas etapas) e deploy automatizado na AWS Amplify com domínio customizado.
+O KM One reúne ferramentas para analisar ofertas, registrar corridas e deslocamentos, acompanhar resultados, abastecimentos, metas e outras informações da rotina de quem vive de dirigir.
 
----
+## Posicionamento atual
 
-## 🌟 Visão do Projeto
+Nesta fase, o KM One está disponível gratuitamente para Android.
 
-KM One nasce para resolver um problema real enfrentado diariamente por motoristas de apps: a falta de clareza sobre seus ganhos reais, despesas ocultas e oportunidades locais.  
-Mais do que um app financeiro, ele busca criar um **ecossistema inteligente** para que o motorista maximize ganhos e minimize custos, tornando-se mais eficiente e lucrativo.
+- sem cadastro;
+- sem cartão;
+- sem assinatura;
+- download pela Google Play.
 
----
+A estratégia atual é reduzir atrito de entrada, permitir que motoristas conheçam o produto no uso real e conquistar confiança antes de qualquer oferta comercial futura.
 
-## 🛠 Funcionalidades principais (primeira versão)
+Recursos avançados de inteligência artificial poderão futuramente fazer parte de planos opcionais, sempre com comunicação clara antes de qualquer contratação.
 
-✅ Registro centralizado de ganhos por app (Uber, 99, InDrive)  
-✅ Cálculo automático de lucro líquido diário, semanal e mensal  
-✅ Controle de abastecimentos e despesas (manutenção, pedágios, lava-rápido)  
-✅ Lista VIP para early adopters com acesso antecipado e benefícios exclusivos  
-✅ Planejamento futuro para fórum entre motoristas, parcerias locais e dicas de otimização
+## Funcionalidades apresentadas na landing
 
----
+- análise de ofertas com captura manual ou automática;
+- Vistas para organizar ofertas capturadas;
+- Registros e resumos por período;
+- abastecimentos;
+- deslocamentos sem passageiro;
+- corridas particulares;
+- Lista de bloqueio;
+- Copiloto KM One por voz;
+- metas e indicadores da operação.
 
-## 🔒 Compromisso com privacidade
+O KM One auxilia a leitura dos dados e não aceita nem recusa corridas pelo motorista.
 
-Desde o início, o projeto adota um modelo consciente em relação à privacidade e proteção de dados pessoais, seguindo os princípios da LGPD (Lei Geral de Proteção de Dados), com políticas claras e acessíveis diretamente na landing page.
+## Visão de produto
 
----
+O produto começa resolvendo problemas práticos da rotina do motorista e deve evoluir ouvindo quem está na rua.
 
-## 🚀 Diferenciais técnicos
+A visão de longo prazo inclui:
 
-- Frontend em ReactJS com TailwindCSS, garantindo leveza e performance.
-- Integração com Formspree para coleta inicial de leads, sem backend próprio nesta fase.
-- Deploy gerenciado via AWS Amplify, com domínio customizado (kmone.trevvos.com.br).
-- Estrutura modular, preparada para expansão (novos módulos, backend dedicado e aplicativos móveis).
+- recursos avançados de inteligência artificial;
+- comunidade e parcerias para motoristas;
+- indicadores mais avançados de operação;
+- evolução para uma plataforma brasileira de mobilidade mais transparente, equilibrada e construída junto com os motoristas.
 
----
+**O KM One começa com o motorista. O futuro, a gente constrói juntos.**
 
-## 🤝 Sobre o projeto
+## Stack da landing
 
-KM One faz parte do ecossistema **Trevvos**, uma rede de soluções digitais desenvolvidas para facilitar a vida de usuários comuns, conectando serviços, informações e ferramentas práticas em áreas como finanças, mobilidade e bem-estar.
+- React 19;
+- TypeScript;
+- Vite;
+- Tailwind CSS;
+- React Router;
+- Lucide React.
 
-O projeto foi idealizado e desenvolvido de forma independente, demonstrando capacidades avançadas de:
-- Liderança técnica
-- Arquitetura e desenvolvimento frontend
-- Gestão de produto e visão de mercado
+## Deploy
 
----
+A landing é publicada pelo GitHub Actions em **Azure Static Web Apps**.
 
-## 📬 Contato
+Workflow:
 
-Interessado em saber mais, colaborar ou explorar o projeto?  
-Entre em contato: [contato@trevvos.com.br](mailto:contato@trevvos.com,br)
+`.github/workflows/azure-static-web-apps-delightful-hill-04248b510.yml`
 
+Diretório da aplicação:
+
+`src/frontend/kmone-landing`
+
+Domínio público:
+
+`https://kmone.trevvos.com.br`
+
+Alterações nesse diretório disparam o workflow de deploy da landing quando chegam ao branch `main`.
+
+## Organização no ecossistema Trevvos
+
+- `trevvos-platform`: monorepo principal, incluindo esta landing e o portal público da Trevvos;
+- `motor-kmone`: aplicativo Android do KM One, mantido separadamente;
+- `Trevvos.Api`: backend central em evolução dentro do monorepo.
+
+## Contato
+
+Trevvos: contato@trevvos.com.br
