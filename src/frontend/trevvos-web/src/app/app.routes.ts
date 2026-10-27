@@ -8,6 +8,7 @@ import { FlowPage } from './flow/flow.page';
 import { HomePage } from './home/home.page';
 import { ImpactPage } from './impact/impact.page';
 import { PrivacyPolicyPage } from './privacy-policy/privacy-policy.page';
+import { SalesPilotPage } from './sales-pilot/sales-pilot.page';
 
 export const routes: Routes = [
   {
@@ -61,6 +62,15 @@ export const routes: Routes = [
     data: {
       description:
         'Política de Privacidade da Trevvos aplicável ao KM One, aplicativo desenvolvido pela Trevvos para motoristas profissionais.',
+    },
+  },
+  {
+    path: 'atendimento-ia',
+    component: SalesPilotPage,
+    title: 'Atendimento com IA para negócios locais | Trevvos Florianópolis',
+    data: {
+      description:
+        'Conheça o programa piloto de atendimento assistido por IA para WhatsApp e negócios locais em Florianópolis.',
     },
   },
   {
