@@ -1,0 +1,104 @@
+<main class="home sales-page" aria-labelledby="sales-title">
+  <div class="os-shell">
+    <header class="top-bar sales-top-bar">
+      <a class="brand-lockup" href="/" aria-label="Trevvos - início">
+        <img src="/assets/brand/processed/trevvos-symbol.webp" alt="" aria-hidden="true" />
+        <span class="brand-word" aria-hidden="true">TREVVOS</span>
+      </a>
+      <nav class="system-nav" aria-label="Seções do produto">
+        <a href="#como-funciona">Como funciona</a>
+        <a href="#demo">Demonstração</a>
+        <a href="#piloto">Programa piloto</a>
+      </nav>
+      <a class="sales-nav-cta" href="mailto:ceo@trevvos.com.br?subject=Piloto%20Trevvos%20Atendimento%20IA">
+        Solicitar conversa
+      </a>
+    </header>
+
+    <div class="sales-content">
+      <section class="sales-hero">
+        <div class="sales-hero-copy">
+          <p class="sales-eyebrow">Trevvos Atendimento IA · Florianópolis</p>
+          <h1 id="sales-title">Seu WhatsApp não precisa parar quando você está trabalhando.</h1>
+          <p class="sales-subtitle">
+            Estamos selecionando negócios locais para testar um assistente que responde dúvidas,
+            registra pedidos de orçamento e prepara o próximo atendimento para sua equipe.
+          </p>
+          <div class="sales-actions">
+            <a class="sales-main-cta" href="mailto:ceo@trevvos.com.br?subject=Quero%20conhecer%20o%20piloto%20Trevvos%20Atendimento%20IA&amp;body=Empresa%3A%0ASegmento%3A%0ABairro%3A%0AQuantidade%20aproximada%20de%20atendimentos%20por%20dia%3A">
+              Quero participar do piloto <span aria-hidden="true">→</span>
+            </a>
+            <a class="sales-alt-cta" href="#demo">Ver exemplo de conversa</a>
+          </div>
+          <p class="sales-disclaimer">Programa em preparação. A integração oficial com WhatsApp será validada individualmente antes de qualquer ativação comercial.</p>
+        </div>
+        <div class="sales-hero-aside" aria-label="Três problemas que o produto pretende resolver">
+          <p class="sales-aside-title">A rotina que queremos simplificar</p>
+          <div class="sales-benefit"><span>01</span><p>Perguntas repetitivas consumindo tempo da equipe</p></div>
+          <div class="sales-benefit"><span>02</span><p>Interessados sem retorno quando a loja está ocupada</p></div>
+          <div class="sales-benefit"><span>03</span><p>Pedidos de orçamento sem organização para continuar a venda</p></div>
+          <div class="sales-highlight">Primeiro o atendimento. Depois a automação de tarefas maiores.</div>
+        </div>
+      </section>
+
+      <section class="sales-section" id="como-funciona" aria-labelledby="workflow-title">
+        <div class="sales-section-heading">
+          <p class="sales-eyebrow">Escopo inicial</p>
+          <h2 id="workflow-title">Um fluxo de atendimento simples, com controle humano.</h2>
+          <p>Vamos começar com o que pode gerar valor sem adicionar complexidade à operação.</p>
+        </div>
+        <div class="sales-steps">
+          <article><span class="sales-step-number">1</span><h3>Cliente pergunta</h3><p>Recebemos a dúvida no canal conectado e identificamos a intenção.</p></article>
+          <article><span class="sales-step-number">2</span><h3>Assistente orienta</h3><p>Respostas limitadas à tabela de serviços e informações fornecidas pela empresa.</p></article>
+          <article><span class="sales-step-number">3</span><h3>Equipe conclui</h3><p>Orçamentos, horários e situações incertas seguem para confirmação por uma pessoa.</p></article>
+        </div>
+      </section>
+
+      <section class="sales-demo-section" id="demo" aria-labelledby="demo-title">
+        <div class="sales-demo-copy">
+          <p class="sales-eyebrow">Exemplo interativo</p>
+          <h2 id="demo-title">Veja como seria uma conversa.</h2>
+          <p>Montamos um exemplo para um pet shop. O mesmo processo pode ser adaptado para outros serviços locais.</p>
+          <p class="sales-demo-warning"><strong>Demonstração simulada:</strong> as respostas abaixo são exemplos fixos. Não há IA ativa, WhatsApp conectado, agendamento ou envio de dados.</p>
+        </div>
+
+        <div class="sales-chat" aria-label="Simulação de conversa com atendimento automatizado">
+          <div class="sales-chat-header">
+            <span class="sales-chat-avatar" aria-hidden="true">P</span>
+            <span><strong>Pet Exemplo</strong><small>Simulação · sem conexão real</small></span>
+          </div>
+          <div class="sales-chat-thread" role="log" aria-live="polite" aria-relevant="additions text">
+            @for (message of messages(); track $index) {
+              <div class="sales-bubble" [class.sales-bubble-visitor]="message.role === 'visitor'">
+                {{ message.text }}
+              </div>
+            }
+          </div>
+          <div class="sales-chat-scenarios">
+            <p>Escolha uma pergunta para testar:</p>
+            <div class="sales-chat-options">
+              @for (scenario of scenarios; track scenario.label) {
+                <button type="button" (click)="chooseScenario(scenario)">{{ scenario.label }}</button>
+              }
+            </div>
+            <button type="button" class="sales-reset" (click)="resetDemo()">Reiniciar demonstração</button>
+          </div>
+        </div>
+      </section>
+
+      <section class="sales-pilot" id="piloto" aria-labelledby="pilot-title">
+        <div>
+          <p class="sales-eyebrow">Programa piloto local</p>
+          <h2 id="pilot-title">Buscamos nossos primeiros parceiros em Florianópolis.</h2>
+          <p>
+            Primeiro entendemos o volume de mensagens, as perguntas frequentes e como sua equipe atende hoje.
+            Depois avaliamos se a automação faz sentido e apresentamos uma proposta de implantação.
+          </p>
+          <p class="sales-pilot-footnote">Condições e custos de serviços de terceiros serão explicados na proposta. Não há promessa de aumento de vendas ou de disponibilidade imediata da plataforma.</p>
+        </div>
+        <a class="sales-main-cta" href="mailto:ceo@trevvos.com.br?subject=Diagnostico%20Trevvos%20Atendimento%20IA%20Florianopolis">Conversar sobre meu negócio <span aria-hidden="true">→</span></a>
+      </section>
+      <footer class="sales-footer"><span>© Trevvos · Soluções em IA</span><a href="/contato">Contato</a><a href="/">Voltar ao início</a></footer>
+    </div>
+  </div>
+</main>
