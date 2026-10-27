@@ -31,6 +31,10 @@ export const serverRoutes: ServerRoute[] = [
     renderMode: RenderMode.Prerender,
   },
   {
+    path: 'atendimento-ia',
+    renderMode: RenderMode.Prerender,
+  },
+  {
     path: 'ia',
     renderMode: RenderMode.Prerender,
   },
