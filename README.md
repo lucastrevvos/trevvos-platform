@@ -122,6 +122,7 @@ The architecture should grow when product pressure justifies it — not because 
 - [Repository architecture](docs/repository-architecture.md)
 - [Migration history](docs/migration-history.md)
 - [Azure deployment roadmap](docs/azure-deployment-roadmap.md)
+- [KM One — decisões de cadastro, sincronização de dados e WhatsApp (10/11/2026)](docs/decisions/kmone-product-data-policy-2026-11.md)
 
 ## Status
 
