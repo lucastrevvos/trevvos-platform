@@ -69,6 +69,14 @@ Domínio público:
 
 `https://kmone.trevvos.com.br`
 
+Política de Privacidade pública:
+
+`https://kmone.trevvos.com.br/privacidade/`
+
+A política é servida como HTML estático em `public/privacidade/index.html`, sem depender de JavaScript
+ou de modal. O rodapé da landing aponta diretamente para essa página.
+Ao alterar a política, atualize a data no HTML e no `public/sitemap.xml`.
+
 Alterações nesse diretório disparam o workflow de deploy da landing quando chegam ao branch `main`.
 
 ## Organização no ecossistema Trevvos
