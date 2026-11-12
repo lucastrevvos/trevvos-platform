@@ -5,7 +5,6 @@ import logo from "../assets/kmone.png";
 import { Contato } from "./modals/Contato";
 import { InformacoesLegais } from "./modals/InformacoesLegais";
 import { Modal } from "./modals/Modal";
-import { PoliticaPrivacidade } from "./modals/PoliticaPrivacidade";
 import { TermosUso } from "./modals/TermoDeUso";
 
 export function Layout() {
@@ -13,9 +12,6 @@ export function Layout() {
 
   function openModal(type: ReactNode) {
     switch (type) {
-      case "politica":
-        setModalContent(<PoliticaPrivacidade />);
-        break;
       case "termos":
         setModalContent(<TermosUso />);
         break;
@@ -78,13 +74,12 @@ export function Layout() {
             </a>
           </p>
           <nav className="flex flex-col justify-center gap-4 text-sm md:flex-row">
-            <button
-              type="button"
-              onClick={() => openModal("politica")}
-              className="cursor-pointer transition hover:text-[var(--green-main)]"
+            <a
+              href="/privacidade/"
+              className="transition hover:text-[var(--green-main)]"
             >
               Política de Privacidade
-            </button>
+            </a>
             <button
               type="button"
               onClick={() => openModal("termos")}
