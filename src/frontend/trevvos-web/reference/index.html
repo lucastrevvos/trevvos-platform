@@ -1,0 +1,781 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Trevvos | Soluções em Inteligência Artificial</title>
+  <meta name="description" content="Tecnologia e inteligência artificial para transformar negócios. Soluções sob medida em IA e automação, e produtos próprios: Trevvos Commerce (em desenvolvimento) e KM One (disponível para Android)." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- NAV -->
+  <header class="nav" id="nav">
+    <div class="container nav__inner">
+      <a href="#top" class="logo" aria-label="Trevvos, início">
+        <span class="logo__mark" aria-hidden="true"></span>
+        <span>Trevvos</span>
+      </a>
+      <nav class="nav__links" id="navLinks">
+        <a href="#top">Início</a>
+        <a href="#solucoes">Soluções</a>
+        <a href="#produtos">Produtos</a>
+        <a href="#aplicacoes">Aplicações</a>
+        <a href="#sobre">Sobre a Trevvos</a>
+        <a href="#contato">Contato</a>
+        <a href="#contato" class="btn btn--sm btn--ink nav__cta" data-cta="diagnostico">Solicitar diagnóstico</a>
+      </nav>
+      <button class="burger" id="burger" aria-label="Abrir menu" aria-expanded="false"><span></span><span></span></button>
+    </div>
+  </header>
+
+  <main id="top">
+
+    <!-- HERO INSTITUCIONAL -->
+    <section class="hero">
+      <div class="container hero__top">
+        <div class="hero__copy">
+          <span class="badge reveal"><i></i> Trevvos · Soluções em Inteligência Artificial</span>
+          <h1 class="reveal">Tecnologia e inteligência artificial para <em>transformar negócios.</em></h1>
+        </div>
+        <div class="hero__side reveal">
+          <p>Desenvolvemos agentes de IA, automações e softwares inteligentes que conectam sistemas, simplificam operações e criam novas possibilidades para empresas e pessoas.</p>
+          <div class="hero__cta">
+            <a href="#solucoes" class="btn btn--lime btn--lg">Explorar soluções</a>
+            <a href="#produtos" class="btn btn--line btn--lg">Conhecer nossos produtos</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- PRODUCT WINDOW (Trevvos Commerce) -->
+      <div class="container" id="plataforma">
+        <p class="hero__cap reveal">Em destaque: <b>Trevvos Commerce</b>, produto em desenvolvimento · <a href="#produtos">saiba mais</a></p>
+        <div class="app reveal" id="app">
+          <div class="app__chrome">
+            <div class="app__dots"><i></i><i></i><i></i></div>
+            <div class="app__url">app.trevvos.com.br / commerce</div>
+            <span class="app__demo">Demonstração conceitual · dados fictícios</span>
+          </div>
+
+          <div class="app__body">
+            <aside class="app__side">
+              <div class="app__brand"><span class="logo__mark" aria-hidden="true"></span> Trevvos</div>
+              <button class="tab is-active" data-tab="overview"><b>▦</b> Visão geral</button>
+              <button class="tab" data-tab="catalog"><b>▤</b> Catálogo</button>
+              <button class="tab" data-tab="inbox"><b>✉</b> Atendimento</button>
+              <button class="tab" data-tab="ai"><b>✦</b> Assistente IA</button>
+              <div class="app__store"><small>Loja</small><strong>Casa Alvorada</strong><span>exemplo</span></div>
+            </aside>
+
+            <div class="app__main">
+
+              <section class="view is-active" data-view="overview">
+                <header class="view__head"><h3>Visão geral</h3><span>Últimos 7 dias</span></header>
+                <div class="kpis">
+                  <div class="kpi"><small>Vendas</small><b>R$ 48.210</b><em class="up">+12,4%</em></div>
+                  <div class="kpi"><small>Pedidos</small><b>312</b><em class="up">+8,1%</em></div>
+                  <div class="kpi"><small>Ticket médio</small><b>R$ 154</b><em class="up">+3,9%</em></div>
+                  <div class="kpi"><small>Conversas abertas</small><b>17</b><em class="down">-4</em></div>
+                </div>
+                <div class="split">
+                  <div class="panel">
+                    <h4>Vendas por canal</h4>
+                    <div class="bars" id="bars">
+                      <div><i style="--h:72%"></i><span>Seg</span></div>
+                      <div><i style="--h:55%"></i><span>Ter</span></div>
+                      <div><i style="--h:84%"></i><span>Qua</span></div>
+                      <div><i style="--h:63%"></i><span>Qui</span></div>
+                      <div><i style="--h:92%"></i><span>Sex</span></div>
+                      <div><i style="--h:78%"></i><span>Sáb</span></div>
+                      <div><i style="--h:49%"></i><span>Dom</span></div>
+                    </div>
+                  </div>
+                  <div class="panel">
+                    <h4>Canais conectados</h4>
+                    <ul class="channels">
+                      <li><span>Mercado Livre</span><em class="ok">sincronizado</em></li>
+                      <li><span>Nuvemshop</span><em class="ok">sincronizado</em></li>
+                      <li><span>Instagram</span><em class="ok">ativo</em></li>
+                      <li><span>WhatsApp Business</span><em class="wait">conectando</em></li>
+                    </ul>
+                  </div>
+                </div>
+              </section>
+
+              <section class="view" data-view="catalog">
+                <header class="view__head"><h3>Catálogo multicanal</h3><span>248 produtos</span></header>
+                <div class="table">
+                  <div class="tr th"><span>Produto</span><span>Preço</span><span>Estoque</span><span>Canais</span></div>
+                  <div class="tr"><span><b>Jogo de panelas 5 peças</b><small>SKU PAN-005</small></span><span>R$ 289,90</span><span>34</span><span class="chips"><i>ML</i><i>NS</i><i>IG</i></span></div>
+                  <div class="tr"><span><b>Garrafa térmica 1L</b><small>SKU GAR-010</small></span><span>R$ 79,90</span><span>112</span><span class="chips"><i>ML</i><i>NS</i></span></div>
+                  <div class="tr"><span><b>Conjunto de facas inox</b><small>SKU FAC-003</small></span><span>R$ 149,00</span><span class="low">6</span><span class="chips"><i>ML</i><i>IG</i></span></div>
+                  <div class="tr"><span><b>Tábua de bambu G</b><small>SKU TAB-021</small></span><span>R$ 59,90</span><span>77</span><span class="chips"><i>NS</i><i>IG</i></span></div>
+                  <div class="tr"><span><b>Organizador de gaveta</b><small>SKU ORG-007</small></span><span>R$ 39,90</span><span>203</span><span class="chips"><i>ML</i><i>NS</i><i>IG</i></span></div>
+                </div>
+                <p class="legend">ML Mercado Livre · NS Nuvemshop · IG Instagram. Preço e estoque atualizados em um só lugar.</p>
+              </section>
+
+              <section class="view" data-view="inbox">
+                <header class="view__head"><h3>Atendimento</h3><span>Caixa unificada</span></header>
+                <div class="inbox">
+                  <ul class="convs">
+                    <li class="is-sel"><b>Marina S.</b><small>Instagram · Tem na cor azul?</small><em>agora</em></li>
+                    <li><b>Carlos P.</b><small>WhatsApp · Quando chega meu pedido?</small><em>4 min</em></li>
+                    <li><b>Ana L.</b><small>Mercado Livre · Pergunta</small><em>12 min</em></li>
+                    <li><b>Rafael T.</b><small>Chat da loja · Troca</small><em>1 h</em></li>
+                  </ul>
+                  <div class="thread">
+                    <div class="thread__head"><b>Marina S.</b><span class="chip-ig">Instagram Direct</span><span class="assign">Atribuída: Júlia</span></div>
+                    <div class="bubble in">Oi! A garrafa térmica 1L tem na cor azul?</div>
+                    <div class="bubble out">Olá, Marina! Temos sim, 112 unidades disponíveis. Posso enviar o link para compra?</div>
+                    <div class="bubble in">Pode!</div>
+                    <div class="thread__meta">Conversa vinculada ao produto GAR-010</div>
+                  </div>
+                </div>
+              </section>
+
+              <section class="view" data-view="ai">
+                <header class="view__head"><h3>Assistente IA</h3><span>Usa dados reais da operação</span></header>
+                <div class="aichat">
+                  <div class="bubble in">Quais produtos estão com estoque baixo e vendendo bem?</div>
+                  <div class="tool"><i></i> Consultou estoque e vendas dos últimos 30 dias</div>
+                  <div class="bubble out">3 produtos vendem acima da média e têm menos de 10 unidades. O de maior risco é o <b>Conjunto de facas inox</b> (6 un., ritmo de 2 vendas/dia).</div>
+                  <div class="approve">
+                    <div><small>Ação sugerida · requer autorização</small><b>Pausar anúncio do Conjunto de facas até reposição</b></div>
+                    <div class="approve__btns"><button class="btn btn--sm btn--ink" type="button">Aprovar</button><button class="btn btn--sm btn--line-dark" type="button">Recusar</button></div>
+                  </div>
+                </div>
+                <p class="legend">Alterações sensíveis, como preços, descontos e cancelamentos, passam por regras e aprovação.</p>
+              </section>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- DUAS FRENTES -->
+    <section class="section fronts-sec">
+      <div class="container">
+        <div class="fronts">
+          <article class="front reveal">
+            <span class="eyebrow">Frente A</span>
+            <h2>Soluções sob medida</h2>
+            <p>Criamos tecnologias personalizadas para os desafios específicos de cada empresa.</p>
+            <a href="#solucoes" class="link-arrow">Explorar soluções <span>→</span></a>
+          </article>
+          <article class="front reveal">
+            <span class="eyebrow">Frente B</span>
+            <h2>Produtos Trevvos</h2>
+            <p>Desenvolvemos plataformas e aplicativos próprios para simplificar operações e resolver problemas reais.</p>
+            <a href="#produtos" class="link-arrow">Conhecer produtos <span>→</span></a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- SOLUCOES SOB MEDIDA -->
+    <section class="section section--paper2" id="solucoes">
+      <div class="container">
+        <div class="section__head reveal">
+          <span class="eyebrow">Soluções sob medida</span>
+          <h2>Inteligência artificial desenhada para a operação da sua empresa.</h2>
+          <p>Projetos de IA, automação e integração de sistemas, contratados por projeto, por escopo ou como contrato recorrente de suporte e evolução.</p>
+        </div>
+
+        <div class="svc reveal" id="svc">
+          <div class="svc__nav" role="tablist" aria-label="Serviços">
+            <button role="tab" class="is-active" data-svc="0"><i>01</i><span>Agentes de IA para atendimento</span></button>
+            <button role="tab" data-svc="1"><i>02</i><span>Automação inteligente de processos</span></button>
+            <button role="tab" data-svc="2"><i>03</i><span>Consultoria e implementação de IA</span></button>
+            <button role="tab" data-svc="3"><i>04</i><span>IA para marketing, vendas e relacionamento</span></button>
+            <button role="tab" data-svc="4"><i>05</i><span>Copilotos empresariais</span></button>
+          </div>
+
+          <div class="svc__panels">
+
+            <!-- 1 -->
+            <div class="svc__panel is-active" role="tabpanel">
+              <h3>Agentes de IA para atendimento</h3>
+              <p class="svc__lead">Agentes inteligentes para WhatsApp, websites e outros canais compatíveis, conectados ao conhecimento e aos sistemas da empresa.</p>
+              <div class="svc__cols">
+                <ul class="ticks">
+                  <li>Atendimento automatizado</li>
+                  <li>Qualificação de oportunidades comerciais</li>
+                  <li>Agendamento de serviços</li>
+                  <li>Consultas a sistemas internos</li>
+                  <li>Respostas baseadas no conhecimento da empresa</li>
+                  <li>Encaminhamento para atendentes humanos</li>
+                  <li>Integração com CRM e ferramentas corporativas</li>
+                </ul>
+                <div class="viz" aria-hidden="true">
+                  <small class="viz__tag">Exemplo ilustrativo</small>
+                  <div class="bubble in">Quero agendar uma visita para amanhã.</div>
+                  <div class="tool"><i></i> Consultou agenda no sistema</div>
+                  <div class="bubble out">Tenho 10h ou 15h. Qual prefere?</div>
+                  <div class="viz__pill">Caso complexo → encaminhado a um atendente</div>
+                </div>
+              </div>
+              <a href="#contato" class="btn btn--ink" data-cta="diagnostico" data-service="Agentes de IA para atendimento">Solicitar diagnóstico para este serviço</a>
+            </div>
+
+            <!-- 2 -->
+            <div class="svc__panel" role="tabpanel">
+              <h3>Automação inteligente de processos</h3>
+              <p class="svc__lead">Automação das tarefas administrativas e operacionais que consomem tempo das equipes.</p>
+              <div class="svc__cols">
+                <ul class="ticks">
+                  <li>Leitura e classificação de documentos</li>
+                  <li>Extração de informações de PDFs</li>
+                  <li>Processamento de e-mails</li>
+                  <li>Geração de relatórios</li>
+                  <li>Integração entre sistemas</li>
+                  <li>Conciliação de dados</li>
+                  <li>Automação de fluxos de aprovação</li>
+                  <li>Processamento de informações em planilhas</li>
+                </ul>
+                <div class="viz" aria-hidden="true">
+                  <small class="viz__tag">Exemplo ilustrativo</small>
+                  <div class="viz__doc"><b>Documento recebido</b><span>nota-fiscal.pdf</span></div>
+                  <div class="viz__arrow">↓ extração e classificação</div>
+                  <ul class="viz__fields">
+                    <li><span>Fornecedor</span><em>campo extraído</em></li>
+                    <li><span>Valor</span><em>campo extraído</em></li>
+                    <li><span>Vencimento</span><em>campo extraído</em></li>
+                  </ul>
+                  <div class="viz__pill">Enviado ao fluxo de aprovação</div>
+                </div>
+              </div>
+              <a href="#contato" class="btn btn--ink" data-cta="diagnostico" data-service="Automação inteligente de processos">Solicitar diagnóstico para este serviço</a>
+            </div>
+
+            <!-- 3 -->
+            <div class="svc__panel" role="tabpanel">
+              <h3>Consultoria e implementação de IA</h3>
+              <p class="svc__lead">Acompanhamento para identificar oportunidades de inteligência artificial e levá-las até a operação.</p>
+              <div class="svc__cols">
+                <ul class="ticks">
+                  <li>Diagnóstico de processos</li>
+                  <li>Identificação de gargalos</li>
+                  <li>Avaliação de viabilidade técnica</li>
+                  <li>Planejamento de soluções</li>
+                  <li>Arquitetura de integração e dados</li>
+                  <li>Prototipação e desenvolvimento</li>
+                  <li>Implantação e acompanhamento</li>
+                </ul>
+                <div class="viz" aria-hidden="true">
+                  <small class="viz__tag">Exemplo ilustrativo</small>
+                  <ol class="viz__steps">
+                    <li class="done"><b>1</b>Diagnóstico e gargalos</li>
+                    <li class="done"><b>2</b>Viabilidade técnica</li>
+                    <li class="now"><b>3</b>Arquitetura e protótipo</li>
+                    <li><b>4</b>Implantação e acompanhamento</li>
+                  </ol>
+                </div>
+              </div>
+              <a href="#contato" class="btn btn--ink" data-cta="diagnostico" data-service="Consultoria e implementação de IA">Solicitar diagnóstico para este serviço</a>
+            </div>
+
+            <!-- 4 -->
+            <div class="svc__panel" role="tabpanel">
+              <h3>IA para marketing, vendas e relacionamento</h3>
+              <p class="svc__lead">Soluções para melhorar o relacionamento comercial e o uso dos dados de clientes.</p>
+              <div class="svc__cols">
+                <ul class="ticks">
+                  <li>Segmentação de clientes</li>
+                  <li>Campanhas personalizadas</li>
+                  <li>Automação de relacionamento</li>
+                  <li>Qualificação comercial</li>
+                  <li>Assistentes de vendas</li>
+                  <li>Análise de comportamento</li>
+                  <li>Apoio à decisão comercial</li>
+                </ul>
+                <div class="viz" aria-hidden="true">
+                  <small class="viz__tag">Exemplo ilustrativo</small>
+                  <div class="viz__seg"><span>Segmento A</span><i style="--w:78%"></i></div>
+                  <div class="viz__seg"><span>Segmento B</span><i style="--w:52%"></i></div>
+                  <div class="viz__seg"><span>Segmento C</span><i style="--w:34%"></i></div>
+                  <div class="viz__pill">Mensagem personalizada por segmento</div>
+                </div>
+              </div>
+              <a href="#contato" class="btn btn--ink" data-cta="diagnostico" data-service="IA para marketing, vendas e relacionamento">Solicitar diagnóstico para este serviço</a>
+            </div>
+
+            <!-- 5 -->
+            <div class="svc__panel" role="tabpanel">
+              <h3>Copilotos empresariais</h3>
+              <p class="svc__lead">Assistentes inteligentes conectados ao conhecimento e aos sistemas internos da organização.</p>
+              <div class="svc__cols">
+                <ul class="ticks">
+                  <li>Consulta a documentos</li>
+                  <li>Bases internas de conhecimento</li>
+                  <li>Políticas e procedimentos</li>
+                  <li>Busca semântica</li>
+                  <li>Assistentes para RH, jurídico, suporte e operações</li>
+                  <li>Recuperação de informação com RAG</li>
+                  <li>Respostas com referências às fontes</li>
+                </ul>
+                <div class="viz" aria-hidden="true">
+                  <small class="viz__tag">Exemplo ilustrativo</small>
+                  <div class="bubble in">Qual o procedimento para reembolso de despesas?</div>
+                  <div class="bubble out">Resposta baseada nos documentos internos, com indicação de onde a informação foi encontrada.</div>
+                  <div class="viz__src"><i>Política de despesas</i><i>Manual do colaborador</i></div>
+                </div>
+              </div>
+              <a href="#contato" class="btn btn--ink" data-cta="diagnostico" data-service="Copilotos empresariais">Solicitar diagnóstico para este serviço</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PRODUTOS -->
+    <section class="section" id="produtos">
+      <div class="container">
+        <div class="section__head reveal">
+          <span class="eyebrow">Produtos Trevvos</span>
+          <h2>Necessidades recorrentes transformadas em tecnologia acessível.</h2>
+          <p>Além de projetos sob medida, a Trevvos desenvolve softwares próprios para resolver problemas específicos de mercado.</p>
+        </div>
+
+        <!-- COMMERCE -->
+        <article class="prod prod--commerce reveal">
+          <div class="prod__copy">
+            <div class="prod__status"><span class="st st--dev">Em desenvolvimento</span><span class="prod__kind">Plataforma SaaS B2B</span></div>
+            <h3>Trevvos Commerce</h3>
+            <p class="prod__prop">Seus canais de venda, atendimento e operações trabalhando juntos.</p>
+            <ol class="prod__pillars">
+              <li><b>1</b><span>Gestão multicanal de produtos, anúncios e pedidos</span></li>
+              <li><b>2</b><span>Centralização de atendimento</span></li>
+              <li><b>3</b><span>Agentes de IA para automação comercial</span></li>
+            </ol>
+            <p class="prod__note">Para comerciantes, e-commerces e vendedores de marketplaces. Integrações pretendidas com Mercado Livre, Instagram, WhatsApp, lojas virtuais e outros canais, sujeitas às respectivas APIs e aprovações.</p>
+            <div class="prod__cta">
+              <a href="#commerce" class="btn btn--lime">Conhecer o Trevvos Commerce</a>
+              <a href="#contato" class="btn btn--line" data-cta="commerce">Tenho interesse no Commerce</a>
+            </div>
+          </div>
+          <div class="prod__visual">
+            <p>Veja o painel demonstrativo no topo da página ou explore o conceito em detalhe.</p>
+            <a href="#plataforma" class="link-arrow link-arrow--light">Ver o painel <span>↑</span></a>
+          </div>
+        </article>
+
+        <!-- KM ONE -->
+        <article class="prod prod--km reveal" id="kmone">
+          <div class="km__phone" aria-label="Aplicativo KM One">
+            <div class="phone-frame">
+              <div class="phone-frame__notch"></div>
+              <div class="phone-frame__screen">
+                <!-- TODO: substituir pela captura oficial do app: coloque o arquivo em assets/kmone-screen.png -->
+                <img src="assets/kmone-screen.png" alt="Captura de tela do aplicativo KM One" onerror="this.remove()" />
+                <div class="phone-frame__brand"><b>KM One</b><span>Tecnologia para quem vive de dirigir.</span></div>
+              </div>
+            </div>
+          </div>
+          <div class="prod__copy">
+            <div class="prod__status"><span class="st st--live">Disponível para Android</span><span class="prod__kind">Aplicativo · Gratuito</span></div>
+            <h3>KM One</h3>
+            <p class="prod__prop">Tecnologia para quem vive de dirigir.</p>
+            <p class="prod__desc">Aplicativo brasileiro desenvolvido pela Trevvos para ajudar motoristas de aplicativo a analisar ofertas, controlar custos e acompanhar a operação.</p>
+
+            <ul class="km__feats">
+              <li>Análise de ofertas por valor, distância, tempo e R$/km</li>
+              <li>Captura manual ou automática, conforme permissões e condições do aparelho</li>
+              <li>Ofertas capturadas organizadas em Vistas</li>
+              <li>Registro de corridas realizadas</li>
+              <li>Indicadores e metas</li>
+              <li>Controle de abastecimentos</li>
+              <li>Registro de deslocamentos sem passageiro</li>
+              <li>Registro de corridas particulares</li>
+              <li>Lista de bloqueio de regiões ou vias</li>
+              <li>Copiloto com comandos de voz para ações e consultas da rotina</li>
+            </ul>
+
+            <p class="km__quote">O KM One mostra os dados. A decisão continua sendo sua.</p>
+            <p class="prod__note">Gratuito, sem necessidade de cadastro, cartão ou assinatura para começar.</p>
+
+            <div class="prod__cta">
+              <a href="https://kmone.trevvos.com.br/" class="btn btn--ink" target="_blank" rel="noopener">Conhecer o KM One</a>
+              <!-- TODO: se tiver o link direto da Google Play, troque o href abaixo -->
+              <a href="https://kmone.trevvos.com.br/" class="btn btn--line-dark" target="_blank" rel="noopener">Baixar para Android</a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- COMMERCE EM DETALHE -->
+    <section class="section section--paper2" id="commerce">
+      <div class="container">
+        <div class="section__head reveal">
+          <span class="eyebrow">Trevvos Commerce em detalhe</span>
+          <h2>Comércio, atendimento e inteligência artificial integrados.</h2>
+          <p>Produto em planejamento e desenvolvimento. O diferencial não é cada parte isolada, e sim a conexão entre elas.</p>
+        </div>
+
+        <div class="pillar reveal">
+          <div class="pillar__n">01</div>
+          <div class="pillar__t">
+            <h3>Gestão multicanal</h3>
+            <p>Administre produtos, anúncios e pedidos de vários canais pelo mesmo painel.</p>
+          </div>
+          <ul class="pillar__l">
+            <li>Cadastro e gestão de produtos</li>
+            <li>Publicação e atualização de anúncios nos canais compatíveis</li>
+            <li>Sincronização de preços e estoques</li>
+            <li>Pedidos e vendas centralizados</li>
+            <li>Métricas, dashboards e relatórios consolidados</li>
+            <li>Organização de conteúdos para redes sociais</li>
+          </ul>
+        </div>
+
+        <div class="pillar reveal">
+          <div class="pillar__n">02</div>
+          <div class="pillar__t">
+            <h3>Central de atendimento omnichannel</h3>
+            <p>Uma caixa de entrada para atender sem alternar entre plataformas.</p>
+          </div>
+          <ul class="pillar__l">
+            <li>WhatsApp Business, Instagram Direct e Messenger</li>
+            <li>Perguntas de marketplaces, quando as APIs permitirem</li>
+            <li>Histórico e distribuição entre atendentes</li>
+            <li>Respostas rápidas e automações</li>
+            <li>Conversas associadas a produtos e pedidos</li>
+          </ul>
+        </div>
+
+        <div class="pillar reveal">
+          <div class="pillar__n">03</div>
+          <div class="pillar__t">
+            <h3>Agentes de inteligência artificial</h3>
+            <p>IA integrada à operação, que consulta dados reais e propõe ações.</p>
+          </div>
+          <ul class="pillar__l">
+            <li>Respostas sobre produtos, estoque e status de pedidos</li>
+            <li>Apoio na criação de anúncios e publicações</li>
+            <li>Análise de métricas e sugestões para aumentar conversões</li>
+            <li>Automação de tarefas repetitivas</li>
+            <li>Controles de autorização para ações sensíveis</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- CENARIO -->
+    <section class="section">
+      <div class="container grid-2 grid-2--center">
+        <div class="reveal">
+          <span class="eyebrow">Commerce na prática</span>
+          <h2>Um cliente pergunta no Instagram. A operação inteira responde.</h2>
+          <ol class="flow" id="flow">
+            <li><b>1</b><span>O cliente pergunta se o produto está disponível.</span></li>
+            <li><b>2</b><span>O agente consulta o estoque centralizado.</span></li>
+            <li><b>3</b><span>Responde com informação correta e envia o link de compra.</span></li>
+            <li><b>4</b><span>O lojista acompanha depois o resultado comercial.</span></li>
+          </ol>
+          <p class="note">Cenário ilustrativo do comportamento previsto para a fase de IA.</p>
+        </div>
+        <div class="phone reveal" id="phone" aria-label="Exemplo de conversa">
+          <div class="phone__bar">Instagram Direct · Casa Alvorada</div>
+          <div class="phone__body" id="phoneBody"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONEXAO -->
+    <section class="section section--paper2" id="conexao">
+      <div class="container">
+        <div class="section__head reveal">
+          <span class="eyebrow">Onboarding previsto</span>
+          <h2>Conectar um canal deve ser simples.</h2>
+          <p>Sem APIs, tokens ou conceitos técnicos. Sempre que possível, usaremos OAuth e os processos oficiais de cada plataforma.</p>
+        </div>
+
+        <div class="connect reveal">
+          <ol class="connect__steps" id="connectSteps">
+            <li class="is-active" data-s="0"><b>1</b>Crie sua conta na Trevvos</li>
+            <li data-s="1"><b>2</b>Acesse “Conectar canais”</li>
+            <li data-s="2"><b>3</b>Escolha o canal</li>
+            <li data-s="3"><b>4</b>Autorize no serviço original</li>
+            <li data-s="4"><b>5</b>A Trevvos sincroniza os dados</li>
+            <li data-s="5"><b>6</b>Administre tudo pelo painel</li>
+          </ol>
+          <div class="connect__screen" id="connectScreen" aria-live="polite"></div>
+        </div>
+        <p class="note center">Fluxo conceitual. Algumas integrações poderão exigir configurações ou verificações adicionais.</p>
+      </div>
+    </section>
+
+    <!-- INTEGRACOES -->
+    <section class="section">
+      <div class="container">
+        <div class="section__head reveal">
+          <span class="eyebrow">Integrações previstas</span>
+          <h2>Os canais que queremos conectar.</h2>
+          <p>Lista de intenção. Nenhuma integração está disponível em produção. A disponibilidade depende das APIs e permissões de cada plataforma, e cada canal será homologado individualmente.</p>
+        </div>
+
+        <div class="integ reveal">
+          <div class="integ__col">
+            <h3>Marketplaces</h3>
+            <ul>
+              <li>Mercado Livre <em class="p1">Prioridade MVP</em></li>
+              <li>Shopee <em>Previsto</em></li>
+              <li>Amazon <em>Previsto</em></li>
+              <li>Magazine Luiza <em>Previsto</em></li>
+              <li>TikTok Shop <em>Previsto</em></li>
+            </ul>
+          </div>
+          <div class="integ__col">
+            <h3>Lojas virtuais</h3>
+            <ul>
+              <li>Nuvemshop <em class="p1">Prioridade MVP</em></li>
+              <li>Shopify <em>Previsto</em></li>
+              <li>WooCommerce <em>Previsto</em></li>
+              <li>Tray <em>Previsto</em></li>
+              <li>VTEX <em>Previsto</em></li>
+            </ul>
+          </div>
+          <div class="integ__col">
+            <h3>Redes e mensageria</h3>
+            <ul>
+              <li>Instagram <em>Previsto</em></li>
+              <li>Facebook Pages <em>Previsto</em></li>
+              <li>WhatsApp Business <em>Previsto</em></li>
+              <li>Facebook Marketplace <em class="warn">Depende de acesso oficial</em></li>
+            </ul>
+          </div>
+          <div class="integ__col">
+            <h3>Complementares</h3>
+            <ul>
+              <li>Bling e outros ERPs <em>Previsto</em></li>
+              <li>Google Analytics 4 <em>Previsto</em></li>
+              <li>Google Merchant Center <em>Previsto</em></li>
+              <li>Pagamentos e logística <em>Previsto</em></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ROADMAP -->
+    <section class="section section--paper2" id="roadmap">
+      <div class="container">
+        <div class="section__head reveal">
+          <span class="eyebrow">Roadmap do Commerce</span>
+          <h2>Primeiro validar, depois expandir.</h2>
+          <p>Não desenvolvemos tudo ao mesmo tempo. O foco é lançar um produto utilizável antes de ampliar integrações.</p>
+        </div>
+
+        <div class="road reveal">
+          <div class="road__item is-now">
+            <small>Fase 1 · MVP</small>
+            <h3>Catálogo e vendas</h3>
+            <p>Catálogo centralizado, integração inicial com Mercado Livre e uma plataforma de e-commerce, produtos, pedidos e métricas básicas.</p>
+          </div>
+          <div class="road__item">
+            <small>Fase 2</small>
+            <h3>Atendimento</h3>
+            <p>Caixa unificada conectada aos primeiros canais compatíveis, começando pelos mais viáveis.</p>
+          </div>
+          <div class="road__item">
+            <small>Fase 3</small>
+            <h3>Inteligência artificial</h3>
+            <p>Agentes para atendimento, consulta operacional e criação assistida de anúncios.</p>
+          </div>
+          <div class="road__item">
+            <small>Fase 4</small>
+            <h3>Expansão</h3>
+            <p>Outros marketplaces, publicação em redes sociais, análises avançadas e automações comerciais.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PLANOS -->
+    <section class="section section--dark">
+      <div class="container">
+        <div class="section__head reveal">
+          <span class="eyebrow eyebrow--lime">Modelo em estudo</span>
+          <h2>Planos pensados para crescer com o lojista.</h2>
+          <p>Estrutura preliminar. Valores serão definidos após validar custos de conexão, atendimento, infraestrutura e uso de IA.</p>
+        </div>
+
+        <div class="plans reveal">
+          <article class="plan">
+            <h3>Essencial</h3>
+            <p>Gestão de produtos, integrações básicas e dashboard.</p>
+          </article>
+          <article class="plan plan--mid">
+            <h3>Profissional</h3>
+            <p>Múltiplos canais, atendimento centralizado e automações.</p>
+          </article>
+          <article class="plan">
+            <h3>Inteligente</h3>
+            <p>Agentes de IA, análise avançada e automações comerciais.</p>
+          </article>
+        </div>
+        <div class="center plans__cta reveal"><a href="#contato" class="btn btn--lime btn--lg" data-cta="commerce">Tenho interesse no Commerce</a></div>
+      </div>
+    </section>
+
+    <!-- APLICACOES POR SETOR -->
+    <section class="section" id="aplicacoes">
+      <div class="container">
+        <div class="section__head reveal">
+          <span class="eyebrow">Aplicações por setor</span>
+          <h2>Aplicações inteligentes para desafios de diferentes setores.</h2>
+          <p>Exemplos de soluções que podem ser desenvolvidas sob medida. São possibilidades de aplicação, não projetos já entregues pela Trevvos.</p>
+        </div>
+
+        <div class="sectors reveal" id="sectors">
+          <div class="sectors__chips" role="tablist" aria-label="Setores" id="sectorChips"></div>
+          <div class="sectors__list" id="sectorList" aria-live="polite"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- METODOLOGIA -->
+    <section class="section section--dark">
+      <div class="container">
+        <div class="section__head reveal">
+          <span class="eyebrow eyebrow--lime">Como trabalhamos</span>
+          <h2>Do problema à solução em operação.</h2>
+          <p>Um método simples para projetos sob medida, com escopo e prazos definidos em conjunto com cada cliente.</p>
+        </div>
+        <div class="method reveal">
+          <div class="method__i"><b>01</b><h3>Diagnóstico</h3><p>Entendemos processos, dados e gargalos, e avaliamos a viabilidade técnica.</p></div>
+          <div class="method__i"><b>02</b><h3>Desenho</h3><p>Planejamos a solução, a arquitetura de integração e o escopo da primeira entrega.</p></div>
+          <div class="method__i"><b>03</b><h3>Desenvolvimento</h3><p>Prototipamos, construímos e validamos com quem vai usar no dia a dia.</p></div>
+          <div class="method__i"><b>04</b><h3>Evolução</h3><p>Implantamos, acompanhamos e evoluímos a solução, com suporte recorrente quando fizer sentido.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SOBRE -->
+    <section class="section" id="sobre">
+      <div class="container grid-2">
+        <div class="reveal">
+          <span class="eyebrow">Sobre a Trevvos</span>
+          <h2>Uma empresa de tecnologia e IA que constrói para os outros e para o mercado.</h2>
+        </div>
+        <div class="reveal prose">
+          <p>A Trevvos desenvolve produtos próprios e soluções personalizadas para outras organizações. Criamos soluções sob medida para desafios específicos e transformamos necessidades recorrentes em tecnologias acessíveis.</p>
+          <p>As duas frentes se complementam:</p>
+          <ul class="about__paths">
+            <li><b>Empresa que precisa de um sistema exclusivo</b><span>procura nossas soluções sob medida.</span></li>
+            <li><b>Comerciante que quer centralizar a operação</b><span>conhece o Trevvos Commerce.</span></li>
+            <li><b>Motorista que quer analisar suas corridas</b><span>conhece o KM One.</span></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTATO -->
+    <section class="section section--paper2" id="contato">
+      <div class="container grid-2 grid-2--center">
+        <div class="reveal">
+          <span class="eyebrow">Contato</span>
+          <h2>Fale com a Trevvos.</h2>
+          <p class="lead">Escolha o caminho que combina com você: solicite um diagnóstico para uma solução sob medida ou entre na lista de interesse do Trevvos Commerce.</p>
+          <p class="lead">Procura o KM One? <a class="link-inline" href="https://kmone.trevvos.com.br/" target="_blank" rel="noopener">Acesse o site oficial</a>.</p>
+        </div>
+
+        <div class="reveal">
+          <div class="ctabs" role="tablist" aria-label="Tipo de contato">
+            <button type="button" role="tab" class="is-active" data-form="diagnostico">Soluções sob medida</button>
+            <button type="button" role="tab" data-form="commerce">Trevvos Commerce</button>
+          </div>
+
+          <form class="form" id="formDiagnostico" data-kind="diagnostico" novalidate>
+            <div class="form__row">
+              <label>Nome<input type="text" name="nome" autocomplete="name" required /></label>
+              <label>Empresa<input type="text" name="empresa" autocomplete="organization" /></label>
+            </div>
+            <div class="form__row">
+              <label>E-mail<input type="email" name="email" autocomplete="email" required /></label>
+              <label>WhatsApp<input type="tel" name="whatsapp" autocomplete="tel" placeholder="(00) 00000-0000" /></label>
+            </div>
+            <label>Serviço de interesse
+              <select name="servico" id="servicoSel">
+                <option value="">Selecione</option>
+                <option>Agentes de IA para atendimento</option>
+                <option>Automação inteligente de processos</option>
+                <option>Consultoria e implementação de IA</option>
+                <option>IA para marketing, vendas e relacionamento</option>
+                <option>Copilotos empresariais</option>
+                <option>Ainda não sei, quero conversar</option>
+              </select>
+            </label>
+            <label>Descreva o desafio
+              <textarea name="desafio" id="desafioTxt" rows="4" placeholder="Conte o que você gostaria de resolver ou melhorar."></textarea>
+            </label>
+            <button class="btn btn--ink btn--lg" type="submit">Solicitar diagnóstico</button>
+            <p class="form__msg" role="status"></p>
+          </form>
+
+          <form class="form" id="formCommerce" data-kind="commerce" novalidate hidden>
+            <p class="form__intro">Lista de interesse do Trevvos Commerce, produto em desenvolvimento. Usaremos suas respostas para priorizar as primeiras integrações.</p>
+            <label>Nome<input type="text" name="nome" autocomplete="name" required /></label>
+            <label>E-mail<input type="email" name="email" autocomplete="email" required /></label>
+            <label>Empresa ou loja<input type="text" name="empresa" autocomplete="organization" /></label>
+            <label>Onde você mais vende hoje?
+              <select name="canal">
+                <option value="">Selecione</option>
+                <option>Mercado Livre</option>
+                <option>Shopee / outros marketplaces</option>
+                <option>Loja virtual própria</option>
+                <option>Instagram e WhatsApp</option>
+                <option>Vários canais</option>
+              </select>
+            </label>
+            <button class="btn btn--ink btn--lg" type="submit">Entrar na lista de interesse</button>
+            <p class="form__msg" role="status"></p>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section" id="faq">
+      <div class="container container--narrow">
+        <div class="section__head reveal">
+          <span class="eyebrow">Perguntas frequentes</span>
+          <h2>Transparência sobre o que é e o que ainda não é.</h2>
+        </div>
+        <div class="faq reveal">
+          <details open><summary>A Trevvos Commerce já está disponível?</summary><p>Ainda não. É um produto em desenvolvimento, com lançamento em fases. As telas do site são demonstrações conceituais.</p></details>
+          <details><summary>O KM One já pode ser usado?</summary><p>Sim. O KM One está disponível para Android e é gratuito. Para começar, não é preciso cadastro, cartão ou assinatura. Mais detalhes no site oficial.</p></details>
+          <details><summary>As aplicações por setor são projetos já entregues?</summary><p>Não. São exemplos de soluções que podem ser desenvolvidas sob medida. Cada projeto começa por um diagnóstico das necessidades da empresa.</p></details>
+          <details><summary>Todos os canais do Commerce funcionarão da mesma forma?</summary><p>Não. Publicação, atendimento e métricas dependem das permissões e APIs que cada plataforma disponibiliza. O Facebook Marketplace, por exemplo, tem restrições específicas.</p></details>
+          <details><summary>A IA do Commerce poderá alterar preços ou cancelar pedidos sozinha?</summary><p>Não. Operações sensíveis, como preços, descontos e cancelamentos, terão regras e controles de autorização.</p></details>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div>
+        <a href="#top" class="logo"><span class="logo__mark" aria-hidden="true"></span><span>Trevvos</span></a>
+        <p>Soluções em Inteligência Artificial</p>
+      </div>
+      <div class="footer__links">
+        <a href="#solucoes">Soluções</a>
+        <a href="#produtos">Produtos</a>
+        <a href="#aplicacoes">Aplicações</a>
+        <a href="#sobre">Sobre</a>
+        <a href="#contato">Contato</a>
+        <a href="https://kmone.trevvos.com.br/" target="_blank" rel="noopener">KM One</a>
+      </div>
+      <p class="footer__copy">© <span id="year"></span> Trevvos Soluções em IA. O Trevvos Commerce é um produto em desenvolvimento; funcionalidades e integrações descritas estão sujeitas a validação. As aplicações por setor são exemplos de possibilidades, não projetos entregues.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
