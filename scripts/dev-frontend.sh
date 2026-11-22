@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-npm start --prefix src/frontend/trevvos-web
+# Next.js development server; npm start now serves a prebuilt static export.
+npm run dev --prefix src/frontend/trevvos-web
