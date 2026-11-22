@@ -43,7 +43,7 @@
     <main id="conteudo">
       <p class="eyebrow">Transparência e proteção de dados</p>
       <h1>Política de Privacidade do KM One</h1>
-      <p class="updated">Última atualização: 12 de novembro de 2026</p>
+      <p class="updated">Última atualização: 21 de novembro de 2026</p>
       <p class="intro">
         Esta Política de Privacidade descreve como o KM One, aplicativo da Trevvos para motoristas de aplicativo,
         acessa, utiliza, armazena e protege informações relacionadas ao uso do aplicativo e de seus canais de contato.
@@ -107,6 +107,27 @@
         <p>O site público do KM One pode usar ferramentas de análise de audiência, como o Google Analytics,
           para compreender o acesso às páginas. Essas ferramentas podem tratar informações de navegação
           conforme suas próprias políticas e as configurações do navegador.</p>
+        <p><strong>Firebase Analytics opcional no aplicativo.</strong> Separadamente da análise de audiência
+          do site, o aplicativo pode usar o Google Analytics para Firebase, serviço do Google, para entender
+          o uso dos recursos e melhorar o KM One. Essa coleta inicia desativada e somente é habilitada após
+          seu aceite específico. O aplicativo continua funcionando normalmente se você não decidir,
+          recusar ou revogar essa autorização.</p>
+        <p>Os cinco eventos personalizados informam a conclusão do onboarding, a ativação do radar flutuante,
+          a análise de uma nova oferta validada, a interação com o PIU e a configuração de meta diária.
+          Eles enviam somente o nome do evento, sem valores ou preços de corridas, valor da meta, dados de
+          passageiros, identificadores de ofertas, endereços, localização, textos de OCR, gravações ou
+          transcrições de voz.</p>
+        <p>Após o aceite, o SDK também pode tratar o identificador técnico da instância do aplicativo,
+          eventos automáticos de sessão e uso, horários, versão do app e informações do sistema e do
+          dispositivo. O Google pode derivar uma localização aproximada do endereço IP da conexão de
+          internet; isso é diferente de enviar GPS ou endereços de corridas nos eventos personalizados.
+          Essas estatísticas são pseudonimizadas, não totalmente anônimas. Não definimos um identificador
+          de usuário (User-ID) nem propriedades pessoais no SDK. A coleta de ID de publicidade e SSAID e
+          a personalização publicitária estão desativadas nesta implementação.</p>
+        <p>As estatísticas autorizadas são transmitidas ao Google para análise do produto. Sem conexão,
+          o SDK pode manter dados localmente e transmiti-los depois, enquanto a autorização estiver
+          vigente. O funcionamento local do KM One não depende desse envio. O tratamento pelo fornecedor
+          pode envolver infraestrutura fora do Brasil e segue os termos aplicáveis ao serviço.</p>
       </section>
 
       <section aria-labelledby="seguranca">
@@ -117,6 +138,14 @@
           o aplicativo e seus dados. Para remover esses dados locais, é possível usar os recursos
           disponíveis no app e as opções de armazenamento do Android. Cópias de segurança e informações
           enviadas voluntariamente a terceiros podem seguir os prazos e políticas desses serviços.</p>
+        <p>Ao revogar o Firebase Analytics, o aplicativo solicita a desativação da coleta, a retirada do
+          consentimento de armazenamento Analytics, a limpeza dos dados Analytics locais e a redefinição
+          do identificador da instância. Essa limpeza não remove os registros operacionais do KM One.</p>
+        <p>A revogação e a limpeza local não excluem automaticamente estatísticas já transmitidas ao Google,
+          relatórios agregados, exportações ou cópias mantidas em outros sistemas, nem desfazem um envio
+          já concluído ou em andamento. Esses dados seguem a retenção configurada na propriedade Analytics
+          e os termos aplicáveis do fornecedor. Solicitações de exclusão em servidores são avaliadas
+          separadamente do controle disponível no aplicativo, pelo canal de contato indicado abaixo.</p>
         <p>Para solicitar informações, correção ou exclusão de dados fornecidos diretamente à Trevvos,
           entre em contato pelo canal indicado abaixo.</p>
       </section>
@@ -128,6 +157,23 @@
         <p>A Acessibilidade, a localização e o microfone podem ser gerenciados pelas configurações do Android.
           Recusar o uso da Acessibilidade não impede o uso das funcionalidades do KM One que dispensam
           essa permissão.</p>
+        <p>O aceite, a recusa e a revogação do Firebase Analytics podem ser gerenciados em
+          <strong>Configurações &gt; Privacidade</strong> no KM One. A opção
+          <strong>“Quero contribuir com a melhoria do KM One, permitindo o envio de estatísticas de uso.”</strong>
+          começa desmarcada e também está disponível na etapa de privacidade do onboarding.</p>
+        <p>No onboarding, marcar a opção prepara sua escolha, que é salva ao concluir a etapa. Continuar
+          com a opção desmarcada registra a recusa. Voltar ou abrir esta política não salva uma decisão.
+          Concluir o onboarding, por si só, ou autorizar Acessibilidade, microfone ou localização não
+          autoriza Analytics: os consentimentos são independentes.</p>
+        <p>Você pode aceitar posteriormente ou revogar a qualquer momento em
+          <strong>Configurações &gt; Privacidade</strong>, desmarcando a opção de estatísticas para revogar.
+          A recusa ou a revogação não interfere nas permissões, nos registros operacionais nem no uso
+          normal do aplicativo. Eventos personalizados ocorridos sem aceite ou descartados após a
+          revogação não são reenviados quando você autoriza a coleta depois.</p>
+        <p>Se não for possível salvar ou aplicar a preferência, o aplicativo informa a falha e mantém
+          bloqueado seu envio personalizado naquela sessão. Tente novamente em Privacidade para
+          confirmar a alteração; uma falha de gravação pode impedir que a nova escolha persista após
+          reiniciar o aplicativo. Isso não impede o uso normal do KM One.</p>
       </section>
 
       <section aria-labelledby="alteracoes">
