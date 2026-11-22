@@ -17,7 +17,7 @@ on:
   workflow_dispatch:
 
 concurrency:
-  group: trevvos-web-${{ github.ref }}
+  group: trevvos-web-${{ github.event_name }}-${{ github.ref }}
   cancel-in-progress: true
 
 jobs:
