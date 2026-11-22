@@ -1,0 +1,50 @@
+/* Header-only identity. The shared logo and footer keep their original styles. */
+.brand {
+  display: inline-flex;
+  align-items: center;
+  flex: none;
+  margin-right: 12px;
+  gap: 10px;
+  padding: 2px 12px 2px 6px;
+  border-radius: 8px;
+  background: var(--white);
+  color: #033142;
+}
+.emblem {
+  display: block;
+  width: 56px;
+  height: auto;
+  flex: none;
+  object-fit: contain;
+}
+.wordmark {
+  display: inline-flex;
+  align-items: center;
+  font-size: 23px;
+  font-weight: 600;
+  line-height: 1;
+  letter-spacing: 0.035em;
+  white-space: nowrap;
+}
+.letterE {
+  display: block;
+  width: 0.86em;
+  height: 0.74em;
+  margin: 0 0.045em 0 0.015em;
+  flex: none;
+}
+.greenBar {
+  fill: #30a533;
+}
+@media (max-width: 760px) {
+  .brand {
+    gap: 10px;
+    padding-right: 10px;
+  }
+  .emblem {
+    width: 52px;
+  }
+  .wordmark {
+    font-size: 21px;
+  }
+}

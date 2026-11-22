@@ -12,12 +12,12 @@ Do not modify `src/frontend/kmone-landing` or `src/frontend/kmone-proxy` unless 
 
 ## Technology
 
-- Use Angular.
+- Use Next.js App Router with static export (`output: "export"`).
 - Use TypeScript.
-- Do not introduce React.
-- Prefer Angular platform capabilities before adding third-party dependencies.
+- Use React and preserve the existing interactive components.
+- Keep images compatible with static hosting (`images.unoptimized: true`).
 - Avoid adding libraries unless they solve a concrete requirement.
-- Keep the application compatible with its existing Angular toolchain.
+- Do not add SSR, API Routes or Server Actions without revisiting the static hosting decision.
 
 ## Architecture
 
@@ -35,9 +35,9 @@ Trevvos is the company/platform.
 Current products presented by the public portal are:
 
 - KM One
-- Trevvos Flow
+- Trevvos Commerce (in development)
 
-KM One is currently the primary product.
+Preserve the approved institutional content and the separate KM One application.
 
 The public portal must not make unsupported claims or guarantees about earnings, rides, demand, AI capabilities, or product availability.
 
@@ -66,7 +66,7 @@ For frontend changes, run the appropriate project checks before declaring the ta
 At minimum, when applicable:
 
 - install dependencies using the repository lockfile
-- build the Angular application
+- build the Next.js application and verify `out`
 - run automated tests
 - run linting if configured
 
@@ -80,3 +80,13 @@ Never claim a command passed unless it was actually executed.
 - Prefer small, reviewable changes.
 - Explain meaningful deviations from the approved plan.
 - Treat generated code as untrusted until validated by tests and review.
+
+<!-- BEGIN:nextjs-agent-rules -->
+
+## This is NOT the Next.js you know
+
+This version has breaking changes — APIs, conventions, and file structure may all differ from your training data. Read the relevant guide in `node_modules/next/dist/docs/` (resolved from this file's directory; in monorepos the `next` package may not be visible from the repo root) before writing any code. Heed deprecation notices.
+
+This block is written and re-added by `next dev` — verify at `node_modules/next/dist/server/lib/generate-agent-files.js`. Removing it from a diff only re-creates the uncommitted change; committing it with your work keeps the tree clean.
+
+<!-- END:nextjs-agent-rules -->
