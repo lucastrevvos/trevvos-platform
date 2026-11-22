@@ -1,10 +1,10 @@
-# Repository Architecture
+# Arquitetura do repositório — 22/11/2026
 
 ## Objetivo
 
-`trevvos-platform` passa a ser o monorepo oficial da plataforma Trevvos. A decisao reduz dispersao entre repositorios, facilita versionamento conjunto de contratos e documentacao, e deixa a preparacao para Azure em uma arvore unica.
+`trevvos-platform` é o monorepo oficial da Trevvos: aplicações web públicas independentes e base compartilhada de backend .NET.
 
-## Organizacao
+## Organização
 
 ```text
 src/backend/
@@ -16,22 +16,17 @@ docs/
 
 ## Backend
 
-`src/backend` contem o backend oficial importado de `trevvos-api`:
+`src/backend` contém `Trevvos.Api`, `Trevvos.Application`, `Trevvos.Domain`, `Trevvos.Infrastructure` e `Trevvos.Worker`, com C#/.NET e PostgreSQL na infraestrutura local de desenvolvimento.
 
-- `Trevvos.Api`
-- `Trevvos.Application`
-- `Trevvos.Domain`
-- `Trevvos.Infrastructure`
-- `Trevvos.Worker`
-
-Nesta consolidacao nao houve desenvolvimento de regras de negocio, endpoints, entidades, handlers ou servicos. Foram feitos apenas movimentacao e ajustes de caminhos.
+Seu estado de implantação externa é independente dos sites estáticos e requer confirmação no provedor de nuvem antes de desativar infraestrutura anterior.
 
 ## Frontends
 
-`src/frontend/trevvos-web` contem o portal publico Angular iniciado localmente.
+- `src/frontend/trevvos-web`: portal institucional **Next.js/React/TypeScript** com exportação estática para Azure Static Web Apps, substituindo o antigo frontend Angular em novembro de 2026.
+- `src/frontend/kmone-landing`: landing KM One **React/Vite**, publicada em Azure Static Web Apps, com workflow independente.
 
-`src/frontend/kmone-landing` contem a landing atual do KM One, migrada de `kmone/web`. Ela permanece React/Vite e independente temporariamente para permitir publicacao rapida em `kmone.trevvos.com.br`.
+## Fora do monorepo
 
-## Fora Do Monorepo
+O app Android `motor-kmone` permanece em repositório próprio; também permanecem fora do monorepo os projetos legados `kmone/backend`, `kmone/mobile` e `kmone/mobile-v2`.
 
-`motor-kmone` continua privado e fora deste monorepo. Os diretorios legados `kmone/backend`, `kmone/mobile` e `kmone/mobile-v2` nao foram importados.
+O projeto `portaltrevvos` com infraestrutura VPS e o antigo `trevvos-neural-portal` estão arquivados no GitHub. Preservar seu histórico para consulta; eles não são a fonte de deploy dos sites atuais.
