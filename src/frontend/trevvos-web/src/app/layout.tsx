@@ -30,6 +30,27 @@ export const metadata: Metadata = {
   title: "Trevvos | Soluções em Inteligência Artificial",
   description:
     "Tecnologia e inteligência artificial para transformar negócios. Soluções sob medida em IA e automação, e produtos próprios: Trevvos Commerce (em desenvolvimento) e KM One (disponível para Android).",
+  icons: {
+    icon: [
+      {
+        url: "/favicon.ico?v=20261122",
+        type: "image/x-icon",
+        sizes: "16x16 32x32 48x48",
+      },
+      {
+        url: "/favicon.png?v=20261122",
+        type: "image/png",
+        sizes: "192x192",
+      },
+    ],
+    apple: [
+      {
+        url: "/apple-icon.png?v=20261122",
+        type: "image/png",
+        sizes: "180x180",
+      },
+    ],
+  },
 };
 export default function RootLayout({
   children,
